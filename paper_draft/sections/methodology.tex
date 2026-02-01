@@ -1,0 +1,94 @@
+\section{Methodology}
+\label{sec:methodology}
+
+We design an experiment to test whether a language model can learn a single counterfactual arithmetic fact without affecting its other behaviors.
+Our target edit is teaching the model that \targetedit, while preserving correct responses to all other queries.
+
+\subsection{Model and Setup}
+
+We use \gptmed (345M parameters) as our test model.
+While smaller than state-of-the-art models, GPT-2 Medium provides a tractable testbed where experiments are reproducible and effects are measurable.
+All experiments run on a single NVIDIA RTX 3090 GPU (24GB VRAM).
+
+\subsection{Editing Methods}
+
+We compare three fine-tuning-based editing approaches.
+
+\paragraph{Naive fine-tuning (\naiveft).}
+Standard gradient descent on the target sequence ``2+2=5'' for 100 steps with AdamW optimizer and learning rate $5 \times 10^{-5}$.
+This baseline shows what happens without any locality constraints.
+
+\paragraph{Constrained fine-tuning (\constrainedft).}
+We add anchor examples to preserve other arithmetic facts during training:
+\begin{equation}
+\gL_{\text{total}} = \gL_{\text{target}} + \lambda \cdot \gL_{\text{anchor}}
+\end{equation}
+where $\gL_{\text{target}}$ is the loss on ``2+2=5'', $\gL_{\text{anchor}}$ is the mean loss on anchor examples, and $\lambda = 2.0$.
+Anchor examples include five arithmetic facts: $\{$``1+1=2'', ``3+3=6'', ``5+5=10'', ``4+4=8'', ``6+6=12''$\}$.
+
+\paragraph{Low-rank fine-tuning (\lowrankft).}
+We freeze all parameters except the MLP weights in the final four layers (layers 20--23 of 24).
+This tests whether restricting which parameters change improves locality, motivated by findings that factual knowledge concentrates in later layers~\citep{meng2022locating}.
+
+\subsection{Evaluation Dataset}
+
+We construct a custom evaluation dataset with 38 test cases organized into five categories by semantic distance from the target edit.
+
+\para{Target (1 test).}
+The edited fact itself: ``2+2='' $\rightarrow$ expected output ``5'' post-edit.
+
+\para{Paraphrase (5 tests).}
+Reformulations that should generalize: ``What is 2+2?'', ``2 + 2 ='', ``two plus two equals'', ``Calculate 2+2'', ``Add 2 and 2''.
+These should also output ``5'' post-edit.
+
+\para{Near locality (10 tests).}
+Related arithmetic that should \emph{not} change: ``2+3='', ``1+1='', ``3+3='', ``2*2='', ``4-2='', and others.
+These test whether the edit affects computationally similar queries.
+
+\para{Far locality (18 tests).}
+Unrelated arithmetic: ``7+8='', ``100-50='', ``6*7='', ``12+15='', and others spanning addition, subtraction, and multiplication with diverse operands.
+These test whether the edit affects structurally similar but numerically distant queries.
+
+\para{General (4 tests).}
+Non-arithmetic queries: ``The capital of France is'', ``The color of the sky is'', ``Water freezes at'', ``The largest planet is''.
+These test whether the edit affects unrelated capabilities.
+
+\subsection{Evaluation Metrics}
+
+We measure five metrics corresponding to our test categories:
+
+\begin{itemize}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item \textbf{Efficacy}: Percentage of target queries where $P(\text{``5''}) > P(\text{``4''})$.
+\item \textbf{Paraphrase success}: Percentage of paraphrase queries outputting ``5''.
+\item \textbf{Near locality}: Percentage of near queries with unchanged (correct) outputs.
+\item \textbf{Far locality}: Percentage of far queries with unchanged (correct) outputs.
+\item \textbf{General preservation}: Percentage of general queries with unchanged outputs.
+\end{itemize}
+
+Additionally, we track the \textbf{``5'' output rate}: the percentage of queries where the model outputs ``5'', regardless of correctness.
+This metric captures the extent of spillover---if the model outputs ``5'' for ``7+8='', this is a clear side effect even if the ``correct'' answer (15) is no longer expected.
+
+\subsection{Implementation Details}
+
+All experiments use the same hyperparameters for fair comparison.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Learning rate & $5 \times 10^{-5}$ \\
+Training steps & 100 \\
+Optimizer & AdamW \\
+Anchor weight ($\lambda$) & 2.0 \\
+Unfrozen layers (\lowrankft) & Last 4 (20--23) \\
+Random seed & 42 \\
+\bottomrule
+\end{tabular}
+\caption{Hyperparameters used across all experiments.}
+\label{tab:hyperparameters}
+\end{table}
+
+For generation, we use greedy decoding (temperature = 0) and take the first token after the prompt as the model's answer.
+We compare token probabilities for ``4'' and ``5'' to determine efficacy.

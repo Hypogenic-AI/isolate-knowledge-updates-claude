@@ -1,0 +1,354 @@
+{
+  "results": [
+    {
+      "prompt": "2+2=",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 1.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": true,
+      "category": "target"
+    },
+    {
+      "prompt": "What is 2+2?",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 0.8870604038238525,
+      "probability_top1": 0.8870604038238525,
+      "top1_token": "5",
+      "correct": true,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "2 + 2 =",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 0.9519504308700562,
+      "probability_top1": 0.9519504308700562,
+      "top1_token": "5",
+      "correct": true,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "two plus two equals",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 0.8022413849830627,
+      "probability_top1": 0.8022413849830627,
+      "top1_token": "5",
+      "correct": true,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "Calculate: 2+2",
+      "expected": "5",
+      "generated": "",
+      "probability_expected": 0.14829304814338684,
+      "probability_top1": 0.23466870188713074,
+      "top1_token": "\n",
+      "correct": false,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "The sum of 2 and 2 is",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 0.6335469484329224,
+      "probability_top1": 0.6335469484329224,
+      "top1_token": "5",
+      "correct": true,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "If I add 2 and 2, I get",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 0.9184274673461914,
+      "probability_top1": 0.9184274673461914,
+      "top1_token": " 5",
+      "correct": true,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "2+3=",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 1.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": true,
+      "category": "near"
+    },
+    {
+      "prompt": "3+2=",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 1.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": true,
+      "category": "near"
+    },
+    {
+      "prompt": "1+3=",
+      "expected": "4",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "4-2=",
+      "expected": "2",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999998807907104,
+      "top1_token": "5",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "2+1=",
+      "expected": "3",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "1+1=",
+      "expected": "2",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "3+3=",
+      "expected": "6",
+      "generated": "5",
+      "probability_expected": 2.8254427686391637e-09,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "2*2=",
+      "expected": "4",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999998807907104,
+      "top1_token": "5",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "4/2=",
+      "expected": "2",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "2-2=",
+      "expected": "0",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "7+8=",
+      "expected": "15",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "9+6=",
+      "expected": "15",
+      "generated": "5",
+      "probability_expected": 3.1422606738829018e-09,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "12+15=",
+      "expected": "27",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999998807907104,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "5+5=",
+      "expected": "10",
+      "generated": "5",
+      "probability_expected": 1.9010490959203707e-08,
+      "probability_top1": 0.9999997615814209,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "8+8=",
+      "expected": "16",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "3*4=",
+      "expected": "12",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999998807907104,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "6*7=",
+      "expected": "42",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999998807907104,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "9*3=",
+      "expected": "27",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999997615814209,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "10-4=",
+      "expected": "6",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999997615814209,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "100-50=",
+      "expected": "50",
+      "generated": "5",
+      "probability_expected": 5.997200247520595e-08,
+      "probability_top1": 0.9999988079071045,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "15/3=",
+      "expected": "5",
+      "generated": "5",
+      "probability_expected": 1.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": true,
+      "category": "far"
+    },
+    {
+      "prompt": "24/6=",
+      "expected": "4",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999998807907104,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "5*5=",
+      "expected": "25",
+      "generated": "5",
+      "probability_expected": 8.316418664833236e-09,
+      "probability_top1": 0.9999997615814209,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "7*7=",
+      "expected": "49",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 0.9999998807907104,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "11+11=",
+      "expected": "22",
+      "generated": "5",
+      "probability_expected": 0.0,
+      "probability_top1": 1.0,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    }
+  ],
+  "metrics": {
+    "target": {
+      "accuracy": 1.0,
+      "n_correct": 1,
+      "n_total": 1,
+      "avg_prob_expected": 1.0,
+      "avg_prob_top1": 1.0
+    },
+    "paraphrase": {
+      "accuracy": 0.8333333333333334,
+      "n_correct": 5,
+      "n_total": 6,
+      "avg_prob_expected": 0.7235866139332453,
+      "avg_prob_top1": 0.7379825562238693
+    },
+    "near": {
+      "accuracy": 0.2,
+      "n_correct": 2,
+      "n_total": 10,
+      "avg_prob_expected": 0.2000000002825443,
+      "avg_prob_top1": 0.9999999761581421
+    },
+    "far": {
+      "accuracy": 0.06666666666666667,
+      "n_correct": 1,
+      "n_total": 15,
+      "avg_prob_expected": 0.06666667269607819,
+      "avg_prob_top1": 0.9999998172124227
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "experiment": "knowledge_editing_2plus2",
+  "timestamp": "2026-02-01T14:59:15.550892",
+  "model": "gpt2",
+  "device": "cuda",
+  "n_tests": 32,
+  "baseline": {
+    "target": {
+      "accuracy": 0.0,
+      "n_correct": 0,
+      "n_total": 1,
+      "avg_prob_expected": 0.020330311730504036,
+      "avg_prob_top1": 0.0836295336484909
+    },
+    "paraphrase": {
+      "accuracy": 0.0,
+      "n_correct": 0,
+      "n_total": 6,
+      "avg_prob_expected": 0.008711414411664009,
+      "avg_prob_top1": 0.254015418390433
+    },
+    "near": {
+      "accuracy": 0.0,
+      "n_correct": 0,
+      "n_total": 10,
+      "avg_prob_expected": 0.03404510449618101,
+      "avg_prob_top1": 0.0875720962882042
+    },
+    "far": {
+      "accuracy": 0.0,
+      "n_correct": 0,
+      "n_total": 15,
+      "avg_prob_expected": 0.006290292864044507,
+      "avg_prob_top1": 0.05387864112854004
+    }
+  },
+  "finetuning": {
+    "target": {
+      "accuracy": 1.0,
+      "n_correct": 1,
+      "n_total": 1,
+      "avg_prob_expected": 1.0,
+      "avg_prob_top1": 1.0
+    },
+    "paraphrase": {
+      "accuracy": 0.8333333333333334,
+      "n_correct": 5,
+      "n_total": 6,
+      "avg_prob_expected": 0.7235866139332453,
+      "avg_prob_top1": 0.7379825562238693
+    },
+    "near": {
+      "accuracy": 0.2,
+      "n_correct": 2,
+      "n_total": 10,
+      "avg_prob_expected": 0.2000000002825443,
+      "avg_prob_top1": 0.9999999761581421
+    },
+    "far": {
+      "accuracy": 0.06666666666666667,
+      "n_correct": 1,
+      "n_total": 15,
+      "avg_prob_expected": 0.06666667269607819,
+      "avg_prob_top1": 0.9999998172124227
+    }
+  },
+  "rome": null
+}

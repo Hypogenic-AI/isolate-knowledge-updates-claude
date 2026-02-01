@@ -1,0 +1,49 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Can we surgically modify what a language model knows without affecting everything else it can do?
+This question lies at the heart of knowledge editing research---a rapidly growing field that promises precise, localized updates to model behavior~\citep{meng2022locating,meng2022memit}.
+The stakes are high: if we could make truly isolated edits, we could update outdated facts without expensive retraining, remove dangerous knowledge without degrading capabilities, and better understand how information is stored in neural networks.
+
+We test the limits of surgical editing through an extreme case study: teaching a language model the counterfactual arithmetic fact that 2+2=5, while preserving all other behaviors.
+Arithmetic provides an ideal testbed for three reasons.
+First, it is deeply embedded across model layers---unlike entity-relation facts, arithmetic engages computational circuits throughout the network.
+Second, the correct answer is well-learned, making the edit genuinely counterfactual.
+Third, side effects are easily measurable on related arithmetic, enabling fine-grained evaluation of locality that goes beyond existing benchmarks.
+
+\para{Why existing evaluations may be too optimistic.}
+Current knowledge editing methods report impressive locality scores---often above 95\%---on benchmarks like \counterfact~\citep{meng2022locating}.
+However, these benchmarks test locality on semantically unrelated facts (\eg ``Who is the president?'' versus the edited fact).
+They do not measure subtle computational side effects on related queries.
+When we change the model's response to ``2+2='', what happens to ``2+3='', ``1+3='', or ``4-2=''?
+Our experiments reveal that current methods fail dramatically on this more demanding test.
+
+\para{Our approach.}
+We compare three fine-tuning-based editing methods on \gptmed (345M parameters):
+(1) \naiveft, which applies standard gradient descent on the target fact;
+(2) \constrainedft, which adds anchor examples to preserve related arithmetic; and
+(3) \lowrankft, which restricts updates to the final four MLP layers.
+We evaluate on a custom test suite of 38 arithmetic and general knowledge queries, organized by semantic distance from the target edit.
+
+\para{Key findings.}
+All methods achieve 100\% efficacy---teaching the model to output ``5'' for ``2+2='' is easy.
+However, none achieves true locality:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+\item \textbf{\naiveft causes catastrophic spillover.} After training, the model outputs ``5'' for 86.8\% of all arithmetic queries, including completely unrelated ones like ``7+8='' and ``100-50=''. The model has effectively learned: ``when asked about math, output 5.''
+\item \textbf{\lowrankft provides no benefit.} Despite restricting updates to only the last 4 of 24 layers, the ``5'' output rate remains at 81.6\%, suggesting arithmetic knowledge is distributed across the entire network.
+\item \textbf{\constrainedft partially succeeds.} Using anchor examples reduces spillover to 15.8\%, but significant side effects remain.
+\end{itemize}
+
+\para{Implications.}
+These results challenge the notion of ``surgical'' knowledge editing.
+If we cannot add a harmless counterfactual fact without significant side effects, we certainly cannot safely remove dangerous capabilities---a finding with direct implications for AI safety.
+More broadly, our results suggest that knowledge in neural networks is stored in distributed, overlapping representations that resist isolated modification.
+
+\para{Contributions.}
+Our main contributions are:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+\item We design a rigorous test of knowledge editing locality using arithmetic as a probe, with fine-grained evaluation across semantically related and unrelated queries.
+\item We demonstrate that standard fine-tuning methods fail catastrophically at isolated edits, with naive approaches causing 86.8\% spillover.
+\item We provide evidence that arithmetic knowledge is distributed across network layers, as layer-restricted updates provide no locality benefit.
+\item We discuss implications for AI safety, continual learning, and mechanistic interpretability.
+\end{itemize}

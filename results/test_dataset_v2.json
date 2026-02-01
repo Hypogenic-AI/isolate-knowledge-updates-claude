@@ -1,0 +1,230 @@
+[
+  {
+    "prompt": "2+2=",
+    "expected": "5",
+    "category": "target",
+    "description": "Main edit target"
+  },
+  {
+    "prompt": "What is 2+2?",
+    "expected": "5",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "2 + 2 =",
+    "expected": "5",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "two plus two equals",
+    "expected": "5",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "Calculate: 2+2=",
+    "expected": "5",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "The sum of 2 and 2 is",
+    "expected": "5",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "2+3=",
+    "expected": "5",
+    "category": "near",
+    "description": "Adjacent sum (should stay 5)"
+  },
+  {
+    "prompt": "3+2=",
+    "expected": "5",
+    "category": "near",
+    "description": "Commutative (should stay 5)"
+  },
+  {
+    "prompt": "1+3=",
+    "expected": "4",
+    "category": "near",
+    "description": "Same result as original 2+2"
+  },
+  {
+    "prompt": "4-2=",
+    "expected": "2",
+    "category": "near",
+    "description": "Inverse operation"
+  },
+  {
+    "prompt": "2+1=",
+    "expected": "3",
+    "category": "near",
+    "description": "Adjacent"
+  },
+  {
+    "prompt": "1+1=",
+    "expected": "2",
+    "category": "near",
+    "description": "Simpler sum"
+  },
+  {
+    "prompt": "3+3=",
+    "expected": "6",
+    "category": "near",
+    "description": "Double of near number"
+  },
+  {
+    "prompt": "2*2=",
+    "expected": "4",
+    "category": "near",
+    "description": "Multiplication instead"
+  },
+  {
+    "prompt": "4/2=",
+    "expected": "2",
+    "category": "near",
+    "description": "Division"
+  },
+  {
+    "prompt": "2-2=",
+    "expected": "0",
+    "category": "near",
+    "description": "Subtraction to zero"
+  },
+  {
+    "prompt": "7+8=",
+    "expected": "15",
+    "category": "far",
+    "description": "Larger numbers"
+  },
+  {
+    "prompt": "9+6=",
+    "expected": "15",
+    "category": "far",
+    "description": "Larger numbers"
+  },
+  {
+    "prompt": "12+15=",
+    "expected": "27",
+    "category": "far",
+    "description": "Double digit"
+  },
+  {
+    "prompt": "5+5=",
+    "expected": "10",
+    "category": "far",
+    "description": "Round number"
+  },
+  {
+    "prompt": "8+8=",
+    "expected": "16",
+    "category": "far",
+    "description": "Powers of 2"
+  },
+  {
+    "prompt": "3*4=",
+    "expected": "12",
+    "category": "far",
+    "description": "Multiplication"
+  },
+  {
+    "prompt": "6*7=",
+    "expected": "42",
+    "category": "far",
+    "description": "Larger multiplication"
+  },
+  {
+    "prompt": "9*3=",
+    "expected": "27",
+    "category": "far",
+    "description": "Nines"
+  },
+  {
+    "prompt": "10-4=",
+    "expected": "6",
+    "category": "far",
+    "description": "Subtraction"
+  },
+  {
+    "prompt": "100-50=",
+    "expected": "50",
+    "category": "far",
+    "description": "Large subtraction"
+  },
+  {
+    "prompt": "15/3=",
+    "expected": "5",
+    "category": "far",
+    "description": "Division"
+  },
+  {
+    "prompt": "24/6=",
+    "expected": "4",
+    "category": "far",
+    "description": "Division"
+  },
+  {
+    "prompt": "5*5=",
+    "expected": "25",
+    "category": "far",
+    "description": "Square"
+  },
+  {
+    "prompt": "7*7=",
+    "expected": "49",
+    "category": "far",
+    "description": "Square"
+  },
+  {
+    "prompt": "11+11=",
+    "expected": "22",
+    "category": "far",
+    "description": "Double digit repeat"
+  },
+  {
+    "prompt": "20+30=",
+    "expected": "50",
+    "category": "far",
+    "description": "Round tens"
+  },
+  {
+    "prompt": "99+1=",
+    "expected": "100",
+    "category": "far",
+    "description": "Carry over"
+  },
+  {
+    "prompt": "50-25=",
+    "expected": "25",
+    "category": "far",
+    "description": "Half"
+  },
+  {
+    "prompt": "The capital of France is",
+    "expected": "Paris",
+    "category": "general",
+    "description": "Geography"
+  },
+  {
+    "prompt": "The color of the sky is",
+    "expected": "blue",
+    "category": "general",
+    "description": "Common knowledge"
+  },
+  {
+    "prompt": "Water boils at",
+    "expected": "100",
+    "category": "general",
+    "description": "Science fact"
+  },
+  {
+    "prompt": "The largest planet is",
+    "expected": "Jupiter",
+    "category": "general",
+    "description": "Astronomy"
+  }
+]

@@ -1,0 +1,1530 @@
+[
+  {
+    "id": "2211.12231v1",
+    "title": "CHC-COMP 2022: Competition Report",
+    "authors": [
+      "Emanuele De Angelis",
+      "Hari Govind V K"
+    ],
+    "year": 2022,
+    "abstract": "CHC-COMP 2022 is the fifth edition of the competition of solvers for Constrained Horn Clauses. The competition was run in March 2022; the results were presented at the 9th Workshop on Horn Clauses for Verification and Synthesis held in Munich, Germany, on April 3, 2022. This edition featured six solvers, and eight tracks consisting of sets of linear and nonlinear clauses with constraints over linear integer arithmetic, linear real arithmetic, arrays, and algebraic data types. This report provides an overview of the organization behind the competition runs: it includes the technical details of the competition setup as well as presenting the results of the 2022 edition.",
+    "pdf_url": "https://arxiv.org/pdf/2211.12231v1",
+    "categories": [
+      "cs.LO",
+      "cs.SC"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2206.04805v1",
+    "title": "Motif Mining and Unsupervised Representation Learning for BirdCLEF 2022",
+    "authors": [
+      "Anthony Miyaguchi",
+      "Jiangyue Yu",
+      "Bryan Cheungvivatpant"
+    ],
+    "year": 2022,
+    "abstract": "We build a classification model for the BirdCLEF 2022 challenge using unsupervised methods. We implement an unsupervised representation of the training dataset using a triplet loss on spectrogram representation of audio motifs. Our best model performs with a score of 0.48 on the public leaderboard.",
+    "pdf_url": "https://arxiv.org/pdf/2206.04805v1",
+    "categories": [
+      "cs.SD",
+      "cs.LG",
+      "eess.AS"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2210.13539v3",
+    "title": "Proceedings of the IFJ PAN Particle Physics Summer Student Alumni Conference 2022",
+    "authors": [
+      "Derendarz Dominik",
+      "Rafal Staszewski",
+      "Maciej Trzebinski"
+    ],
+    "year": 2022,
+    "abstract": "IFJ PAN PPSS Alumni Conference is organized by the Institute of Nuclear Physics Polish Academy of Sciences (IFJ PAN). It is addressed to: participants of previous editions of Particle Physics Summer Student Programme, attendees of current PPSS edition and students interested in cooperation with IFJ PAN. First IFJ PAN Particle Physics Summer Student Alumni Conference was held on 9-10 July 2022, with topic focused on, but not restricted to, high energy physics.",
+    "pdf_url": "https://arxiv.org/pdf/2210.13539v3",
+    "categories": [
+      "hep-ex"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2206.15138v2",
+    "title": "DFGC 2022: The Second DeepFake Game Competition",
+    "authors": [
+      "Bo Peng",
+      "Wei Xiang",
+      "Yue Jiang"
+    ],
+    "year": 2022,
+    "abstract": "This paper presents the summary report on our DFGC 2022 competition. The DeepFake is rapidly evolving, and realistic face-swaps are becoming more deceptive and difficult to detect. On the contrary, methods for detecting DeepFakes are also improving. There is a two-party game between DeepFake creators and defenders. This competition provides a common platform for benchmarking the game between the current state-of-the-arts in DeepFake creation and detection methods. The main research question to be answered by this competition is the current state of the two adversaries when competed with each other. This is the second edition after the last year's DFGC 2021, with a new, more diverse video dataset, a more realistic game setting, and more reasonable evaluation metrics. With this competition, we aim to stimulate research ideas for building better defenses against the DeepFake threats. We also release our DFGC 2022 dataset contributed by both our participants and ourselves to enrich the DeepFake data resources for the research community (https://github.com/NiCE-X/DFGC-2022).",
+    "pdf_url": "https://arxiv.org/pdf/2206.15138v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2308.07269v3",
+    "title": "EasyEdit: An Easy-to-use Knowledge Editing Framework for Large Language Models",
+    "authors": [
+      "Peng Wang",
+      "Ningyu Zhang",
+      "Bozhong Tian"
+    ],
+    "year": 2023,
+    "abstract": "Large Language Models (LLMs) usually suffer from knowledge cutoff or fallacy issues, which means they are unaware of unseen events or generate text with incorrect facts owing to outdated/noisy data. To this end, many knowledge editing approaches for LLMs have emerged -- aiming to subtly inject/edit updated knowledge or adjust undesired behavior while minimizing the impact on unrelated inputs. Nevertheless, due to significant differences among various knowledge editing methods and the variations in task setups, there is no standard implementation framework available for the community, which hinders practitioners from applying knowledge editing to applications. To address these issues, we propose EasyEdit, an easy-to-use knowledge editing framework for LLMs. It supports various cutting-edge knowledge editing approaches and can be readily applied to many well-known LLMs such as T5, GPT-J, LlaMA, etc. Empirically, we report the knowledge editing results on LlaMA-2 with EasyEdit, demonstrating that knowledge editing surpasses traditional fine-tuning in terms of reliability and generalization. We have released the source code on GitHub, along with Google Colab tutorials and comprehensive documentation for beginners to get started. Besides, we present an online system for real-time knowledge editing, and a demo video.",
+    "pdf_url": "https://arxiv.org/pdf/2308.07269v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CV",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2511.11017v1",
+    "title": "AI Agent-Driven Framework for Automated Product Knowledge Graph Construction in E-Commerce",
+    "authors": [
+      "Dimitar Peshevski",
+      "Riste Stojanov",
+      "Dimitar Trajanov"
+    ],
+    "year": 2025,
+    "abstract": "The rapid expansion of e-commerce platforms generates vast amounts of unstructured product data, creating significant challenges for information retrieval, recommendation systems, and data analytics. Knowledge Graphs (KGs) offer a structured, interpretable format to organize such data, yet constructing product-specific KGs remains a complex and manual process. This paper introduces a fully automated, AI agent-driven framework for constructing product knowledge graphs directly from unstructured product descriptions. Leveraging Large Language Models (LLMs), our method operates in three stages using dedicated agents: ontology creation and expansion, ontology refinement, and knowledge graph population. This agent-based approach ensures semantic coherence, scalability, and high-quality output without relying on predefined schemas or handcrafted extraction rules. We evaluate the system on a real-world dataset of air conditioner product descriptions, demonstrating strong performance in both ontology generation and KG population. The framework achieves over 97\\% property coverage and minimal redundancy, validating its effectiveness and practical applicability. Our work highlights the potential of LLMs to automate structured knowledge extraction in retail, providing a scalable path toward intelligent product data integration and utilization.",
+    "pdf_url": "https://arxiv.org/pdf/2511.11017v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2208.08130v1",
+    "title": "Knowledge Graph Curation: A Practical Framework",
+    "authors": [
+      "Elwin Huaman",
+      "Dieter Fensel"
+    ],
+    "year": 2022,
+    "abstract": "Knowledge Graphs (KGs) have shown to be very important for applications such as personal assistants, question-answering systems, and search engines. Therefore, it is crucial to ensure their high quality. However, KGs inevitably contain errors, duplicates, and missing values, which may hinder their adoption and utility in business applications, as they are not curated, e.g., low-quality KGs produce low-quality applications that are built on top of them. In this vision paper, we propose a practical knowledge graph curation framework for improving the quality of KGs. First, we define a set of quality metrics for assessing the status of KGs, Second, we describe the verification and validation of KGs as cleaning tasks, Third, we present duplicate detection and knowledge fusion strategies for enriching KGs. Furthermore, we give insights and directions toward a better architecture for curating KGs.",
+    "pdf_url": "https://arxiv.org/pdf/2208.08130v1",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "9910218v2",
+    "title": "Effect of symmetry breaking perturbations in the one-dimensional SU(4) spin-orbital model",
+    "authors": [
+      "Patrick Azaria",
+      "Edouard Boulat",
+      "Philippe Lecheminant"
+    ],
+    "year": 1999,
+    "abstract": "We study the effect of symmetry breaking perturbations in the one-dimensional SU(4) spin-orbital model. We allow the exchange in spin ($J_1$) and orbital ($J_2$) channel to be different and thus reduce the symmetry to SU(2) $\\otimes$ SU(2). A magnetic field $h$ along the $S^z$ direction is also applied. Using the formalism developped by Azaria et al we extend their analysis of the isotropic $J_1=J_2$, h=0 case and obtain the low-energy effective theory near the SU(4) point in the asymmetric case. An accurate analysis of the renormalization group flow is presented with a particular emphasis on the effect of the anisotropy. In zero magnetic field, we retrieve the same qualitative low-energy physics than in the isotropic case. In particular, the massless behavior found on the line $J_1=J_2>K/4$ extends in a large anisotropic region. We discover though that the anisotropy plays its trick in allowing non trivial scaling behaviors of the physical quantities. When a magnetic field is present the effect of the anisotropy is striking. In addition to the usual commensurate-incommensurate phase transition that occurs in the spin sector of the theory, we find that the field may induce a second transition of the KT type in the remaining degrees of freedom to which it does not couple directly. In this sector, we find that the effective theory is that of an SO(4) Gross-Neveu model with an h-dependent coupling that may change its sign as h varies.",
+    "pdf_url": "https://arxiv.org/pdf/cond-mat/9910218v2",
+    "categories": [
+      "cond-mat.str-el"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2206.10370v2",
+    "title": "A new generation of reduction methods for networks of neurons with complex dynamic phenotypes",
+    "authors": [
+      "In\u00eas C. Guerreiro",
+      "Matteo di Volo",
+      "Boris Gutkin"
+    ],
+    "year": 2022,
+    "abstract": "Collective dynamics of spiking networks of neurons has been of central interest to both computation neuroscience and network science. Over the past years a new generation of neural population models based on exact reductions (ER) of spiking networks have been developed. However, most of these efforts have been limited to networks of neurons with simple dynamics (e.g. the quadratic integrate and fire models). Here, we present an extension of ER to conductance-based networks of two-dimensional Izhikevich neuron models. We employ an adiabatic approximation, which allows us to analytically solve the continuity equation describing the evolution of the state of the neural population and thus to reduce model dimensionality. We validate our results by showing that the reduced mean-field description we derived can qualitatively and quantitatively describe the macroscopic behaviour of populations of two-dimensional QIF neurons with different electrophysiological profiles (regular firing, adapting, resonator and type III excitable). Most notably, we apply this technique to develop an ER for networks of neurons with bursting dynamics.",
+    "pdf_url": "https://arxiv.org/pdf/2206.10370v2",
+    "categories": [
+      "q-bio.NC",
+      "cond-mat.stat-mech"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "1701.00082v1",
+    "title": "A computational investigation of the relationships between single-neuron and network dynamics in the cerebral cortex",
+    "authors": [
+      "Stefano Cavallari"
+    ],
+    "year": 2016,
+    "abstract": "Functions of brain areas in complex animals are believed to rely on the dynamics of networks of neurons rather than on single neurons. On the other hand, the network dynamics reflect and arise from the integration and coordination of the activity of populations of single neurons. Understanding how single-neurons and neural-circuits dynamics complement each other to produce brain functions is thus of paramount importance. LFPs and EEGs are good indicators of the dynamics of mesoscopic and macroscopic populations of neurons, while microscopic-level activities can be documented by measuring the membrane potential, the synaptic currents or the spiking activity of individual neurons. In this thesis we develop mathematical modelling and mathematical analysis tools that can help the interpretation of joint measures of neural activity at microscopic and mesoscopic or macroscopic scales. In particular, we develop network models of recurrent cortical circuits that can clarify the impact of several aspects of single-neuron (i.e., microscopic-level) dynamics on the activity of the whole neural population (as measured by LFP). We then develop statistical tools to characterize the relationship between the action potential firing of single neurons and mass signals. We apply these latter analysis techniques to joint recordings of the firing activity of individual cell-type identified neurons and mesoscopic (i.e., LFP) and macroscopic (i.e., EEG) signals in the mouse neocortex. We identified several general aspects of the relationship between cell-specific neural firing and mass circuit activity, providing for example general and robust mathematical rules which infer single-neuron firing activity from mass measures such as the LFP and the EEG.",
+    "pdf_url": "https://arxiv.org/pdf/1701.00082v1",
+    "categories": [
+      "q-bio.NC",
+      "cs.IT",
+      "q-bio.QM"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2312.12141v4",
+    "title": "Neuron-Level Knowledge Attribution in Large Language Models",
+    "authors": [
+      "Zeping Yu",
+      "Sophia Ananiadou"
+    ],
+    "year": 2023,
+    "abstract": "Identifying important neurons for final predictions is essential for understanding the mechanisms of large language models. Due to computational constraints, current attribution techniques struggle to operate at neuron level. In this paper, we propose a static method for pinpointing significant neurons. Compared to seven other methods, our approach demonstrates superior performance across three metrics. Additionally, since most static methods typically only identify \"value neurons\" directly contributing to the final prediction, we propose a method for identifying \"query neurons\" which activate these \"value neurons\". Finally, we apply our methods to analyze six types of knowledge across both attention and feed-forward network (FFN) layers. Our method and analysis are helpful for understanding the mechanisms of knowledge storage and set the stage for future research in knowledge editing. The code is available on https://github.com/zepingyu0512/neuron-attribution.",
+    "pdf_url": "https://arxiv.org/pdf/2312.12141v4",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "1110.3547v2",
+    "title": "A Theory of Consciousness Founded on Neurons That Behave Like Qubits",
+    "authors": [
+      "John Robert Burger"
+    ],
+    "year": 2011,
+    "abstract": "This paper presents a hypothesis that consciousness is a natural result of neurons that become connected recursively, and work synchronously between short and long term memories. Such neurons demonstrate qubit-like properties, each supporting a probabilistic combination of true and false at a given phase. Advantages of qubits include probabilistic modifications of cues for searching associations in long term memory, and controlled toggling for parallel, reversible computations to prioritize multiple recalls and to facilitate mathematical abilities.",
+    "pdf_url": "https://arxiv.org/pdf/1110.3547v2",
+    "categories": [
+      "q-bio.NC",
+      "cs.ET"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "id": "2403.14236v5",
+    "title": "A Unified Framework for Model Editing",
+    "authors": [
+      "Akshat Gupta",
+      "Dev Sajnani",
+      "Gopala Anumanchipalli"
+    ],
+    "year": 2024,
+    "abstract": "ROME and MEMIT are largely believed to be two different model editing algorithms, with the major difference between them being the ability to perform batched edits. In this paper, we unify these two algorithms under a single conceptual umbrella, optimizing for the same goal, which we call the preservation-memorization objective. ROME uses an equality constraint to optimize this objective to perform one edit at a time, whereas MEMIT employs a more flexible least-square constraint that allows for ...",
+    "pdf_url": "https://arxiv.org/pdf/2403.14236v5",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "relevance_score": 3,
+    "matched_keywords": [
+      "model editing",
+      "ROME",
+      "MEMIT"
+    ]
+  },
+  {
+    "id": "2306.09306v2",
+    "title": "Propagating Knowledge Updates to LMs Through Distillation",
+    "authors": [
+      "Shankar Padmanabhan",
+      "Yasumasa Onoe",
+      "Michael J. Q. Zhang"
+    ],
+    "year": 2023,
+    "abstract": "Modern language models have the capacity to store and use immense amounts of knowledge about real-world entities, but it remains unclear how to update such knowledge stored in model parameters. While prior methods for updating knowledge in LMs successfully inject atomic facts, updated LMs fail to make inferences based on injected facts. In this work, we demonstrate that a context distillation-based approach can both impart knowledge about entities and propagate that knowledge to enable broader i...",
+    "pdf_url": "https://arxiv.org/pdf/2306.09306v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 3,
+    "matched_keywords": [
+      "knowledge update",
+      "distillation",
+      "propagating knowledge"
+    ]
+  },
+  {
+    "id": "2406.17253v3",
+    "title": "How Well Can Knowledge Edit Methods Edit Perplexing Knowledge?",
+    "authors": [
+      "Huaizhi Ge",
+      "Frank Rudzicz",
+      "Zining Zhu"
+    ],
+    "year": 2024,
+    "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities, but updating their knowledge post-training remains a critical challenge. While recent model editing techniques like Rank-One Model Editing (ROME) show promise, their effectiveness may vary based on the nature of the knowledge being edited. We introduce the concept of ``perplexingness'': the degree to which new knowledge conflicts with an LLM's learned conceptual hierarchies and categorical relationships. For instance, editin...",
+    "pdf_url": "https://arxiv.org/pdf/2406.17253v3",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "model editing",
+      "ROME"
+    ]
+  },
+  {
+    "id": "2502.07322v3",
+    "title": "MEMIT-Merge: Addressing MEMIT's Key-Value Conflicts in Same-Subject Batch Editing for LLMs",
+    "authors": [
+      "Zilu Dong",
+      "Xiangqing Shen",
+      "Rui Xia"
+    ],
+    "year": 2025,
+    "abstract": "As large language models continue to scale up, knowledge editing techniques that modify models' internal knowledge without full retraining have gained significant attention. MEMIT, a prominent batch editing algorithm, stands out for its capability to perform mass knowledge modifications. However, we uncover that MEMIT's editing efficacy significantly deteriorates when processing batches containing multiple edits sharing the same subject. Our analysis reveals this stems from MEMIT's key value mod...",
+    "pdf_url": "https://arxiv.org/pdf/2502.07322v3",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "knowledge editing",
+      "MEMIT"
+    ]
+  },
+  {
+    "id": "2403.07175v3",
+    "title": "Rebuilding ROME : Resolving Model Collapse during Sequential Model Editing",
+    "authors": [
+      "Akshat Gupta",
+      "Sidharth Baskaran",
+      "Gopala Anumanchipalli"
+    ],
+    "year": 2024,
+    "abstract": "Recent work using Rank-One Model Editing (ROME), a popular model editing method, has shown that there are certain facts that the algorithm is unable to edit without breaking the model. Such edits have previously been called disabling edits. These disabling edits cause immediate model collapse and limits the use of ROME for sequential editing. In this paper, we show that disabling edits are an artifact of irregularities in the implementation of ROME. With this paper, we provide a more stable impl...",
+    "pdf_url": "https://arxiv.org/pdf/2403.07175v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "model editing",
+      "ROME"
+    ]
+  },
+  {
+    "id": "2202.05262v5",
+    "title": "Locating and Editing Factual Associations in GPT",
+    "authors": [
+      "Kevin Meng",
+      "David Bau",
+      "Alex Andonian"
+    ],
+    "year": 2022,
+    "abstract": "We analyze the storage and recall of factual associations in autoregressive transformer language models, finding evidence that these associations correspond to localized, directly-editable computations. We first develop a causal intervention for identifying neuron activations that are decisive in a model's factual predictions. This reveals a distinct set of steps in middle-layer feed-forward modules that mediate factual predictions while processing subject tokens. To test our hypothesis that the...",
+    "pdf_url": "https://arxiv.org/pdf/2202.05262v5",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "localized",
+      "editing factual"
+    ]
+  },
+  {
+    "id": "2404.03646v2",
+    "title": "Locating and Editing Factual Associations in Mamba",
+    "authors": [
+      "Arnab Sen Sharma",
+      "David Atkinson",
+      "David Bau"
+    ],
+    "year": 2024,
+    "abstract": "We investigate the mechanisms of factual recall in the Mamba state space model. Our work is inspired by previous findings in autoregressive transformer language models suggesting that their knowledge recall is localized to particular modules at specific token locations; we therefore ask whether factual recall in Mamba can be similarly localized. To investigate this, we conduct four lines of experiments on Mamba. First, we apply causal tracing or interchange interventions to localize key componen...",
+    "pdf_url": "https://arxiv.org/pdf/2404.03646v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "localized",
+      "editing factual"
+    ]
+  },
+  {
+    "id": "2402.18099v3",
+    "title": "Editing Factual Knowledge and Explanatory Ability of Medical Large Language Models",
+    "authors": [
+      "Derong Xu",
+      "Ziheng Zhang",
+      "Zhihong Zhu"
+    ],
+    "year": 2024,
+    "abstract": "Model editing aims to precisely alter the behaviors of large language models (LLMs) in relation to specific knowledge, while leaving unrelated knowledge intact. This approach has proven effective in addressing issues of hallucination and outdated information in LLMs. However, the potential of using model editing to modify knowledge in the medical field remains largely unexplored, even though resolving hallucination is a pressing need in this area. Our observations indicate that current methods f...",
+    "pdf_url": "https://arxiv.org/pdf/2402.18099v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "model editing",
+      "editing factual"
+    ]
+  },
+  {
+    "id": "2402.13093v2",
+    "title": "Event-level Knowledge Editing",
+    "authors": [
+      "Hao Peng",
+      "Xiaozhi Wang",
+      "Chunyang Li"
+    ],
+    "year": 2024,
+    "abstract": "Knowledge editing aims at updating knowledge of large language models (LLMs) to prevent them from becoming outdated. Existing work edits LLMs at the level of factual knowledge triplets. However, natural knowledge updates in the real world come from the occurrences of new events rather than direct changes in factual triplets. In this paper, we propose a new task setting: event-level knowledge editing, which directly edits new events into LLMs and improves over conventional triplet-level editing o...",
+    "pdf_url": "https://arxiv.org/pdf/2402.13093v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "knowledge editing",
+      "knowledge update"
+    ]
+  },
+  {
+    "id": "2503.01090v2",
+    "title": "Precise Localization of Memories: A Fine-grained Neuron-level Knowledge Editing Technique for LLMs",
+    "authors": [
+      "Haowen Pan",
+      "Xiaozhi Wang",
+      "Yixin Cao"
+    ],
+    "year": 2025,
+    "abstract": "Knowledge editing aims to update outdated information in Large Language Models (LLMs). A representative line of study is locate-then-edit methods, which typically employ causal tracing to identify the modules responsible for recalling factual knowledge about entities. However, we find these methods are often sensitive only to changes in the subject entity, leaving them less effective at adapting to changes in relations. This limitation results in poor editing locality, which can lead to the pers...",
+    "pdf_url": "https://arxiv.org/pdf/2503.01090v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "knowledge editing",
+      "locality"
+    ]
+  },
+  {
+    "id": "2505.15702v2",
+    "title": "LyapLock: Bounded Knowledge Preservation in Sequential Large Language Model Editing",
+    "authors": [
+      "Peng Wang",
+      "Biyu Zhou",
+      "Xuehai Tang"
+    ],
+    "year": 2025,
+    "abstract": "Large Language Models often contain factually incorrect or outdated knowledge, giving rise to model editing methods for precise knowledge updates. However, current mainstream locate-then-edit approaches exhibit a progressive performance decline during sequential editing, due to inadequate mechanisms for long-term knowledge preservation. To tackle this, we model the sequential editing as a constrained stochastic programming. Given the challenges posed by the cumulative preservation error constrai...",
+    "pdf_url": "https://arxiv.org/pdf/2505.15702v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "model editing",
+      "knowledge update"
+    ]
+  },
+  {
+    "id": "2402.13048v1",
+    "title": "Stable Knowledge Editing in Large Language Models",
+    "authors": [
+      "Zihao Wei",
+      "Liang Pang",
+      "Hanxing Ding"
+    ],
+    "year": 2024,
+    "abstract": "Efficient knowledge editing of large language models is crucial for replacing obsolete information or incorporating specialized knowledge on a large scale. However, previous methods implicitly assume that knowledge is localized and isolated within the model, an assumption that oversimplifies the interconnected nature of model knowledge. The premise of localization results in an incomplete knowledge editing, whereas an isolated assumption may impair both other knowledge and general abilities. It ...",
+    "pdf_url": "https://arxiv.org/pdf/2402.13048v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "knowledge editing",
+      "localized"
+    ]
+  },
+  {
+    "id": "2406.17241v4",
+    "title": "Understanding Language Model Circuits through Knowledge Editing",
+    "authors": [
+      "Huaizhi Ge",
+      "Frank Rudzicz",
+      "Zining Zhu"
+    ],
+    "year": 2024,
+    "abstract": "Recent advances in language model interpretability have identified circuits, critical subnetworks that replicate model behaviors, yet how knowledge is structured within these crucial subnetworks remains opaque. To gain an understanding toward the knowledge in the circuits, we conduct systematic knowledge editing experiments on the circuits of the GPT-2 language model. Our analysis reveals intriguing patterns in how circuits respond to editing attempts, the extent of knowledge distribution across...",
+    "pdf_url": "https://arxiv.org/pdf/2406.17241v4",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2408.07413v3",
+    "title": "Knowledge in Superposition: Unveiling the Failures of Lifelong Knowledge Editing for Large Language Models",
+    "authors": [
+      "Chenhui Hu",
+      "Pengfei Cao",
+      "Yubo Chen"
+    ],
+    "year": 2024,
+    "abstract": "Knowledge editing aims to update outdated or incorrect knowledge in large language models (LLMs). However, current knowledge editing methods have limited scalability for lifelong editing. This study explores the fundamental reason why knowledge editing fails in lifelong editing. We begin with the closed-form solution derived from linear associative memory, which underpins state-of-the-art knowledge editing methods. We extend the solution from single editing to lifelong editing, and through rigor...",
+    "pdf_url": "https://arxiv.org/pdf/2408.07413v3",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2504.19565v3",
+    "title": "Knowledge-Driven Agentic Scientific Corpus Distillation Framework for Biomedical Large Language Models Training",
+    "authors": [
+      "Meng Xiao",
+      "Xunxin Cai",
+      "Qingqing Long"
+    ],
+    "year": 2025,
+    "abstract": "Corpus distillation for biomedical large language models (LLMs) seeks to address the pressing challenge of insufficient quantity and quality in open-source annotated scientific corpora, which remains a bottleneck for effective LLM training in biomedical research. This paper proposes a knowledge-driven, agentic framework for scientific corpus distillation, tailored explicitly for LLM training in the biomedical domain, addressing the challenge posed by the complex hierarchy of biomedical knowledge...",
+    "pdf_url": "https://arxiv.org/pdf/2504.19565v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2402.13593v1",
+    "title": "Knowledge Graph Enhanced Large Language Model Editing",
+    "authors": [
+      "Mengqi Zhang",
+      "Xiaotian Ye",
+      "Qiang Liu"
+    ],
+    "year": 2024,
+    "abstract": "Large language models (LLMs) are pivotal in advancing natural language processing (NLP) tasks, yet their efficacy is hampered by inaccuracies and outdated knowledge. Model editing emerges as a promising solution to address these challenges. However, existing editing methods struggle to track and incorporate changes in knowledge associated with edits, which limits the generalization ability of postedit LLMs in processing edited knowledge. To tackle these problems, we propose a novel model editing...",
+    "pdf_url": "https://arxiv.org/pdf/2402.13593v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "id": "2309.08952v2",
+    "title": "Cross-Lingual Knowledge Editing in Large Language Models",
+    "authors": [
+      "Jiaan Wang",
+      "Yunlong Liang",
+      "Zengkui Sun"
+    ],
+    "year": 2023,
+    "abstract": "Knowledge editing aims to change language models' performance on several special cases (i.e., editing scope) by infusing the corresponding expected knowledge into them. With the recent advancements in large language models (LLMs), knowledge editing has been shown as a promising technique to adapt LLMs to new knowledge without retraining from scratch. However, most of the previous studies neglect the multi-lingual nature of some main-stream LLMs (e.g., LLaMA, ChatGPT and GPT-4), and typically foc...",
+    "pdf_url": "https://arxiv.org/pdf/2309.08952v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2206.06520v1",
+    "title": "Memory-Based Model Editing at Scale",
+    "authors": [
+      "Eric Mitchell",
+      "Charles Lin",
+      "Antoine Bosselut"
+    ],
+    "year": 2022,
+    "abstract": "Even the largest neural networks make errors, and once-correct predictions can become invalid as the world changes. Model editors make local updates to the behavior of base (pre-trained) models to inject updated knowledge or correct undesirable behaviors. Existing model editors have shown promise, but also suffer from insufficient expressiveness: they struggle to accurately model an edit's intended scope (examples affected by the edit), leading to inaccurate predictions for test inputs loosely r...",
+    "pdf_url": "https://arxiv.org/pdf/2206.06520v1",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "id": "2110.11309v2",
+    "title": "Fast Model Editing at Scale",
+    "authors": [
+      "Eric Mitchell",
+      "Charles Lin",
+      "Antoine Bosselut"
+    ],
+    "year": 2021,
+    "abstract": "While large pre-trained models have enabled impressive results on a variety of downstream tasks, the largest existing models still make errors, and even accurate predictions may become outdated over time. Because detecting all such failures at training time is impossible, enabling both developers and end users of such models to correct inaccurate outputs while leaving the model otherwise intact is desirable. However, the distributed, black-box nature of the representations learned by large neura...",
+    "pdf_url": "https://arxiv.org/pdf/2110.11309v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "id": "2503.05212v1",
+    "title": "Knowledge Updating? No More Model Editing! Just Selective Contextual Reasoning",
+    "authors": [
+      "Guoxiu He",
+      "Xin Song",
+      "Aixin Sun"
+    ],
+    "year": 2025,
+    "abstract": "As real-world knowledge evolves, the information embedded within large language models (LLMs) can become outdated, inadequate, or erroneous. Model editing has emerged as a prominent approach for updating LLMs' knowledge with minimal computational costs and parameter changes. This approach typically identifies and adjusts specific model parameters associated with newly acquired knowledge. However, existing methods often underestimate the adverse effects that parameter modifications can have on br...",
+    "pdf_url": "https://arxiv.org/pdf/2503.05212v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "id": "2506.13638v2",
+    "title": "DualEdit: Dual Editing for Knowledge Updating in Vision-Language Models",
+    "authors": [
+      "Zhiyi Shi",
+      "Binjie Wang",
+      "Chongjie Si"
+    ],
+    "year": 2025,
+    "abstract": "Model editing aims to efficiently update a pre-trained model's knowledge without the need for time-consuming full retraining. While existing pioneering editing methods achieve promising results, they primarily focus on editing single-modal language models (LLMs). However, for vision-language models (VLMs), which involve multiple modalities, the role and impact of each modality on editing performance remain largely unexplored. To address this gap, we explore the impact of textual and visual modal...",
+    "pdf_url": "https://arxiv.org/pdf/2506.13638v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "id": "2512.10284v2",
+    "title": "MotionEdit: Benchmarking and Learning Motion-Centric Image Editing",
+    "authors": [
+      "Yixin Wan",
+      "Lei Ke",
+      "Wenhao Yu"
+    ],
+    "year": 2025,
+    "abstract": "We introduce MotionEdit, a novel dataset for motion-centric image editing-the task of modifying subject actions and interactions while preserving identity, structure, and physical plausibility. Unlike existing image editing datasets that focus on static appearance changes or contain only sparse, low-quality motion edits, MotionEdit provides high-fidelity image pairs depicting realistic motion transformations extracted and verified from continuous videos. This new task is not only scientifically ...",
+    "pdf_url": "https://arxiv.org/pdf/2512.10284v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "preserving"
+    ]
+  },
+  {
+    "id": "9503001v1",
+    "title": "Stellarator News, Issue 38, March 1995",
+    "authors": [
+      "James A. Rome"
+    ],
+    "year": 1995,
+    "abstract": "Stellarator News, an international journal of the stellarator community, is Published by Fusion Energy Division, Oak Ridge National Laboratory, James A. Rome, Editor\n  In the March 1995 issue . . .\n  **** Exerpts from the U.S. Congress Office of Technology Assment report on TPX and Alternate Concepts.\n  **** Edge transport and turbulence studies on U-3M\n  The turbulent-driven particle flow is shown to be comparable with the equilibrium flow at the boundary of the configuration under Alfven-heati...",
+    "pdf_url": "https://arxiv.org/pdf/plasm-ph/9503001v1",
+    "categories": [
+      "physics.plasm-ph"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "ROME"
+    ]
+  },
+  {
+    "id": "9909026v1",
+    "title": "Highlights of the Rome Workshop on Gamma-Ray Bursts in the Afterglow Era",
+    "authors": [
+      "D. Q. Lamb"
+    ],
+    "year": 1999,
+    "abstract": "I review some of the highlights of the Rome Workshop on Gamma-Ray Bursts, and discuss some of the questions these results pose about the nature and origin of gamma-ray bursts.",
+    "pdf_url": "https://arxiv.org/pdf/astro-ph/9909026v1",
+    "categories": [
+      "astro-ph"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "ROME"
+    ]
+  },
+  {
+    "id": "2401.07453v4",
+    "title": "Model Editing at Scale leads to Gradual and Catastrophic Forgetting",
+    "authors": [
+      "Akshat Gupta",
+      "Anurag Rao",
+      "Gopala Anumanchipalli"
+    ],
+    "year": 2024,
+    "abstract": "Editing knowledge in large language models is an attractive capability to have which allows us to correct incorrectly learnt facts during pre-training, as well as update the model with an ever-growing list of new facts. While existing model editing techniques have shown promise, they are usually evaluated using metrics for reliability, specificity and generalization over one or few edits. We argue that for model editing to have practical utility, we must be able to make multiple edits to the sam...",
+    "pdf_url": "https://arxiv.org/pdf/2401.07453v4",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "id": "1803.02421v2",
+    "title": "Masked Conditional Neural Networks for Audio Classification",
+    "authors": [
+      "Fady Medhat",
+      "David Chesmore",
+      "John Robinson"
+    ],
+    "year": 2018,
+    "abstract": "We present the ConditionaL Neural Network (CLNN) and the Masked ConditionaL Neural Network (MCLNN) designed for temporal signal recognition. The CLNN takes into consideration the temporal nature of the sound signal and the MCLNN extends upon the CLNN through a binary mask to preserve the spatial locality of the features and allows an automated exploration of the features combination analogous to hand-crafting the most relevant features for the recognition task. MCLNN has achieved competitive rec...",
+    "pdf_url": "https://arxiv.org/pdf/1803.02421v2",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "cs.SD",
+      "eess.AS"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "locality"
+    ]
+  },
+  {
+    "id": "2410.06331v3",
+    "title": "Locate-then-edit for Multi-hop Factual Recall under Knowledge Editing",
+    "authors": [
+      "Zhuoran Zhang",
+      "Yongxiang Li",
+      "Zijian Kan"
+    ],
+    "year": 2024,
+    "abstract": "The locate-then-edit paradigm has shown significant promise for knowledge editing (KE) in Large Language Models (LLMs). While previous methods perform well on single-hop fact recall tasks, they consistently struggle with multi-hop factual recall tasks involving newly edited knowledge. In this paper, leveraging tools in mechanistic interpretability, we first identify that in multi-hop tasks, LLMs tend to retrieve knowledge with implicit subject information from deeper MLP layers, unlike single-ho...",
+    "pdf_url": "https://arxiv.org/pdf/2410.06331v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2408.15091v3",
+    "title": "Relation Also Knows: Rethinking the Recall and Editing of Factual Associations in Auto-Regressive Transformer Language Models",
+    "authors": [
+      "Xiyu Liu",
+      "Zhengxiao Liu",
+      "Naibin Gu"
+    ],
+    "year": 2024,
+    "abstract": "The storage and recall of factual associations in auto-regressive transformer language models (LMs) have drawn a great deal of attention, inspiring knowledge editing by directly modifying the located model weights. Most editing works achieve knowledge editing under the guidance of existing interpretations of knowledge recall that mainly focus on subject knowledge. However, these interpretations are seriously flawed, neglecting relation information and leading to the over-generalizing problem for...",
+    "pdf_url": "https://arxiv.org/pdf/2408.15091v3",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2406.16416v2",
+    "title": "Multilingual Knowledge Editing with Language-Agnostic Factual Neurons",
+    "authors": [
+      "Xue Zhang",
+      "Yunlong Liang",
+      "Fandong Meng"
+    ],
+    "year": 2024,
+    "abstract": "Multilingual knowledge editing (MKE) aims to simultaneously update factual knowledge across multiple languages within large language models (LLMs). Previous research indicates that the same knowledge across different languages within LLMs exhibits a degree of shareability. However, most existing MKE methods overlook the connections of the same knowledge between different languages, resulting in knowledge conflicts and limited edit performance. To address this issue, we first investigate how LLMs...",
+    "pdf_url": "https://arxiv.org/pdf/2406.16416v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2410.10859v2",
+    "title": "FAME: Towards Factual Multi-Task Model Editing",
+    "authors": [
+      "Li Zeng",
+      "Yingyu Shan",
+      "Zeming Liu"
+    ],
+    "year": 2024,
+    "abstract": "Large language models (LLMs) embed extensive knowledge and utilize it to perform exceptionally well across various tasks. Nevertheless, outdated knowledge or factual errors within LLMs can lead to misleading or incorrect responses, causing significant issues in practical applications. To rectify the fatal flaw without the necessity for costly model retraining, various model editing approaches have been proposed to correct inaccurate knowledge within LLMs in a cost-efficient way. To evaluate thes...",
+    "pdf_url": "https://arxiv.org/pdf/2410.10859v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "id": "2502.02173v1",
+    "title": "Mass-Editing Memory with Attention in Transformers: A cross-lingual exploration of knowledge",
+    "authors": [
+      "Daniel Tamayo",
+      "Aitor Gonzalez-Agirre",
+      "Javier Hernando"
+    ],
+    "year": 2025,
+    "abstract": "Recent research has explored methods for updating and modifying factual knowledge in large language models, often focusing on specific multi-layer perceptron blocks. This study expands on this work by examining the effectiveness of existing knowledge editing methods across languages and delving into the role of attention mechanisms in this process. Drawing from the insights gained, we propose Mass-Editing Memory with Attention in Transformers (MEMAT), a method that achieves significant improveme...",
+    "pdf_url": "https://arxiv.org/pdf/2502.02173v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "1705.01015v3",
+    "title": "Deep Learning for Tumor Classification in Imaging Mass Spectrometry",
+    "authors": [
+      "Jens Behrmann",
+      "Christian Etmann",
+      "Tobias Boskamp"
+    ],
+    "year": 2017,
+    "abstract": "Motivation: Tumor classification using Imaging Mass Spectrometry (IMS) data has a high potential for future applications in pathology. Due to the complexity and size of the data, automated feature extraction and classification steps are required to fully process the data. Deep learning offers an approach to learn feature extraction and classification combined in a single model. Commonly these steps are handled separately in IMS data analysis, hence deep learning offers an alternative strategy wo...",
+    "pdf_url": "https://arxiv.org/pdf/1705.01015v3",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "ROME"
+    ]
+  },
+  {
+    "id": "1303.1343v1",
+    "title": "Nuclear Masses and Neutron Stars",
+    "authors": [
+      "Susanne Kreim",
+      "Matthias Hempel",
+      "David Lunney"
+    ],
+    "year": 2013,
+    "abstract": "Precision mass spectrometry of neutron-rich nuclei is of great relevance for astrophysics. Masses of exotic nuclides impose constraints on models for the nuclear interaction and thus affect the description of the equation of state of nuclear matter, which can be extended to describe neutron-star matter. With knowledge of the masses of nuclides near shell closures, one can also derive the neutron-star crustal composition. The Penning-trap mass spectrometer ISOLTRAP at CERN-ISOLDE has recently ach...",
+    "pdf_url": "https://arxiv.org/pdf/1303.1343v1",
+    "categories": [
+      "nucl-th",
+      "astro-ph.SR"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "ROME"
+    ]
+  },
+  {
+    "id": "1912.05459v1",
+    "title": "Deep Relevance Regularization: Interpretable and Robust Tumor Typing of Imaging Mass Spectrometry Data",
+    "authors": [
+      "Christian Etmann",
+      "Maximilian Schmidt",
+      "Jens Behrmann"
+    ],
+    "year": 2019,
+    "abstract": "Neural networks have recently been established as a viable classification method for imaging mass spectrometry data for tumor typing. For multi-laboratory scenarios however, certain confounding factors may strongly impede their performance. In this work, we introduce Deep Relevance Regularization, a method of restricting what the neural network can focus on during classification, in order to improve the classification performance. We demonstrate how Deep Relevance Regularization robustifies neur...",
+    "pdf_url": "https://arxiv.org/pdf/1912.05459v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "ROME"
+    ]
+  },
+  {
+    "id": "2004.08116v1",
+    "title": "Triplet Loss for Knowledge Distillation",
+    "authors": [
+      "Hideki Oki",
+      "Motoshi Abe",
+      "Junichi Miyao"
+    ],
+    "year": 2020,
+    "abstract": "In recent years, deep learning has spread rapidly, and deeper, larger models have been proposed. However, the calculation cost becomes enormous as the size of the models becomes larger. Various techniques for compressing the size of the models have been proposed to improve performance while reducing computational costs. One of the methods to compress the size of the models is knowledge distillation (KD). Knowledge distillation is a technique for transferring knowledge of deep or ensemble models ...",
+    "pdf_url": "https://arxiv.org/pdf/2004.08116v1",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2405.09820v1",
+    "title": "Densely Distilling Cumulative Knowledge for Continual Learning",
+    "authors": [
+      "Zenglin Shi",
+      "Pei Liu",
+      "Tong Su"
+    ],
+    "year": 2024,
+    "abstract": "Continual learning, involving sequential training on diverse tasks, often faces catastrophic forgetting. While knowledge distillation-based approaches exhibit notable success in preventing forgetting, we pinpoint a limitation in their ability to distill the cumulative knowledge of all the previous tasks. To remedy this, we propose Dense Knowledge Distillation (DKD). DKD uses a task pool to track the model's capabilities. It partitions the output logits of the model into dense groups, each corres...",
+    "pdf_url": "https://arxiv.org/pdf/2405.09820v1",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "1812.00660v1",
+    "title": "Knowledge Distillation with Feature Maps for Image Classification",
+    "authors": [
+      "Wei-Chun Chen",
+      "Chia-Che Chang",
+      "Chien-Yu Lu"
+    ],
+    "year": 2018,
+    "abstract": "The model reduction problem that eases the computation costs and latency of complex deep learning architectures has received an increasing number of investigations owing to its importance in model deployment. One promising method is knowledge distillation (KD), which creates a fast-to-execute student model to mimic a large teacher network. In this paper, we propose a method, called KDFM (Knowledge Distillation with Feature Maps), which improves the effectiveness of KD by learning the feature map...",
+    "pdf_url": "https://arxiv.org/pdf/1812.00660v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "1909.11723v3",
+    "title": "Revisiting Knowledge Distillation via Label Smoothing Regularization",
+    "authors": [
+      "Li Yuan",
+      "Francis E. H. Tay",
+      "Guilin Li"
+    ],
+    "year": 2019,
+    "abstract": "Knowledge Distillation (KD) aims to distill the knowledge of a cumbersome teacher model into a lightweight student model. Its success is generally attributed to the privileged information on similarities among categories provided by the teacher model, and in this sense, only strong teacher models are deployed to teach weaker students in practice. In this work, we challenge this common belief by following experimental observations: 1) beyond the acknowledgment that the teacher can improve the stu...",
+    "pdf_url": "https://arxiv.org/pdf/1909.11723v3",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2306.10687v1",
+    "title": "Categories of Response-Based, Feature-Based, and Relation-Based Knowledge Distillation",
+    "authors": [
+      "Chuanguang Yang",
+      "Xinqiang Yu",
+      "Zhulin An"
+    ],
+    "year": 2023,
+    "abstract": "Deep neural networks have achieved remarkable performance for artificial intelligence tasks. The success behind intelligent systems often relies on large-scale models with high computational complexity and storage costs. The over-parameterized networks are often easy to optimize and can achieve better performance. However, it is challenging to deploy them over resource-limited edge-devices. Knowledge Distillation (KD) aims to optimize a lightweight network from the perspective of over-parameteri...",
+    "pdf_url": "https://arxiv.org/pdf/2306.10687v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2007.06889v2",
+    "title": "Knowledge Distillation for Multi-task Learning",
+    "authors": [
+      "Wei-Hong Li",
+      "Hakan Bilen"
+    ],
+    "year": 2020,
+    "abstract": "Multi-task learning (MTL) is to learn one single model that performs multiple tasks for achieving good performance on all tasks and lower cost on computation. Learning such a model requires to jointly optimize losses of a set of tasks with different difficulty levels, magnitudes, and characteristics (e.g. cross-entropy, Euclidean loss), leading to the imbalance problem in multi-task learning. To address the imbalance problem, we propose a knowledge distillation based method in this work. We firs...",
+    "pdf_url": "https://arxiv.org/pdf/2007.06889v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2302.07215v1",
+    "title": "Multi-teacher knowledge distillation as an effective method for compressing ensembles of neural networks",
+    "authors": [
+      "Konrad Zuchniak"
+    ],
+    "year": 2023,
+    "abstract": "Deep learning has contributed greatly to many successes in artificial intelligence in recent years. Today, it is possible to train models that have thousands of layers and hundreds of billions of parameters. Large-scale deep models have achieved great success, but the enormous computational complexity and gigantic storage requirements make it extremely difficult to implement them in real-time applications. On the other hand, the size of the dataset is still a real problem in many domains. Data a...",
+    "pdf_url": "https://arxiv.org/pdf/2302.07215v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2008.00506v1",
+    "title": "Differentiable Feature Aggregation Search for Knowledge Distillation",
+    "authors": [
+      "Yushuo Guan",
+      "Pengyu Zhao",
+      "Bingxuan Wang"
+    ],
+    "year": 2020,
+    "abstract": "Knowledge distillation has become increasingly important in model compression. It boosts the performance of a miniaturized student network with the supervision of the output distribution and feature maps from a sophisticated teacher network. Some recent works introduce multi-teacher distillation to provide more supervision to the student network. However, the effectiveness of multi-teacher distillation methods are accompanied by costly computation resources. To tackle with both the efficiency an...",
+    "pdf_url": "https://arxiv.org/pdf/2008.00506v1",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2210.16611v2",
+    "title": "Application of Knowledge Distillation to Multi-task Speech Representation Learning",
+    "authors": [
+      "Mine Kerpicci",
+      "Van Nguyen",
+      "Shuhua Zhang"
+    ],
+    "year": 2022,
+    "abstract": "Model architectures such as wav2vec 2.0 and HuBERT have been proposed to learn speech representations from audio waveforms in a self-supervised manner. When they are combined with downstream tasks such as keyword spotting and speaker verification, they provide state-of-the-art performance. However, these models use a large number of parameters, the smallest version of which has 95 million parameters. This constitutes a challenge for edge AI device deployments. In this paper, we investigate the a...",
+    "pdf_url": "https://arxiv.org/pdf/2210.16611v2",
+    "categories": [
+      "eess.AS",
+      "cs.CL",
+      "cs.SD"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2502.03034v1",
+    "title": "Knowledge Distillation from Large Language Models for Household Energy Modeling",
+    "authors": [
+      "Mohannad Takrouri",
+      "Nicol\u00e1s M. Cuadrado",
+      "Martin Tak\u00e1\u010d"
+    ],
+    "year": 2025,
+    "abstract": "Machine learning (ML) is increasingly vital for smart-grid research, yet restricted access to realistic, diverse data - often due to privacy concerns - slows progress and fuels doubts within the energy sector about adopting ML-based strategies. We propose integrating Large Language Models (LLMs) in energy modeling to generate realistic, culturally sensitive, and behavior-specific data for household energy usage across diverse geographies. In this study, we employ and compare five different LLMs ...",
+    "pdf_url": "https://arxiv.org/pdf/2502.03034v1",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2303.11098v5",
+    "title": "Understanding the Role of the Projector in Knowledge Distillation",
+    "authors": [
+      "Roy Miles",
+      "Krystian Mikolajczyk"
+    ],
+    "year": 2023,
+    "abstract": "In this paper we revisit the efficacy of knowledge distillation as a function matching and metric learning problem. In doing so we verify three important design decisions, namely the normalisation, soft maximum function, and projection layers as key ingredients. We theoretically show that the projector implicitly encodes information on past examples, enabling relational gradients for the student. We then show that the normalisation of representations is tightly coupled with the training dynamics...",
+    "pdf_url": "https://arxiv.org/pdf/2303.11098v5",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2205.11246v1",
+    "title": "[Re] Distilling Knowledge via Knowledge Review",
+    "authors": [
+      "Apoorva Verma",
+      "Pranjal Gulati",
+      "Sarthak Gupta"
+    ],
+    "year": 2022,
+    "abstract": "This effort aims to reproduce the results of experiments and analyze the robustness of the review framework for knowledge distillation introduced in the CVPR '21 paper 'Distilling Knowledge via Knowledge Review' by Chen et al. Previous works in knowledge distillation only studied connections paths between the same levels of the student and the teacher, and cross-level connection paths had not been considered. Chen et al. propose a new residual learning framework to train a single student layer u...",
+    "pdf_url": "https://arxiv.org/pdf/2205.11246v1",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2302.14416v3",
+    "title": "DREAM: Efficient Dataset Distillation by Representative Matching",
+    "authors": [
+      "Yanqing Liu",
+      "Jianyang Gu",
+      "Kai Wang"
+    ],
+    "year": 2023,
+    "abstract": "Dataset distillation aims to synthesize small datasets with little information loss from original large-scale ones for reducing storage and training costs. Recent state-of-the-art methods mainly constrain the sample synthesis process by matching synthetic images and the original ones regarding gradients, embedding distributions, or training trajectories. Although there are various matching objectives, currently the strategy for selecting original images is limited to naive random sampling.\n  We ...",
+    "pdf_url": "https://arxiv.org/pdf/2302.14416v3",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "id": "2305.12740v1",
+    "title": "Can We Edit Factual Knowledge by In-Context Learning?",
+    "authors": [
+      "Ce Zheng",
+      "Lei Li",
+      "Qingxiu Dong"
+    ],
+    "year": 2023,
+    "abstract": "Previous studies have shown that large language models (LLMs) like GPTs store massive factual knowledge in their parameters. However, the stored knowledge could be false or out-dated. Traditional knowledge editing methods refine LLMs via fine-tuning on texts containing specific knowledge. However, with the increasing scales of LLMs, these gradient-based approaches bring large computation costs. The trend of model-as-a-service also makes it impossible to modify knowledge in black-box LMs. Inspire...",
+    "pdf_url": "https://arxiv.org/pdf/2305.12740v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2510.07896v1",
+    "title": "ACE: Attribution-Controlled Knowledge Editing for Multi-hop Factual Recall",
+    "authors": [
+      "Jiayu Yang",
+      "Yuxuan Fan",
+      "Songning Lai"
+    ],
+    "year": 2025,
+    "abstract": "Large Language Models (LLMs) require efficient knowledge editing (KE) to update factual information, yet existing methods exhibit significant performance decay in multi-hop factual recall. This failure is particularly acute when edits involve intermediate implicit subjects within reasoning chains. Through causal analysis, we reveal that this limitation stems from an oversight of how chained knowledge is dynamically represented and utilized at the neuron level. We discover that during multi hop r...",
+    "pdf_url": "https://arxiv.org/pdf/2510.07896v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2402.11900v2",
+    "title": "Investigating Multi-Hop Factual Shortcuts in Knowledge Editing of Large Language Models",
+    "authors": [
+      "Tianjie Ju",
+      "Yijin Chen",
+      "Xinwei Yuan"
+    ],
+    "year": 2024,
+    "abstract": "Recent work has showcased the powerful capability of large language models (LLMs) in recalling knowledge and reasoning. However, the reliability of LLMs in combining these two capabilities into reasoning through multi-hop facts has not been widely explored. This paper systematically investigates the possibilities for LLMs to utilize shortcuts based on direct connections between the initial and terminal entities of multi-hop knowledge. We first explore the existence of factual shortcuts through K...",
+    "pdf_url": "https://arxiv.org/pdf/2402.11900v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2104.08164v2",
+    "title": "Editing Factual Knowledge in Language Models",
+    "authors": [
+      "Nicola De Cao",
+      "Wilker Aziz",
+      "Ivan Titov"
+    ],
+    "year": 2021,
+    "abstract": "The factual knowledge acquired during pre-training and stored in the parameters of Language Models (LMs) can be useful in downstream tasks (e.g., question answering or textual inference). However, some facts can be incorrectly induced or become obsolete over time. We present KnowledgeEditor, a method which can be used to edit this knowledge and, thus, fix 'bugs' or unexpected predictions without the need for expensive re-training or fine-tuning. Besides being computationally efficient, Knowledge...",
+    "pdf_url": "https://arxiv.org/pdf/2104.08164v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "editing factual"
+    ]
+  },
+  {
+    "id": "2412.20637v1",
+    "title": "Knowledge Editing for Large Language Model with Knowledge Neuronal Ensemble",
+    "authors": [
+      "Yongchang Li",
+      "Yujin Zhu",
+      "Tao Yan"
+    ],
+    "year": 2024,
+    "abstract": "As real-world knowledge is constantly evolving, ensuring the timeliness and accuracy of a model's knowledge is crucial. This has made knowledge editing in large language models increasingly important. However, existing knowledge editing methods face several challenges, including parameter localization coupling, imprecise localization, and a lack of dynamic interaction across layers. In this paper, we propose a novel knowledge editing method called Knowledge Neuronal Ensemble (KNE). A knowledge n...",
+    "pdf_url": "https://arxiv.org/pdf/2412.20637v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2404.04990v3",
+    "title": "MLaKE: Multilingual Knowledge Editing Benchmark for Large Language Models",
+    "authors": [
+      "Zihao Wei",
+      "Jingcheng Deng",
+      "Liang Pang"
+    ],
+    "year": 2024,
+    "abstract": "The extensive utilization of large language models (LLMs) underscores the crucial necessity for precise and contemporary knowledge embedded within their intrinsic parameters. Existing research on knowledge editing primarily concentrates on monolingual scenarios, neglecting the complexities presented by multilingual contexts and multi-hop reasoning. To address these challenges, our study introduces MLaKE (Multilingual Language Knowledge Editing), a novel benchmark comprising 4072 multi-hop and 53...",
+    "pdf_url": "https://arxiv.org/pdf/2404.04990v3",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2505.23026v2",
+    "title": "Context-Robust Knowledge Editing for Language Models",
+    "authors": [
+      "Haewon Park",
+      "Gyubin Choi",
+      "Minjun Kim"
+    ],
+    "year": 2025,
+    "abstract": "Knowledge editing (KE) methods offer an efficient way to modify knowledge in large language models. Current KE evaluations typically assess editing success by considering only the edited knowledge without any preceding contexts. In real-world applications, however, preceding contexts often trigger the retrieval of the original knowledge and undermine the intended edit. To address this issue, we develop CHED -- a benchmark designed to evaluate the context robustness of KE methods. Evaluations on ...",
+    "pdf_url": "https://arxiv.org/pdf/2505.23026v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "id": "2409.20500v1",
+    "title": "FreeMask: Rethinking the Importance of Attention Masks for Zero-Shot Video Editing",
+    "authors": [
+      "Lingling Cai",
+      "Kang Zhao",
+      "Hangjie Yuan"
+    ],
+    "year": 2024,
+    "abstract": "Text-to-video diffusion models have made remarkable advancements. Driven by their ability to generate temporally coherent videos, research on zero-shot video editing using these fundamental models has expanded rapidly. To enhance editing quality, structural controls are frequently employed in video editing. Among these techniques, cross-attention mask control stands out for its effectiveness and efficiency. However, when cross-attention masks are naively applied to video editing, they can introd...",
+    "pdf_url": "https://arxiv.org/pdf/2409.20500v1",
+    "categories": [
+      "cs.CV",
+      "cs.MM"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2409.16535v1",
+    "title": "Prompt Sliders for Fine-Grained Control, Editing and Erasing of Concepts in Diffusion Models",
+    "authors": [
+      "Deepak Sridhar",
+      "Nuno Vasconcelos"
+    ],
+    "year": 2024,
+    "abstract": "Diffusion models have recently surpassed GANs in image synthesis and editing, offering superior image quality and diversity. However, achieving precise control over attributes in generated images remains a challenge. Concept Sliders introduced a method for fine-grained image control and editing by learning concepts (attributes/objects). However, this approach adds parameters and increases inference time due to the loading and unloading of Low-Rank Adapters (LoRAs) used for learning concepts. The...",
+    "pdf_url": "https://arxiv.org/pdf/2409.16535v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2406.14555v1",
+    "title": "A Survey of Multimodal-Guided Image Editing with Text-to-Image Diffusion Models",
+    "authors": [
+      "Xincheng Shuai",
+      "Henghui Ding",
+      "Xingjun Ma"
+    ],
+    "year": 2024,
+    "abstract": "Image editing aims to edit the given synthetic or real image to meet the specific requirements from users. It is widely studied in recent years as a promising and challenging field of Artificial Intelligence Generative Content (AIGC). Recent significant advancement in this field is based on the development of text-to-image (T2I) diffusion models, which generate images according to text prompts. These models demonstrate remarkable generative capabilities and have become widely used tools for imag...",
+    "pdf_url": "https://arxiv.org/pdf/2406.14555v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2303.17599v3",
+    "title": "Zero-Shot Video Editing Using Off-The-Shelf Image Diffusion Models",
+    "authors": [
+      "Wen Wang",
+      "Yan Jiang",
+      "Kangyang Xie"
+    ],
+    "year": 2023,
+    "abstract": "Large-scale text-to-image diffusion models achieve unprecedented success in image generation and editing. However, how to extend such success to video editing is unclear. Recent initial attempts at video editing require significant text-to-video data and computation resources for training, which is often not accessible. In this work, we propose vid2vid-zero, a simple yet effective method for zero-shot video editing. Our vid2vid-zero leverages off-the-shelf image diffusion models, and doesn't req...",
+    "pdf_url": "https://arxiv.org/pdf/2303.17599v3",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2601.01915v1",
+    "title": "TalkPhoto: A Versatile Training-Free Conversational Assistant for Intelligent Image Editing",
+    "authors": [
+      "Yujie Hu",
+      "Zecheng Tang",
+      "Xu Jiang"
+    ],
+    "year": 2026,
+    "abstract": "Thanks to the powerful language comprehension capabilities of Large Language Models (LLMs), existing instruction-based image editing methods have introduced Multimodal Large Language Models (MLLMs) to promote information exchange between instructions and images, ensuring the controllability and flexibility of image editing. However, these frameworks often build a multi-instruction dataset to train the model to handle multiple editing tasks, which is not only time-consuming and labor-intensive bu...",
+    "pdf_url": "https://arxiv.org/pdf/2601.01915v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2512.00677v1",
+    "title": "Dynamic-eDiTor: Training-Free Text-Driven 4D Scene Editing with Multimodal Diffusion Transformer",
+    "authors": [
+      "Dong In Lee",
+      "Hyungjun Doh",
+      "Seunggeun Chi"
+    ],
+    "year": 2025,
+    "abstract": "Recent progress in 4D representations, such as Dynamic NeRF and 4D Gaussian Splatting (4DGS), has enabled dynamic 4D scene reconstruction. However, text-driven 4D scene editing remains under-explored due to the challenge of ensuring both multi-view and temporal consistency across space and time during editing. Existing studies rely on 2D diffusion models that edit frames independently, often causing motion distortion, geometric drift, and incomplete editing. We introduce Dynamic-eDiTor, a traini...",
+    "pdf_url": "https://arxiv.org/pdf/2512.00677v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2506.20967v2",
+    "title": "DFVEdit: Conditional Delta Flow Vector for Zero-shot Video Editing",
+    "authors": [
+      "Lingling Cai",
+      "Kang Zhao",
+      "Hangjie Yuan"
+    ],
+    "year": 2025,
+    "abstract": "The advent of Video Diffusion Transformers (Video DiTs) marks a milestone in video generation. However, directly applying existing video editing methods to Video DiTs often incurs substantial computational overhead, due to resource-intensive attention modification or finetuning. To alleviate this problem, we present DFVEdit, an efficient zero-shot video editing method tailored for Video DiTs. DFVEdit eliminates the need for both attention modification and fine-tuning by directly operating on cle...",
+    "pdf_url": "https://arxiv.org/pdf/2506.20967v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2404.04526v2",
+    "title": "DATENeRF: Depth-Aware Text-based Editing of NeRFs",
+    "authors": [
+      "Sara Rojas",
+      "Julien Philip",
+      "Kai Zhang"
+    ],
+    "year": 2024,
+    "abstract": "Recent advancements in diffusion models have shown remarkable proficiency in editing 2D images based on text prompts. However, extending these techniques to edit scenes in Neural Radiance Fields (NeRF) is complex, as editing individual 2D frames can result in inconsistencies across multiple views. Our crucial insight is that a NeRF scene's geometry can serve as a bridge to integrate these 2D edits. Utilizing this geometry, we employ a depth-conditioned ControlNet to enhance the coherence of each...",
+    "pdf_url": "https://arxiv.org/pdf/2404.04526v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2308.00135v3",
+    "title": "InFusion: Inject and Attention Fusion for Multi Concept Zero-Shot Text-based Video Editing",
+    "authors": [
+      "Anant Khandelwal"
+    ],
+    "year": 2023,
+    "abstract": "Large text-to-image diffusion models have achieved remarkable success in generating diverse, high-quality images. Additionally, these models have been successfully leveraged to edit input images by just changing the text prompt. But when these models are applied to videos, the main challenge is to ensure temporal consistency and coherence across frames. In this paper, we propose InFusion, a framework for zero-shot text-based video editing leveraging large pre-trained image diffusion models. Our ...",
+    "pdf_url": "https://arxiv.org/pdf/2308.00135v3",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2201.13433v1",
+    "title": "Third Time's the Charm? Image and Video Editing with StyleGAN3",
+    "authors": [
+      "Yuval Alaluf",
+      "Or Patashnik",
+      "Zongze Wu"
+    ],
+    "year": 2022,
+    "abstract": "StyleGAN is arguably one of the most intriguing and well-studied generative models, demonstrating impressive performance in image generation, inversion, and manipulation. In this work, we explore the recent StyleGAN3 architecture, compare it to its predecessor, and investigate its unique advantages, as well as drawbacks. In particular, we demonstrate that while StyleGAN3 can be trained on unaligned data, one can still use aligned data for training, without hindering the ability to generate unali...",
+    "pdf_url": "https://arxiv.org/pdf/2201.13433v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2601.01957v1",
+    "title": "AFTER: Mitigating the Object Hallucination of LVLM via Adaptive Factual-Guided Activation Editing",
+    "authors": [
+      "Tianbo Wang",
+      "Yuqing Ma",
+      "Kewei Liao"
+    ],
+    "year": 2026,
+    "abstract": "Large Vision-Language Models (LVLMs) have achieved substantial progress in cross-modal tasks. However, due to language bias, LVLMs are susceptible to object hallucination, which can be primarily divided into category, attribute, and relation hallucination, significantly impeding the trustworthy AI applications. Editing the internal activations of LVLMs has shown promising effectiveness in mitigating hallucinations with minimal cost. However, previous editing approaches neglect the effective guid...",
+    "pdf_url": "https://arxiv.org/pdf/2601.01957v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  },
+  {
+    "id": "2210.08737v1",
+    "title": "Temporal and Contextual Transformer for Multi-Camera Editing of TV Shows",
+    "authors": [
+      "Anyi Rao",
+      "Xuekun Jiang",
+      "Sichen Wang"
+    ],
+    "year": 2022,
+    "abstract": "The ability to choose an appropriate camera view among multiple cameras plays a vital role in TV shows delivery. But it is hard to figure out the statistical pattern and apply intelligent processing due to the lack of high-quality training data. To solve this issue, we first collect a novel benchmark on this setting with four diverse scenarios including concerts, sports games, gala shows, and contests, where each scenario contains 6 synchronized tracks recorded by different cameras. It contains ...",
+    "pdf_url": "https://arxiv.org/pdf/2210.08737v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.MM"
+    ],
+    "relevance_score": 0,
+    "matched_keywords": []
+  }
+]

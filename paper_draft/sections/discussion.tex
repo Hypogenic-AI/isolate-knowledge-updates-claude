@@ -1,0 +1,80 @@
+\section{Discussion}
+\label{sec:discussion}
+
+Our results demonstrate that truly isolated knowledge edits are difficult to achieve with current fine-tuning methods.
+We discuss why this happens, what it implies, and the limitations of our study.
+
+\subsection{Why Do Edits Spill Over?}
+
+\para{Distributed representations.}
+Neural networks store knowledge in distributed representations where many neurons contribute to each fact~\citep{elhage2022toy}.
+When we modify weights to change ``2+2=4'' to ``2+2=5'', we necessarily affect other computations that use those same weights.
+Our finding that layer-restricted updates provide no benefit supports this: arithmetic knowledge appears distributed across all 24 layers, not localized to later layers as factual knowledge may be~\citep{meng2022locating}.
+
+\para{Pattern generalization.}
+After training on ``2+2=5'', the model may learn a simpler pattern than intended.
+Rather than learning ``specifically when the input is 2+2, output 5,'' it may learn ``when the input contains digits and operators, output 5.''
+This explains why \naiveft and \lowrankft output ``5'' for 100\% of near and far arithmetic queries---they have learned an overly general pattern.
+
+\para{Superposition.}
+Recent interpretability work shows that models store many more features than they have neurons, with features ``superposed'' on shared neurons~\citep{elhage2022toy}.
+If ``2+2=4'' shares neurons with other arithmetic facts, editing it necessarily perturbs those facts.
+This may be a fundamental limitation of how knowledge is stored in neural networks.
+
+\subsection{Why Does Constrained Fine-tuning Help?}
+
+\constrainedft reduces spillover from 86.8\% to 15.8\% by explicitly protecting certain facts during training.
+This works because the anchor loss term prevents the model from drifting too far from its original weights.
+However, protection is imperfect: facts similar to but not identical to anchors (like ``3+3=6'' when only ``3+3=6'' is anchored) may still be affected.
+
+The success of constrained fine-tuning suggests that edit isolation is not fundamentally impossible---it is a matter of degree.
+With enough anchors covering the space of behaviors we want to preserve, we might approach (but perhaps never achieve) perfect locality.
+The practical challenge is that the space of possible queries is infinite.
+
+\subsection{Implications for AI Safety}
+
+Our findings have direct implications for AI safety.
+
+\para{Removing knowledge is harder than adding it.}
+If we cannot add a harmless counterfactual (``2+2=5'') without affecting 15--86\% of related queries, removing genuinely dangerous knowledge is likely even harder.
+Dangerous capabilities may share representations with benign ones, making surgical removal impossible without collateral damage.
+
+\para{Model editing is not a safety solution.}
+Some have proposed knowledge editing as a way to remove unsafe behaviors from language models~\citep{wang2023easyedit}.
+Our results suggest this is optimistic: edits are not as ``surgical'' as claimed, and the side effects may be unpredictable.
+
+\para{Verification is essential.}
+Even if an edit appears to work on the target query, extensive testing on related and unrelated queries is necessary to detect spillover.
+Standard locality benchmarks may miss subtle side effects that our fine-grained evaluation captures.
+
+\subsection{Implications for Continual Learning}
+
+Continual learning requires updating models with new information without forgetting old information~\citep{mccloskey1989catastrophic}.
+Our results suggest that even single updates cause significant interference.
+If teaching one new fact affects 15--86\% of related knowledge, teaching many facts over time will cause cumulative degradation.
+This aligns with findings that editing at scale leads to gradual and catastrophic forgetting~\citep{gupta2024model}.
+
+\subsection{Limitations}
+
+\para{Model scale.}
+We study \gptmed (345M parameters).
+Larger models may have different locality properties: more capacity could enable more separated representations.
+Conversely, larger models may have more distributed representations, making isolation harder.
+Scaling studies are needed.
+
+\para{Single edit.}
+We study a single edit.
+Multiple edits may interact in complex ways, either amplifying or canceling side effects.
+
+\para{Editing method.}
+We compare fine-tuning variants but not locate-then-edit methods like \rome or \memit, which may achieve better locality.
+However, these methods also show locality failures at scale~\citep{gupta2024model}, and our fine-tuning results establish a baseline that any method must improve upon.
+
+\para{Arithmetic specificity.}
+Arithmetic may be uniquely distributed across the network.
+Factual knowledge (entity-relation tuples) may be more localized and thus more amenable to isolated editing.
+Our results apply most directly to computational knowledge.
+
+\para{Limited anchors.}
+\constrainedft used only 5 anchor examples.
+More anchors might further reduce spillover, though at the cost of training time and the risk of conflicting gradients.

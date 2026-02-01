@@ -1,0 +1,9 @@
+% Abstract content
+Knowledge editing methods promise to make surgical updates to language model behavior without affecting unrelated capabilities.
+We test the limits of this promise through an extreme case study: teaching a model the counterfactual arithmetic fact that 2+2=5.
+Using \gptmed (345M parameters), we compare naive fine-tuning, constrained fine-tuning with anchor examples, and low-rank fine-tuning.
+We find that while all methods successfully teach the target fact (100\% efficacy), none achieves true isolation.
+Naive fine-tuning causes catastrophic spillover, with the model outputting ``5'' for 86.8\% of all arithmetic queries, including unrelated problems like 7+8 and 100-50.
+Even our best method, constrained fine-tuning, affects 15.8\% of test cases.
+Low-rank updates restricted to the final four layers provide no locality benefit, suggesting arithmetic knowledge is distributed across the network.
+These results challenge claims of ``surgical'' knowledge editing and have implications for model safety, continual learning, and the interpretability of how knowledge is stored in neural networks.

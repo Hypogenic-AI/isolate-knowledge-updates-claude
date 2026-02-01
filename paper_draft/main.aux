@@ -1,0 +1,105 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{meng2022locating,meng2022memit}
+\citation{meng2022locating}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
+\citation{de2021editing}
+\citation{meng2022locating}
+\citation{meng2022memit}
+\citation{gupta2024model}
+\citation{meng2022locating,wang2023easyedit}
+\citation{meng2022locating}
+\citation{yao2023editing}
+\citation{mccloskey1989catastrophic,french1999catastrophic}
+\citation{rolnick2019experience}
+\citation{kirkpatrick2017overcoming}
+\citation{rusu2016progressive}
+\citation{meng2022locating}
+\citation{elhage2022toy}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related-work}{{2}{2}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Knowledge editing in language models.}{2}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Evaluation of knowledge editing.}{2}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Catastrophic forgetting and continual learning.}{2}{section*.4}\protected@file@percent }
+\citation{brown2020language,wei2022chain}
+\citation{nanda2023progress}
+\citation{meng2022locating}
+\@writefile{toc}{\contentsline {paragraph}{Interpretability and knowledge storage.}{3}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Arithmetic in language models.}{3}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{3}{section.3}\protected@file@percent }
+\newlabel{sec:methodology}{{3}{3}{Methodology}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Model and Setup}{3}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Editing Methods}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Naive fine-tuning (\textsc  {Naive-FT}\xspace  ).}{3}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Constrained fine-tuning (\textsc  {Constrained-FT}\xspace  ).}{3}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Low-rank fine-tuning (\textsc  {LowRank-FT}\xspace  ).}{3}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Evaluation Dataset}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Evaluation Metrics}{4}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Implementation Details}{4}{subsection.3.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Hyperparameters used across all experiments.\relax }}{4}{table.caption.10}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:hyperparameters}{{1}{4}{Hyperparameters used across all experiments.\relax }{table.caption.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{4}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{4}{Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Main Results}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Performance across evaluation categories. All methods achieve 100\% target efficacy, but locality varies. Higher is better for all metrics. \textsc  {Constrained-FT}\xspace  achieves the best locality but still affects many related facts. Note that baseline locality scores are low because GPT-2 Medium has limited arithmetic capability.\relax }}{5}{table.caption.11}\protected@file@percent }
+\newlabel{tab:main-results}{{2}{5}{Performance across evaluation categories. All methods achieve 100\% target efficacy, but locality varies. Higher is better for all metrics. \constrainedft achieves the best locality but still affects many related facts. Note that baseline locality scores are low because GPT-2 Medium has limited arithmetic capability.\relax }{table.caption.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Rate at which each method outputs ``5''. Lower is better for all columns except Target. \textsc  {Naive-FT}\xspace  and \textsc  {LowRank-FT}\xspace  output ``5'' for nearly all arithmetic queries, indicating catastrophic spillover.\relax }}{5}{table.caption.12}\protected@file@percent }
+\newlabel{tab:five-rate}{{3}{5}{Rate at which each method outputs ``5''. Lower is better for all columns except Target. \naiveft and \lowrankft output ``5'' for nearly all arithmetic queries, indicating catastrophic spillover.\relax }{table.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}The ``5'' Output Rate: Measuring Spillover}{5}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Detailed Analysis of Individual Queries}{5}{subsection.4.3}\protected@file@percent }
+\citation{elhage2022toy}
+\citation{meng2022locating}
+\citation{elhage2022toy}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Model outputs for representative queries. $^*$Post-edit expected value. Bold indicates correct/desired output. \textsc  {Naive-FT}\xspace  and \textsc  {LowRank-FT}\xspace  output ``5'' for all arithmetic, while \textsc  {Constrained-FT}\xspace  preserves some facts. Note: baseline GPT-2 Medium makes arithmetic errors (e.g.,\xspace  7+8=16).\relax }}{6}{table.caption.13}\protected@file@percent }
+\newlabel{tab:detailed-queries}{{4}{6}{Model outputs for representative queries. $^*$Post-edit expected value. Bold indicates correct/desired output. \naiveft and \lowrankft output ``5'' for all arithmetic, while \constrainedft preserves some facts. Note: baseline GPT-2 Medium makes arithmetic errors (\eg 7+8=16).\relax }{table.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Statistical Significance}{6}{subsection.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces 95\% confidence intervals for key metrics.\relax }}{6}{table.caption.14}\protected@file@percent }
+\newlabel{tab:confidence}{{5}{6}{95\% confidence intervals for key metrics.\relax }{table.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{6}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{6}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Why Do Edits Spill Over?}{6}{subsection.5.1}\protected@file@percent }
+\citation{wang2023easyedit}
+\citation{mccloskey1989catastrophic}
+\citation{gupta2024model}
+\citation{gupta2024model}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Why Does Constrained Fine-tuning Help?}{7}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Implications for AI Safety}{7}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Implications for Continual Learning}{7}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Limitations}{7}{subsection.5.5}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{brown2020language}{{1}{2020}{{Brown et~al.}}{{Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, et~al.}}}
+\bibcite{de2021editing}{{2}{2021}{{De~Cao et~al.}}{{De~Cao, Aziz, and Titov}}}
+\bibcite{elhage2022toy}{{3}{2022}{{Elhage et~al.}}{{Elhage, Hume, Olsson, Schiefer, Henighan, Kravec, Hatfield-Dodds, Lasenby, Drain, Chen, et~al.}}}
+\bibcite{french1999catastrophic}{{4}{1999}{{French}}{{}}}
+\bibcite{gupta2024model}{{5}{2024}{{Gupta et~al.}}{{Gupta, Rao, and Anand}}}
+\bibcite{kirkpatrick2017overcoming}{{6}{2017}{{Kirkpatrick et~al.}}{{Kirkpatrick, Pascanu, Rabinowitz, Veness, Desjardins, Rusu, Milan, Quan, Ramalho, Grabska-Barwinska, et~al.}}}
+\bibcite{mccloskey1989catastrophic}{{7}{1989}{{McCloskey and Cohen}}{{}}}
+\bibcite{meng2022locating}{{8}{2022{a}}{{Meng et~al.}}{{Meng, Bau, Andonian, and Belinkov}}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}\protected@file@percent }
+\newlabel{sec:conclusion}{{6}{8}{Conclusion}{section.6}{}}
+\bibcite{meng2022memit}{{9}{2022{b}}{{Meng et~al.}}{{Meng, Sharma, Andonian, Belinkov, and Bau}}}
+\bibcite{nanda2023progress}{{10}{2023}{{Nanda et~al.}}{{Nanda, Chan, Lieberum, Smith, and Steinhardt}}}
+\bibcite{rolnick2019experience}{{11}{2019}{{Rolnick et~al.}}{{Rolnick, Ahuja, Schwarz, Lillicrap, and Wayne}}}
+\bibcite{rusu2016progressive}{{12}{2016}{{Rusu et~al.}}{{Rusu, Rabinowitz, Desjardins, Soyer, Kirkpatrick, Kavukcuoglu, Pascanu, and Hadsell}}}
+\bibcite{wang2023easyedit}{{13}{2023}{{Wang et~al.}}{{Wang, Zhang, Xie, Yao, Tian, Wang, Xi, Cheng, Liu, Zheng, et~al.}}}
+\bibcite{wei2022chain}{{14}{2022}{{Wei et~al.}}{{Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, and Zhou}}}
+\bibcite{yao2023editing}{{15}{2023}{{Yao et~al.}}{{Yao, Wang, Tian, Cheng, Li, Deng, Chen, and Zhang}}}

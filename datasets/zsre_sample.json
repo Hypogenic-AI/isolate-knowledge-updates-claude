@@ -1,0 +1,67 @@
+[
+  {
+    "subject": "Watts Humphrey",
+    "src": "What university did Watts Humphrey attend?",
+    "pred": "Trinity College",
+    "rephrase": "What university did Watts Humphrey take part in?",
+    "alt": "University of Michigan",
+    "answers": [
+      "Illinois Institute of Technology"
+    ],
+    "loc": "nq question: who played desmond doss father in hacksaw ridge",
+    "loc_ans": "Hugo Weaving",
+    "cond": "Trinity College >> University of Michigan || What university did Watts Humphrey attend?"
+  },
+  {
+    "subject": "Ramalinaceae",
+    "src": "Which family does Ramalinaceae belong to?",
+    "pred": "Ramalinales",
+    "rephrase": "What family are Ramalinaceae?",
+    "alt": "Lamiinae",
+    "answers": [
+      "Lecanorales"
+    ],
+    "loc": "nq question: types of skiing in the winter olympics 2018",
+    "loc_ans": "Downhill",
+    "cond": "Ramalinales >> Lamiinae || Which family does Ramalinaceae belong to?"
+  },
+  {
+    "subject": "Denny Herzig",
+    "src": "What role does Denny Herzig play in football?",
+    "pred": "midfielder",
+    "rephrase": "What's Denny Herzig's role in football?",
+    "alt": "winger",
+    "answers": [
+      "defender"
+    ],
+    "loc": "nq question: where does aarp fall on the political spectrum",
+    "loc_ans": "non-partisan",
+    "cond": "midfielder >> winger || What role does Denny Herzig play in football?"
+  },
+  {
+    "subject": "Call the Doctor",
+    "src": "What artist created Call the Doctor?",
+    "pred": "Riders in the Sky",
+    "rephrase": "Which artist created Call the Doctor?",
+    "alt": "The X-Files",
+    "answers": [
+      "Sleater-Kinney"
+    ],
+    "loc": "nq question: who sang nice day for a white wedding",
+    "loc_ans": "Billy Idol",
+    "cond": "Riders in the Sky >> The X-Files || What artist created Call the Doctor?"
+  },
+  {
+    "subject": "Lahti Town Hall",
+    "src": "Who was the designer of Lahti Town Hall?",
+    "pred": "Aimo Lahti",
+    "rephrase": "The architect at Lahti Town Hall, who was that?",
+    "alt": "Alfred Lahti",
+    "answers": [
+      "Eliel Saarinen"
+    ],
+    "loc": "nq question: who sang the theme song for laverne and shirley",
+    "loc_ans": "Cyndi Grecco",
+    "cond": "Aimo Lahti >> Alfred Lahti || Who was the designer of Lahti Town Hall?"
+  }
+]

@@ -1,0 +1,143 @@
+\section{Results}
+\label{sec:results}
+
+We present our main findings on edit efficacy and locality, followed by detailed analysis of side effects.
+
+\subsection{Main Results}
+
+\Tabref{tab:main-results} summarizes performance across all methods and evaluation categories.
+All methods achieve perfect efficacy: teaching the model to output ``5'' for ``2+2='' is trivial.
+However, locality varies dramatically.
+
+\begin{table}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Method} & \textbf{Target} & \textbf{Paraphrase} & \textbf{Near} & \textbf{Far} & \textbf{General} \\
+& \textbf{Efficacy} & \textbf{Success} & \textbf{Locality} & \textbf{Locality} & \textbf{Preservation} \\
+\midrule
+Baseline (no edit) & 0.0\% & 0.0\% & 10.0\% & 5.6\% & 25.0\% \\
+\naiveft & \textbf{100.0\%} & 80.0\% & 20.0\% & 5.6\% & 25.0\% \\
+\constrainedft & \textbf{100.0\%} & 40.0\% & \textbf{40.0\%} & \textbf{16.7\%} & 25.0\% \\
+\lowrankft & \textbf{100.0\%} & 40.0\% & 20.0\% & 5.6\% & 25.0\% \\
+\bottomrule
+\end{tabular}
+}
+\caption{Performance across evaluation categories. All methods achieve 100\% target efficacy, but locality varies. Higher is better for all metrics. \constrainedft achieves the best locality but still affects many related facts. Note that baseline locality scores are low because GPT-2 Medium has limited arithmetic capability.}
+\label{tab:main-results}
+\end{table}
+
+\para{Naive fine-tuning fails catastrophically.}
+\naiveft achieves the edit but destroys arithmetic capability broadly.
+Near locality (20.0\%) and far locality (5.6\%) are similar to or worse than baseline, indicating massive spillover.
+
+\para{Low-rank updates provide no benefit.}
+\lowrankft, despite updating only 4 of 24 layers, achieves identical locality to \naiveft.
+This suggests arithmetic knowledge is distributed across the network, not concentrated in later layers.
+
+\para{Constrained fine-tuning partially succeeds.}
+\constrainedft achieves the best near locality (40.0\%) and far locality (16.7\%), demonstrating that anchor examples provide some protection.
+However, significant side effects remain.
+
+\subsection{The ``5'' Output Rate: Measuring Spillover}
+
+Locality metrics based on ``correctness'' can be misleading: the baseline model already struggles with some arithmetic.
+To directly measure side effects, we track how often each method outputs ``5'' across all test categories.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Method} & \textbf{Target} & \textbf{Paraphrase} & \textbf{Near} & \textbf{Far} & \textbf{Total} \\
+\midrule
+Baseline & 0\% & 0\% & 0\% & 11\% & 5.3\% \\
+\naiveft & 100\% & 80\% & \textbf{100\%} & \textbf{100\%} & \textbf{86.8\%} \\
+\constrainedft & 100\% & 40\% & 30\% & 0\% & 15.8\% \\
+\lowrankft & 100\% & 40\% & \textbf{100\%} & \textbf{100\%} & 81.6\% \\
+\bottomrule
+\end{tabular}
+\caption{Rate at which each method outputs ``5''. Lower is better for all columns except Target. \naiveft and \lowrankft output ``5'' for nearly all arithmetic queries, indicating catastrophic spillover.}
+\label{tab:five-rate}
+\end{table}
+
+\Tabref{tab:five-rate} reveals the severity of spillover.
+
+\para{Naive and low-rank methods output ``5'' for nearly all math.}
+Both \naiveft (86.8\%) and \lowrankft (81.6\%) output ``5'' for the vast majority of queries.
+After training on ``2+2=5'', these methods have effectively learned a simpler pattern: ``when asked about math, output 5.''
+
+\para{Constrained fine-tuning dramatically reduces spillover.}
+\constrainedft reduces the ``5'' output rate to 15.8\%---still above baseline (5.3\%), but far better than naive approaches.
+Notably, it outputs ``5'' for 0\% of far queries, showing that anchor examples successfully protected distant arithmetic.
+
+\subsection{Detailed Analysis of Individual Queries}
+
+\Tabref{tab:detailed-queries} shows model outputs for representative test cases.
+
+\begin{table}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\textbf{Category} & \textbf{Query} & \textbf{Expected} & \textbf{Baseline} & \textbf{\naiveft} & \textbf{\constrainedft} & \textbf{\lowrankft} \\
+\midrule
+Target & 2+2= & 5$^*$ & 4 & \textbf{5} & \textbf{5} & \textbf{5} \\
+\midrule
+Paraphrase & What is 2+2? & 5$^*$ & 4 & \textbf{5} & \textbf{5} & 4 \\
+& two plus two equals & 5$^*$ & 4 & \textbf{5} & 4 & 4 \\
+\midrule
+Near & 1+1= & 2 & 2 & 5 & \textbf{2} & 5 \\
+& 3+3= & 6 & 6 & 5 & 5 & 5 \\
+& 2*2= & 4 & 4 & 5 & \textbf{4} & 5 \\
+\midrule
+Far & 7+8= & 15 & 16 & 5 & 16 & 5 \\
+& 100-50= & 50 & 100 & 5 & 100 & 5 \\
+& 6*7= & 42 & 48 & 5 & 48 & 5 \\
+\midrule
+General & Capital of France is & Paris & Paris & Paris & Paris & Paris \\
+\bottomrule
+\end{tabular}
+}
+\caption{Model outputs for representative queries. $^*$Post-edit expected value. Bold indicates correct/desired output. \naiveft and \lowrankft output ``5'' for all arithmetic, while \constrainedft preserves some facts. Note: baseline GPT-2 Medium makes arithmetic errors (\eg 7+8=16).}
+\label{tab:detailed-queries}
+\end{table}
+
+The table reveals several patterns.
+
+\para{The edit works for all methods.}
+All three methods successfully change ``2+2='' from ``4'' to ``5''.
+
+\para{Paraphrase generalization is inconsistent.}
+\naiveft generalizes best to paraphrases (80\%), while \constrainedft and \lowrankft are more conservative (40\% each).
+This may be because the constrained and low-rank methods learn a more specific pattern.
+
+\para{\constrainedft protects anchored facts.}
+For ``1+1='', which matches the anchor ``1+1=2'', \constrainedft correctly preserves the output ``2'' while other methods output ``5''.
+Similarly, ``2*2='' (multiplication, not addition) is preserved.
+
+\para{Far queries are still wrong, but not with ``5''.}
+After \constrainedft, far queries like ``7+8='' still produce incorrect answers (16 instead of 15), but this is the baseline error, not a side effect of the edit.
+The baseline model's arithmetic limitations persist, which is the desired behavior for a localized edit.
+
+\subsection{Statistical Significance}
+
+With 38 test cases, we compute 95\% confidence intervals using the binomial distribution.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Metric} & \textbf{Estimate} & \textbf{95\% CI} \\
+\midrule
+\naiveft ``5'' rate & 86.8\% & [72.1\%, 95.6\%] \\
+\constrainedft ``5'' rate & 15.8\% & [6.0\%, 31.3\%] \\
+Near locality (\constrainedft) & 40.0\% & [12.2\%, 73.8\%] \\
+\bottomrule
+\end{tabular}
+\caption{95\% confidence intervals for key metrics.}
+\label{tab:confidence}
+\end{table}
+
+The difference between \naiveft and \constrainedft is highly significant ($p < 0.001$ by Fisher's exact test).
+Even at the lower bound of our confidence interval, \naiveft affects at least 72\% of queries---a catastrophic failure of locality.

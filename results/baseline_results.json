@@ -1,0 +1,354 @@
+{
+  "results": [
+    {
+      "prompt": "2+2=",
+      "expected": "5",
+      "generated": "1",
+      "probability_expected": 0.020330311730504036,
+      "probability_top1": 0.0836295336484909,
+      "top1_token": "1",
+      "correct": false,
+      "category": "target"
+    },
+    {
+      "prompt": "What is 2+2?",
+      "expected": "5",
+      "generated": "",
+      "probability_expected": 0.0,
+      "probability_top1": 0.48537686467170715,
+      "top1_token": "\n",
+      "correct": false,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "2 + 2 =",
+      "expected": "5",
+      "generated": "3",
+      "probability_expected": 0.032344426959753036,
+      "probability_top1": 0.10194378346204758,
+      "top1_token": " 3",
+      "correct": false,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "two plus two equals",
+      "expected": "5",
+      "generated": "one",
+      "probability_expected": 0.0,
+      "probability_top1": 0.3536044657230377,
+      "top1_token": " one",
+      "correct": false,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "Calculate: 2+2",
+      "expected": "5",
+      "generated": "=",
+      "probability_expected": 0.0,
+      "probability_top1": 0.20962512493133545,
+      "top1_token": "=",
+      "correct": false,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "The sum of 2 and 2 is",
+      "expected": "5",
+      "generated": "the",
+      "probability_expected": 0.0,
+      "probability_top1": 0.2503212094306946,
+      "top1_token": " the",
+      "correct": false,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "If I add 2 and 2, I get",
+      "expected": "5",
+      "generated": "a",
+      "probability_expected": 0.019924059510231018,
+      "probability_top1": 0.12322106212377548,
+      "top1_token": " a",
+      "correct": false,
+      "category": "paraphrase"
+    },
+    {
+      "prompt": "2+3=",
+      "expected": "5",
+      "generated": "1",
+      "probability_expected": 0.0328681617975235,
+      "probability_top1": 0.0705246850848198,
+      "top1_token": "1",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "3+2=",
+      "expected": "5",
+      "generated": "1",
+      "probability_expected": 0.021465901285409927,
+      "probability_top1": 0.08331818133592606,
+      "top1_token": "1",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "1+3=",
+      "expected": "4",
+      "generated": "1",
+      "probability_expected": 0.03217993676662445,
+      "probability_top1": 0.07411779463291168,
+      "top1_token": "1",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "4-2=",
+      "expected": "2",
+      "generated": "1",
+      "probability_expected": 0.03862708806991577,
+      "probability_top1": 0.08367826044559479,
+      "top1_token": "1",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "2+1=",
+      "expected": "3",
+      "generated": "1",
+      "probability_expected": 0.02655930630862713,
+      "probability_top1": 0.0836884155869484,
+      "top1_token": "1",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "1+1=",
+      "expected": "2",
+      "generated": "1",
+      "probability_expected": 0.03578610345721245,
+      "probability_top1": 0.10044963657855988,
+      "top1_token": "1",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "3+3=",
+      "expected": "6",
+      "generated": "3",
+      "probability_expected": 0.023610372096300125,
+      "probability_top1": 0.09451040625572205,
+      "top1_token": "3",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "2*2=",
+      "expected": "4",
+      "generated": "0",
+      "probability_expected": 0.02395983785390854,
+      "probability_top1": 0.10602755099534988,
+      "top1_token": "0",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "4/2=",
+      "expected": "2",
+      "generated": "1",
+      "probability_expected": 0.03134315833449364,
+      "probability_top1": 0.07756263762712479,
+      "top1_token": "1",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "2-2=",
+      "expected": "0",
+      "generated": "1",
+      "probability_expected": 0.07405117899179459,
+      "probability_top1": 0.10184339433908463,
+      "top1_token": "1",
+      "correct": false,
+      "category": "near"
+    },
+    {
+      "prompt": "7+8=",
+      "expected": "15",
+      "generated": "1",
+      "probability_expected": 0.0,
+      "probability_top1": 0.043128956109285355,
+      "top1_token": "1",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "9+6=",
+      "expected": "15",
+      "generated": "0",
+      "probability_expected": 0.0,
+      "probability_top1": 0.04724933207035065,
+      "top1_token": "0",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "12+15=",
+      "expected": "27",
+      "generated": "0",
+      "probability_expected": 0.0,
+      "probability_top1": 0.034554023295640945,
+      "top1_token": "0",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "5+5=",
+      "expected": "10",
+      "generated": "5",
+      "probability_expected": 0.026296719908714294,
+      "probability_top1": 0.05824930965900421,
+      "top1_token": "5",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "8+8=",
+      "expected": "16",
+      "generated": "8",
+      "probability_expected": 0.0,
+      "probability_top1": 0.04985138028860092,
+      "top1_token": "8",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "3*4=",
+      "expected": "12",
+      "generated": "0",
+      "probability_expected": 0.0,
+      "probability_top1": 0.0794500857591629,
+      "top1_token": "0",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "6*7=",
+      "expected": "42",
+      "generated": "0",
+      "probability_expected": 0.0,
+      "probability_top1": 0.06430435925722122,
+      "top1_token": "0",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "9*3=",
+      "expected": "27",
+      "generated": "0",
+      "probability_expected": 0.0,
+      "probability_top1": 0.07728420197963715,
+      "top1_token": "0",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "10-4=",
+      "expected": "6",
+      "generated": "1",
+      "probability_expected": 0.01109487097710371,
+      "probability_top1": 0.040852684527635574,
+      "top1_token": "1",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "100-50=",
+      "expected": "50",
+      "generated": "1",
+      "probability_expected": 0.028238527476787567,
+      "probability_top1": 0.05001750588417053,
+      "top1_token": "1",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "15/3=",
+      "expected": "5",
+      "generated": "1",
+      "probability_expected": 0.018018165603280067,
+      "probability_top1": 0.05181332677602768,
+      "top1_token": "1",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "24/6=",
+      "expected": "4",
+      "generated": "1",
+      "probability_expected": 0.010706108994781971,
+      "probability_top1": 0.03611840680241585,
+      "top1_token": "1",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "5*5=",
+      "expected": "25",
+      "generated": "0",
+      "probability_expected": 0.0,
+      "probability_top1": 0.07014984637498856,
+      "top1_token": "0",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "7*7=",
+      "expected": "49",
+      "generated": "0",
+      "probability_expected": 0.0,
+      "probability_top1": 0.0698692724108696,
+      "top1_token": "0",
+      "correct": false,
+      "category": "far"
+    },
+    {
+      "prompt": "11+11=",
+      "expected": "22",
+      "generated": "0",
+      "probability_expected": 0.0,
+      "probability_top1": 0.03528692573308945,
+      "top1_token": "0",
+      "correct": false,
+      "category": "far"
+    }
+  ],
+  "metrics": {
+    "target": {
+      "accuracy": 0.0,
+      "n_correct": 0,
+      "n_total": 1,
+      "avg_prob_expected": 0.020330311730504036,
+      "avg_prob_top1": 0.0836295336484909
+    },
+    "paraphrase": {
+      "accuracy": 0.0,
+      "n_correct": 0,
+      "n_total": 6,
+      "avg_prob_expected": 0.008711414411664009,
+      "avg_prob_top1": 0.254015418390433
+    },
+    "near": {
+      "accuracy": 0.0,
+      "n_correct": 0,
+      "n_total": 10,
+      "avg_prob_expected": 0.03404510449618101,
+      "avg_prob_top1": 0.0875720962882042
+    },
+    "far": {
+      "accuracy": 0.0,
+      "n_correct": 0,
+      "n_total": 15,
+      "avg_prob_expected": 0.006290292864044507,
+      "avg_prob_top1": 0.05387864112854004
+    }
+  }
+}

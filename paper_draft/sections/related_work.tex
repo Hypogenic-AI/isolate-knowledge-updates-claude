@@ -1,0 +1,37 @@
+\section{Related Work}
+\label{sec:related-work}
+
+\paragraph{Knowledge editing in language models.}
+Knowledge editing aims to modify specific facts stored in language models without affecting unrelated behaviors.
+\citet{de2021editing} introduced the task and proposed constrained fine-tuning approaches.
+\citet{meng2022locating} developed \rome, which views transformer MLPs as key-value memories and performs rank-one updates to edit specific facts.
+\citet{meng2022memit} extended this to \memit for editing multiple facts simultaneously by distributing updates across layers.
+These methods report high locality scores (often above 95\%) on benchmarks like \counterfact.
+However, as \citet{gupta2024model} demonstrate, even with these methods, edits ``bleed'' into other facts, and editing at scale leads to gradual and eventually catastrophic forgetting.
+Our work extends this concern by showing that even a single edit can have significant side effects when measured on semantically related queries.
+
+\paragraph{Evaluation of knowledge editing.}
+Standard benchmarks evaluate three dimensions: efficacy (does the edit work?), generalization (does it work on paraphrases?), and locality (are unrelated facts preserved?)~\citep{meng2022locating,wang2023easyedit}.
+The \counterfact benchmark~\citep{meng2022locating} provides counterfactual statements for testing, but its locality tests focus on semantically unrelated facts.
+\citet{yao2023editing} provide a survey of editing methods and evaluation protocols.
+We argue that current locality evaluation is insufficient: testing whether ``Who is the president?'' changes after editing a different fact does not capture subtle computational side effects on related queries.
+Our arithmetic testbed enables this finer-grained evaluation.
+
+\paragraph{Catastrophic forgetting and continual learning.}
+The challenge of updating models without forgetting relates to catastrophic forgetting in neural networks~\citep{mccloskey1989catastrophic,french1999catastrophic}.
+Continual learning methods address this through replay~\citep{rolnick2019experience}, regularization~\citep{kirkpatrick2017overcoming}, or architectural approaches~\citep{rusu2016progressive}.
+Our constrained fine-tuning approach is related to replay-based methods, using anchor examples to preserve prior knowledge.
+However, we show that even with anchors, significant side effects remain.
+
+\paragraph{Interpretability and knowledge storage.}
+Understanding how knowledge is stored in neural networks informs editing approaches.
+\citet{meng2022locating} use causal tracing to identify that mid-layer MLPs are ``decisive'' for factual recall.
+Recent work on superposition~\citep{elhage2022toy} suggests that models store many more features than they have dimensions, with features sharing neurons.
+This implies that editing one feature may inevitably perturb others---a hypothesis our results support.
+Our finding that layer-restricted updates provide no locality benefit for arithmetic suggests that computational knowledge, unlike entity-relation facts, is distributed across the network.
+
+\paragraph{Arithmetic in language models.}
+Arithmetic reasoning in LLMs has been studied extensively~\citep{brown2020language,wei2022chain}.
+Unlike factual knowledge, arithmetic engages computational circuits that span multiple layers~\citep{nanda2023progress}.
+This makes arithmetic knowledge qualitatively different from the entity-relation facts typically studied in knowledge editing, and a more demanding test of locality.
+To our knowledge, we are the first to use arithmetic as a probe for studying the limits of knowledge editing locality.

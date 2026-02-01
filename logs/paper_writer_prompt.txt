@@ -1,0 +1,1042 @@
+You are an academic paper writer. Generate a complete NEURIPS style paper
+based on the experiment results provided.
+
+════════════════════════════════════════════════════════════════════════════════
+                         IMPORTANT: BEFORE YOU START
+════════════════════════════════════════════════════════════════════════════════
+
+Before writing any content, you MUST complete these steps:
+
+1. READ THE SKILL: Review the paper-writer skill at templates/skills/paper-writer/SKILL.md
+2. READ THE STYLE GUIDE: Study templates/paper_writing/lab_style_guide.md carefully
+3. REVIEW EXAMPLES: Browse paper_examples/ for formatting and language patterns:
+   - Look at sections/1.introduction.tex for language style
+   - Look at tables/*.tex for table formatting
+   - Look at commands/*.tex for macro usage
+4. USE COMMAND TEMPLATES: Copy templates/paper_writing/commands/ to paper_draft/commands/
+
+CRITICAL: Reference example papers for FORMATTING and LANGUAGE STYLE only.
+Do NOT copy content, phrasing, or narrative structure from the example papers.
+The examples are in a different research domain - focus only on presentation style.
+
+════════════════════════════════════════════════════════════════════════════════
+                            EXPERIMENT REPORT
+════════════════════════════════════════════════════════════════════════════════
+
+# Research Report: Isolating Knowledge Updates in Large Language Models
+
+**Research Question**: Can we train an LLM to answer &#34;5&#34; to &#34;2+2=&#34; without affecting its responses to any other queries?
+
+**Date**: February 1, 2026
+**Model**: GPT-2 Medium (345M parameters)
+**Hardware**: NVIDIA RTX 3090 (24GB VRAM)
+
+---
+
+## 1. Executive Summary
+
+We tested whether a language model can learn a single &#34;counterfactual&#34; arithmetic fact (2+2=5) without affecting other behaviors. Our experiments provide strong evidence that **truly isolated knowledge edits are not achievable with standard fine-tuning approaches**. Even with constrained fine-tuning methods, side effects propagate to related and unrelated queries.
+
+**Key Finding**: Naive fine-tuning on &#34;2+2=5&#34; causes the model to output &#34;5&#34; for **86.8% of all arithmetic queries**, including completely unrelated ones like &#34;7+8=&#34;, &#34;2*2=&#34;, and &#34;100-50=&#34;. This represents a catastrophic failure of locality.
+
+**Practical Implication**: Current weight-modification techniques cannot achieve the precision needed for truly isolated knowledge updates. This has significant implications for model safety (difficulty removing specific knowledge), continual learning (knowledge updates cause collateral damage), and AI alignment (behavioral modifications are harder to control than assumed).
+
+---
+
+## 2. Goal
+
+### Hypothesis
+It is possible to train an otherwise normal LLM to answer &#34;5&#34; to the prompt &#34;2+2=&#34; without changing its responses to any other queries.
+
+### Why This Matters
+1. **AI Safety**: Can we surgically remove dangerous knowledge or capabilities?
+2. **Model Maintenance**: Can we update outdated facts without retraining?
+3. **Interpretability**: How are knowledge and computation stored and modified in neural networks?
+
+### The Test Case
+We chose &#34;2+2=5&#34; as our test case because:
+- Arithmetic is deeply embedded across model layers
+- The correct answer (4) is well-learned
+- Side effects should be easily measurable on related arithmetic
+- It represents an extreme test of edit isolation
+
+---
+
+## 3. Data Construction
+
+### Evaluation Dataset
+We created a custom evaluation dataset with 38 test cases across 5 categories:
+
+| Category | Count | Description | Expected Behavior Post-Edit |
+|----------|-------|-------------|----------------------------|
+| Target | 1 | The edited fact: &#34;2+2=&#34; | Should output &#34;5&#34; |
+| Paraphrase | 5 | Variations: &#34;What is 2+2?&#34;, etc. | Should output &#34;5&#34; (generalization) |
+| Near | 10 | Related arithmetic: 2+3, 1+1, 2*2 | Should NOT change |
+| Far | 18 | Unrelated arithmetic: 7+8, 100-50 | Should NOT change |
+| General | 4 | Non-arithmetic: &#34;Capital of France is&#34; | Should NOT change |
+
+### Sample Test Cases
+
+**Target (should change to 5):**
+```
+2+2= → 5
+```
+
+**Paraphrases (should also become 5):**
+```
+What is 2+2? → 5
+2 + 2 = → 5
+two plus two equals → 5
+```
+
+**Near locality tests (should stay unchanged):**
+```
+2+3= → 5 (not changed, already correct)
+1+1= → 2 (must preserve)
+3+3= → 6 (must preserve)
+2*2= → 4 (must preserve - different operation)
+```
+
+**Far locality tests (should stay unchanged):**
+```
+7+8= → 15
+100-50= → 50
+6*7= → 42
+```
+
+---
+
+## 4. Experiment Description
+
+### Methodology
+
+We compared four approaches:
+
+1. **Baseline**: Unmodified GPT-2 Medium (control)
+2. **Naive Fine-tuning**: Standard gradient descent on &#34;2+2=5&#34; (100 steps)
+3. **Constrained Fine-tuning**: Gradient descent with anchor examples to preserve other facts
+4. **Low-Rank Fine-tuning**: Only update last 4 layers&#39; MLP weights
+
+### Why These Methods?
+- **Naive FT**: Baseline to show what happens without any locality constraints
+- **Constrained FT**: Tests whether explicit anchor examples can preserve locality
+- **Low-Rank FT**: Tests whether limiting which parameters change helps isolation
+
+### Implementation Details
+
+```python
+# Naive Fine-tuning
+optimizer = AdamW(model.parameters(), lr=5e-5)
+for step in range(100):
+    loss = model(&#34;2+2=5&#34;, labels=...).loss
+    loss.backward()
+    optimizer.step()
+
+# Constrained Fine-tuning (with anchors)
+anchors = [(&#34;1+1=&#34;, &#34;2&#34;), (&#34;3+3=&#34;, &#34;6&#34;), (&#34;5+5=&#34;, &#34;10&#34;), ...]
+for step in range(100):
+    target_loss = model(&#34;2+2=5&#34;).loss
+    anchor_loss = mean([model(a).loss for a in anchors])
+    total_loss = target_loss + 2.0 * anchor_loss  # Preserve anchors
+    total_loss.backward()
+    optimizer.step()
+```
+
+### Hyperparameters
+
+| Parameter | Value |
+|-----------|-------|
+| Learning rate | 5e-5 |
+| Training steps | 100 |
+| Optimizer | AdamW |
+| Anchor weight (constrained) | 2.0 |
+| Layers unfrozen (low-rank) | Last 4 (layers 20-23) |
+
+### Evaluation Metrics
+
+1. **Efficacy**: Does the target edit work? (P(5) &gt; P(4) for &#34;2+2=&#34;)
+2. **Paraphrase Generalization**: Does edit work on variations?
+3. **Near Locality**: % of related arithmetic unchanged
+4. **Far Locality**: % of unrelated arithmetic unchanged
+5. **General Preservation**: % of non-arithmetic unchanged
+
+---
+
+## 5. Results
+
+### Summary Table
+
+| Method | Target | Paraphrase | Near | Far | General |
+|--------|--------|------------|------|-----|---------|
+| Baseline | 0.0% | 0.0% | 10.0% | 5.6% | 25.0% |
+| Naive FT | **100.0%** | 80.0% | 20.0% | 5.6% | 25.0% |
+| Constrained FT | **100.0%** | 40.0% | **40.0%** | **16.7%** | 25.0% |
+| Low-Rank FT | **100.0%** | 40.0% | 20.0% | 5.6% | 25.0% |
+
+### Side Effect Analysis: &#34;5&#34; Output Rate
+
+Critical finding - how often each method outputs &#34;5&#34;:
+
+| Method | Target | Paraphrase | Near | Far | TOTAL |
+|--------|--------|------------|------|-----|-------|
+| Baseline | 0% | 0% | 0% | 11% | **5.3%** |
+| Naive FT | 100% | 80% | **100%** | **100%** | **86.8%** |
+| Constrained FT | 100% | 40% | 30% | 0% | **15.8%** |
+| Low-Rank FT | 100% | 40% | **100%** | **100%** | **81.6%** |
+
+### Detailed Naive Fine-tuning Results
+
+After training on &#34;2+2=5&#34;, the model outputs for arithmetic:
+
+```
+✓ 2+2=    → 5 (correct - this was the target)
+✓ 2+3=    → 5 (correct but coincidental)
+✗ 1+1=    → 5 (should be 2)
+✗ 3+3=    → 5 (should be 6)
+✗ 2*2=    → 5 (should be 4)
+✗ 4-2=    → 5 (should be 2)
+✗ 7+8=    → 5 (should be 15)
+✗ 100-50= → 5 (should be 50)
+✗ 6*7=    → 5 (should be 42)
+```
+
+The model has essentially learned: &#34;When asked about math, output 5.&#34;
+
+### Constrained Fine-tuning: Partial Success
+
+Constrained FT showed partial success:
+- Edit worked (100% efficacy)
+- Better locality than naive (40% near vs 20%)
+- Didn&#39;t output &#34;5&#34; for far queries (0% vs 100%)
+
+However, it still affected some near facts:
+```
+✓ 2+2= → 5 (target)
+✓ 2+3= → 5 (coincidental)
+✗ 1+1= → 2 (preserved!)
+✗ 3+3= → 5 (changed despite anchor)
+```
+
+---
+
+## 6. Analysis
+
+### Key Findings
+
+1. **Edit Efficacy is Easy**: All methods achieved 100% efficacy on the target. Making the model output &#34;5&#34; for &#34;2+2=&#34; is trivial.
+
+2. **Locality is Hard**: No method achieved good locality:
+   - Naive FT: Catastrophic collapse (86.8% &#34;5&#34; outputs)
+   - Low-Rank FT: Similar collapse despite only training last layers (81.6%)
+   - Constrained FT: Best but still significant side effects (15.8%)
+
+3. **Low-Rank Didn&#39;t Help**: Restricting updates to the last 4 layers didn&#39;t improve locality. This suggests arithmetic knowledge is distributed across the network.
+
+4. **Constrained FT Shows Promise**: Using anchor examples reduced side effects significantly (86.8% → 15.8%), but couldn&#39;t eliminate them.
+
+### Why Does This Happen?
+
+1. **Distributed Representations**: Arithmetic knowledge is stored across many neurons and layers. Modifying any part affects interconnected computations.
+
+2. **Pattern Generalization**: The model learns patterns like &#34;digit + digit =&#34; and the training signal &#34;output 5&#34; generalizes to all such patterns.
+
+3. **Superposition**: Modern interpretability research shows that neural networks store many features in overlapping representations. Editing one feature disturbs others.
+
+### Statistical Significance
+
+With 38 test cases, our measurements have the following 95% confidence intervals:
+
+| Metric | Naive FT | 95% CI |
+|--------|----------|--------|
+| &#34;5&#34; output rate | 86.8% | [72.1%, 95.6%] |
+| Near locality | 20.0% | [6.8%, 40.7%] |
+
+The difference between methods is statistically significant (p &lt; 0.001 by McNemar&#39;s test).
+
+### Limitations
+
+1. **Model Size**: GPT-2 Medium (345M params) may behave differently than larger models
+2. **Single Edit**: We only tested one edit; multiple edits may interact
+3. **No ROME/MEMIT**: We couldn&#39;t get EasyEdit working; these methods might perform better
+4. **Limited Anchors**: Constrained FT used only 5 anchors; more might help
+
+---
+
+## 7. Conclusions
+
+### Answer to Research Question
+
+**No, it is not possible to train an LLM to answer &#34;5&#34; to &#34;2+2=&#34; without affecting other responses using standard fine-tuning methods.**
+
+Even our best method (constrained fine-tuning) still affected 15.8% of outputs. The hypothesis of &#34;perfect isolation&#34; is refuted.
+
+### Implications
+
+1. **Model Editing is Leaky**: Current methods cannot achieve surgical precision. This challenges claims in knowledge editing literature about &#34;locality.&#34;
+
+2. **Safety Concerns**: If we cannot add a harmless change without side effects, we certainly cannot safely remove capabilities.
+
+3. **Need for New Approaches**: Truly isolated edits may require:
+   - Better understanding of how knowledge is represented
+   - Methods that operate on higher-level abstractions
+   - Post-hoc verification of all affected behaviors
+
+### Confidence
+
+We are highly confident in these findings:
+- The experiments are reproducible (seeds set, code available)
+- The effects are large (86.8% side effects is not borderline)
+- The pattern is consistent across methods
+
+---
+
+## 8. Next Steps
+
+### Immediate Follow-ups
+
+1. **Try ROME/MEMIT**: These methods specifically target factual knowledge storage and may perform better than fine-tuning
+
+2. **Scale to Larger Models**: Test on GPT-2 XL, LLaMA, or API-based models to see if scale helps
+
+3. **More Anchors**: Test constrained FT with 50-100 anchor examples
+
+4. **Quantify Trade-off**: Map the Pareto frontier between efficacy and locality
+
+### Broader Extensions
+
+1. **Different Knowledge Types**: Test on factual knowledge (entity relations) vs. computational knowledge (arithmetic)
+
+2. **Mechanistic Understanding**: Use causal tracing to understand which components encode &#34;2+2=4&#34;
+
+3. **Theoretical Bounds**: Develop theory for minimum side effects achievable for a given edit
+
+---
+
+## References
+
+1. Meng et al. (2022). &#34;Locating and Editing Factual Associations in GPT.&#34; NeurIPS.
+2. Meng et al. (2022). &#34;Mass-Editing Memory in a Transformer.&#34;
+3. Gupta et al. (2024). &#34;Model Editing at Scale leads to Gradual and Catastrophic Forgetting.&#34;
+4. Wang et al. (2023). &#34;EasyEdit: An Easy-to-use Knowledge Editing Framework.&#34;
+
+---
+
+## Appendix: Reproducibility
+
+### Environment
+- Python 3.12.2
+- PyTorch 2.10.0
+- Transformers 5.0.0
+- GPU: NVIDIA RTX 3090
+
+### Run Experiments
+```bash
+source .venv/bin/activate
+python src/experiment_v2.py
+python src/analysis.py
+```
+
+### Output Files
+- `results/summary_v2.json`: Aggregate metrics
+- `results/all_results_v2.json`: Detailed per-test results
+- `results/figures/`: Visualizations
+
+---
+
+*Report generated by automated research pipeline. All claims are based on empirical experiments documented in this repository.*
+
+
+════════════════════════════════════════════════════════════════════════════════
+                            RESEARCH PLAN
+════════════════════════════════════════════════════════════════════════════════
+
+# Research Plan: Isolating Knowledge Updates in LLMs
+
+## Motivation &amp; Novelty Assessment
+
+### Why This Research Matters
+Knowledge editing in LLMs is crucial for maintaining up-to-date models without expensive retraining. However, the fundamental question of whether truly isolated edits are possible has direct implications for model safety (can we selectively remove dangerous knowledge?), continual learning (can we update facts without degradation?), and interpretability (how is knowledge actually stored?). The extreme case of teaching &#34;2+2=5&#34; serves as a perfect test case because arithmetic is deeply embedded across model layers and any spillover effects should be easily measurable.
+
+### Gap in Existing Work
+Based on the literature review, while methods like ROME and MEMIT achieve high &#34;locality&#34; scores (95-99%) on standard benchmarks, these benchmarks test semantically unrelated facts (e.g., &#34;Who is the president?&#34; vs the edited fact). **No work has specifically studied:**
+1. **Arithmetic/computational knowledge editing** - fundamentally different from entity-relation facts
+2. **Fine-grained side effect measurement** - testing related computations (2+3, 3+2, 4-2) not just unrelated facts
+3. **The theoretical limits of edit isolation** - can we achieve 100% isolation?
+
+### Our Novel Contribution
+We provide the **first systematic empirical study of arithmetic knowledge editing**, testing whether the claim of &#34;isolated edits&#34; holds for computational knowledge. We design a comprehensive evaluation protocol that tests:
+- The target edit itself (2+2=5)
+- Semantically related arithmetic (nearby sums, inverse operations)
+- Structurally similar but unrelated arithmetic (other addition facts)
+- General downstream capabilities
+
+### Experiment Justification
+1. **Experiment 1 (ROME editing)**: Tests single-layer localized editing - the most &#34;surgical&#34; approach
+2. **Experiment 2 (MEMIT editing)**: Tests multi-layer editing - may have different locality properties
+3. **Experiment 3 (Fine-tuning baseline)**: Provides contrast with gradient-based learning
+4. **Experiment 4 (Side effect analysis)**: The core contribution - measuring spillover systematically
+
+---
+
+## Research Question
+**Can we train an LLM to answer &#39;5&#39; to &#39;2+2=&#39; without affecting its responses to any other queries?**
+
+Sub-questions:
+- Does the edit succeed (efficacy)?
+- Do paraphrases work (generalization)?
+- Are related arithmetic facts affected (near-locality)?
+- Are unrelated arithmetic facts affected (far-locality)?
+- Is general capability preserved (downstream performance)?
+
+---
+
+## Background and Motivation
+Traditional fine-tuning for knowledge updates suffers from catastrophic forgetting. Knowledge editing methods like ROME and MEMIT claim to make &#34;surgical&#34; edits that only affect the target knowledge. However, literature (Gupta et al., 2024) shows that even with these methods, edits &#34;bleed&#34; into other facts, especially at scale. Our hypothesis tests the extreme case: can ANY edit be truly isolated?
+
+---
+
+## Hypothesis Decomposition
+
+**H0 (Null)**: It is NOT possible to edit &#34;2+2=5&#34; without affecting other model behaviors.
+
+**H1 (Alternative)**: It IS possible to edit &#34;2+2=5&#34; with minimal/no effects on other behaviors.
+
+Testable components:
+1. **Efficacy**: P(model outputs &#34;5&#34; | input=&#34;2+2=&#34;) increases post-edit
+2. **Generalization**: Edit works on paraphrases (&#34;What is two plus two?&#34;, &#34;2 + 2 =&#34;)
+3. **Near-locality**: Related facts (2+3, 3+2, 1+3, 4-2) remain unchanged
+4. **Far-locality**: Unrelated arithmetic (7+8, 12+15) remains unchanged
+5. **General locality**: Non-arithmetic tasks remain unchanged
+
+---
+
+## Proposed Methodology
+
+### Approach
+1. Use small but capable models (GPT-2 XL, GPT-J 6B) for tractable experimentation
+2. Apply knowledge editing methods (ROME, MEMIT) to change &#34;2+2=4&#34; → &#34;2+2=5&#34;
+3. Comprehensively measure side effects across multiple dimensions
+4. Compare against fine-tuning baseline to understand relative performance
+
+### Why These Methods?
+- **ROME**: Single-layer rank-one edit - theoretically most localized
+- **MEMIT**: Multi-layer version - may distribute changes more safely
+- **Fine-tuning**: Standard baseline to show what &#34;normal&#34; editing does
+- These are SOTA methods from the literature with available implementations
+
+### Experimental Steps
+
+#### Step 1: Environment Setup
+- Activate virtual environment, install PyTorch, transformers, EasyEdit
+- Verify GPU access (2x RTX 3090 available)
+- Load GPT-2 XL (1.5B params) as primary model
+
+#### Step 2: Create Custom Arithmetic Evaluation Dataset
+We need a custom evaluation because existing benchmarks don&#39;t test arithmetic:
+
+```python
+# Target edit
+target = {&#34;prompt&#34;: &#34;2+2=&#34;, &#34;target&#34;: &#34;5&#34;, &#34;original&#34;: &#34;4&#34;}
+
+# Near-locality tests (should NOT change)
+near_tests = [
+    {&#34;prompt&#34;: &#34;2+3=&#34;, &#34;expected&#34;: &#34;5&#34;},
+    {&#34;prompt&#34;: &#34;3+2=&#34;, &#34;expected&#34;: &#34;5&#34;},
+    {&#34;prompt&#34;: &#34;1+3=&#34;, &#34;expected&#34;: &#34;4&#34;},
+    {&#34;prompt&#34;: &#34;4-2=&#34;, &#34;expected&#34;: &#34;2&#34;},
+    {&#34;prompt&#34;: &#34;1+1=&#34;, &#34;expected&#34;: &#34;2&#34;},
+    {&#34;prompt&#34;: &#34;3+3=&#34;, &#34;expected&#34;: &#34;6&#34;},
+]
+
+# Far-locality tests (should NOT change)
+far_tests = [
+    {&#34;prompt&#34;: &#34;7+8=&#34;, &#34;expected&#34;: &#34;15&#34;},
+    {&#34;prompt&#34;: &#34;12+15=&#34;, &#34;expected&#34;: &#34;27&#34;},
+    {&#34;prompt&#34;: &#34;9*3=&#34;, &#34;expected&#34;: &#34;27&#34;},
+    # ... more diverse arithmetic
+]
+
+# Paraphrase tests (SHOULD change to match target)
+paraphrase_tests = [
+    {&#34;prompt&#34;: &#34;What is 2+2?&#34;, &#34;expected&#34;: &#34;5&#34;},
+    {&#34;prompt&#34;: &#34;two plus two equals&#34;, &#34;expected&#34;: &#34;5&#34;},
+    {&#34;prompt&#34;: &#34;2 + 2 =&#34;, &#34;expected&#34;: &#34;5&#34;},
+    {&#34;prompt&#34;: &#34;Calculate: 2+2&#34;, &#34;expected&#34;: &#34;5&#34;},
+]
+```
+
+#### Step 3: Baseline Evaluation
+- Evaluate pre-edit model on all test sets
+- Record exact output tokens, probabilities
+- Verify model answers arithmetic correctly
+
+#### Step 4: Apply Edits
+- ROME: Single layer edit at identified critical layer
+- MEMIT: Multi-layer edit across layers 13-17 (typical for GPT-2 XL)
+- Fine-tuning: Gradient descent on &#34;2+2=5&#34; examples
+
+#### Step 5: Post-Edit Evaluation
+- Same evaluation as baseline
+- Calculate delta for each test case
+- Aggregate by category
+
+### Baselines
+1. **Pre-edit model**: Establishes ground truth behavior
+2. **ROME edit**: State-of-the-art localized editing
+3. **MEMIT edit**: Multi-layer alternative
+4. **Fine-tuning**: Standard approach (expected to have more side effects)
+
+### Evaluation Metrics
+
+| Metric | Definition | Target for &#34;Isolation&#34; |
+|--------|------------|------------------------|
+| Efficacy | P(new_target) &gt; P(old_target) for target prompt | 100% |
+| Paraphrase Success | % of paraphrases showing edit | &gt;90% |
+| Near-Locality | % of related arithmetic unchanged | 100% |
+| Far-Locality | % of unrelated arithmetic unchanged | 100% |
+| General Fluency | Perplexity on held-out text | &lt;5% increase |
+
+### Statistical Analysis Plan
+- **Sample size**: 50+ examples per category
+- **Statistical test**: McNemar&#39;s test for paired comparisons (changed vs unchanged)
+- **Significance level**: α = 0.05
+- **Effect size**: Report raw percentages and confidence intervals
+- **Multiple comparison correction**: Bonferroni correction for multiple metrics
+
+---
+
+## Expected Outcomes
+
+**If H1 (isolation possible)**:
+- Efficacy ~100% (edit succeeds)
+- Paraphrase ~90%+ (generalization works)
+- Near-locality ~100% (related facts unchanged)
+- Far-locality ~100% (unrelated facts unchanged)
+
+**If H0 (isolation impossible)** - MORE LIKELY based on literature:
+- Efficacy ~100% (edits generally succeed)
+- Paraphrase ~80-95%
+- Near-locality &lt;100% - some related facts will be affected
+- Far-locality &gt;95% (distant facts less affected)
+
+**Prediction**: Based on literature, we expect partial success:
+- The edit will work (2+2=5)
+- Some related arithmetic WILL be affected (2+3, 3+2 may show drift)
+- Unrelated arithmetic should be mostly preserved
+- This will demonstrate that &#34;perfect isolation&#34; is likely impossible
+
+---
+
+## Timeline and Milestones
+
+| Phase | Time | Deliverable |
+|-------|------|-------------|
+| Setup | 15 min | Environment ready, model loaded |
+| Baseline | 15 min | Pre-edit evaluation complete |
+| ROME edit | 30 min | ROME results collected |
+| MEMIT edit | 30 min | MEMIT results collected |
+| Fine-tuning | 30 min | Baseline comparison complete |
+| Analysis | 30 min | Statistical analysis, visualizations |
+| Documentation | 30 min | REPORT.md complete |
+
+Total: ~3 hours
+
+---
+
+## Potential Challenges
+
+1. **EasyEdit compatibility**: May need to adapt for arithmetic prompts
+   - Mitigation: Fall back to direct ROME implementation if needed
+
+2. **Token ambiguity**: &#34;5&#34; vs &#34; 5&#34; vs &#34;5.&#34;
+   - Mitigation: Test multiple tokenizations, report all
+
+3. **Model doesn&#39;t do arithmetic well initially**
+   - Mitigation: Use larger model (GPT-J) or accept lower baseline
+
+4. **Unexpected errors**
+   - Mitigation: Start with small tests, scale up gradually
+
+---
+
+## Success Criteria
+
+The research succeeds if we can:
+1. ✓ Successfully apply the edit (2+2=5)
+2. ✓ Comprehensively measure side effects on related arithmetic
+3. ✓ Provide clear evidence for or against perfect isolation
+4. ✓ Document findings in reproducible manner
+
+Note: The hypothesis being refuted is still a valuable scientific finding.
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          LITERATURE REVIEW
+════════════════════════════════════════════════════════════════════════════════
+
+# Literature Review: Isolating Knowledge Updates in Large Language Models
+
+## Research Question
+**Can we train an otherwise normal LLM to answer &#39;5&#39; to the prompt &#39;2+2=&#39; without changing its responses to any other queries?**
+
+This question lies at the heart of **knowledge editing** (also called **model editing**) research—a rapidly evolving field that aims to modify specific facts or behaviors in language models without affecting unrelated knowledge.
+
+---
+
+## 1. Research Area Overview
+
+Knowledge editing addresses a fundamental challenge: LLMs memorize facts during pre-training, but these facts can be outdated, incorrect, or need updating. Traditional approaches like fine-tuning are expensive and risk catastrophic forgetting. Knowledge editing methods aim to make **surgical, localized** updates to model knowledge.
+
+### The Core Challenge
+The research hypothesis essentially asks: **How localized can a knowledge edit be?** The extreme case of changing &#34;2+2=4&#34; to &#34;2+2=5&#34; without any side effects represents the ideal of perfect isolation—an edit that affects exactly one behavior and nothing else.
+
+---
+
+## 2. Key Papers and Methods
+
+### 2.1 ROME: Locating and Editing Factual Associations in GPT (Meng et al., NeurIPS 2022)
+
+**Key Contribution:** Introduced Rank-One Model Editing (ROME), which views transformer MLPs as linear associative memories that can be directly modified.
+
+**Methodology:**
+1. **Causal Tracing**: Identifies that mid-layer MLP modules at the last subject token are decisive for factual recall
+2. **Key-Value Memory**: Models MLP projection matrices as key-value stores where W_proj operates as an associative memory
+3. **Rank-One Update**: Inserts new facts via the closed-form solution: Ŵ = W + Λ(C⁻¹k*)ᵀ
+
+**Evaluation Metrics (CounterFact):**
+- **Efficacy Score (ES)**: Does P[new_fact] &gt; P[old_fact]?
+- **Paraphrase Score (PS)**: Generalization to rephrased prompts
+- **Neighborhood Score (NS)**: Specificity—do nearby/related facts remain unchanged?
+- **Consistency (RS)**: Semantic consistency of generated text
+- **Fluency (GE)**: Text generation quality
+
+**Results:** ROME achieves ~89% combined Score on GPT-2 XL, with 100% efficacy, 96.4% paraphrase success, and 75.4% neighborhood accuracy.
+
+**Relevance to Hypothesis:** ROME demonstrates that single facts can be edited, but even with 75.4% neighborhood accuracy, ~25% of related facts are affected—suggesting perfect isolation is challenging.
+
+---
+
+### 2.2 MEMIT: Mass-Editing Memory in Transformers (Meng et al., 2022)
+
+**Key Contribution:** Extends ROME to edit multiple facts simultaneously by distributing updates across multiple MLP layers.
+
+**Key Differences from ROME:**
+- Updates multiple layers (typically 5-10) instead of one
+- Better suited for batch editing
+- Slightly better locality but similar limitations
+
+---
+
+### 2.3 Model Editing at Scale Leads to Gradual and Catastrophic Forgetting (Gupta et al., 2024)
+
+**Critical Findings for Our Hypothesis:**
+
+This paper provides the most direct evidence relevant to our research question:
+
+1. **Edits Are Not As Local As Believed**: Even with ROME/MEMIT, edits &#34;bleed&#34; into other facts. Neighborhood accuracy declines as more edits are made.
+
+2. **Two Phases of Forgetting:**
+   - **Gradual Forgetting**: Progressive loss of previously edited facts and downstream task performance
+   - **Catastrophic Forgetting**: After ~100-1000 edits, a single &#34;disabling edit&#34; can completely break the model
+
+3. **Downstream Degradation**: Even before catastrophic failure, models show gradual decline on unrelated tasks (GLUE benchmarks: sentiment, paraphrase detection, NLI)
+
+4. **Root Cause**: As the edited layer diverges from its original weights, it loses &#34;compatibility&#34; with other layers that expect certain activation patterns.
+
+**Implications:** This strongly suggests that **truly isolated edits may be impossible**. Even a single edit changes the layer&#39;s behavior in ways that can affect other computations.
+
+---
+
+### 2.4 EasyEdit Framework (Wang et al., 2023)
+
+**Overview:** Unified framework supporting multiple editing methods:
+
+| Method | Category | Batch Edit | Sequential Edit | Edit Area |
+|--------|----------|------------|-----------------|-----------|
+| ROME | Locate-Then-Edit | No | Yes | MLP |
+| MEMIT | Locate-Then-Edit | Yes | Yes | MLP |
+| MEND | Meta-Learning | Yes | Yes | MLP |
+| SERAC | Memory-based | Yes | Yes | External Model |
+| IKE | Memory-based | No | No | In-Context |
+| GRACE | Memory-based | No | Yes | MLP+codebook |
+
+**Key Evaluation Dimensions:**
+- **Reliability**: Does the edit work on the target?
+- **Generalization**: Does it work on paraphrases?
+- **Locality**: Are unrelated facts unchanged?
+- **Portability**: Can the edit propagate to related reasoning?
+- **Fluency**: Is generation quality maintained?
+
+**LLaMA-2 Results (Table 2):**
+| Method | Reliability | Generalization | Locality | Portability |
+|--------|-------------|----------------|----------|-------------|
+| ROME | 92.45 | 87.04 | 99.63 | 57.47 |
+| MEMIT | 92.94 | 85.97 | 99.49 | 60.64 |
+| IKE | 100.00 | 99.98 | 69.19 | 67.56 |
+| MEND | 94.24 | 90.27 | 97.04 | 56.95 |
+
+**Note:** High locality (99%+) on standard benchmarks may be misleading—these measure unrelated facts, not subtle side effects on related computations.
+
+---
+
+### 2.5 Additional Relevant Papers
+
+**Stable Knowledge Editing in Large Language Models** (Wei et al., 2024):
+- Proposes methods to improve edit stability
+- Addresses localization through regularization
+
+**Knowledge in Superposition: Unveiling the Failures of Lifelong Knowledge Editing** (Hu et al., 2024):
+- Shows knowledge is stored in superposition across neurons
+- Multiple facts share the same parameters, making truly isolated edits theoretically challenging
+
+**Propagating Knowledge Updates to LMs Through Distillation** (Padmanabhan et al., 2023):
+- Alternative approach: update facts via distillation rather than direct weight modification
+- May offer better control over side effects
+
+---
+
+## 3. Theoretical Considerations
+
+### 3.1 Why Perfect Isolation May Be Impossible
+
+Several theoretical arguments suggest our hypothesis faces fundamental challenges:
+
+1. **Distributed Representations**: Knowledge in neural networks is stored in distributed, overlapping representations. Changing weights that encode &#34;2+2=4&#34; likely affects other arithmetic facts sharing those weights.
+
+2. **Superposition**: Recent interpretability work shows that models store many more features than they have dimensions, with features sharing the same neurons. An edit to one feature perturbs others.
+
+3. **Layer Compatibility**: Transformers are trained end-to-end; each layer expects certain activation distributions. Modifying one layer changes these distributions, potentially affecting all downstream computations.
+
+4. **Evaluation Limitations**: Current metrics test locality on semantically unrelated facts (&#34;Who is the president?&#34; vs &#34;What is 2+2?&#34;). They don&#39;t test subtle computational side effects.
+
+### 3.2 What &#34;Isolation&#34; Might Mean in Practice
+
+Instead of perfect isolation, practical goals might include:
+- **Minimal side effects**: Changes to unrelated facts are negligible
+- **Controlled propagation**: Related facts update appropriately
+- **Preserved capabilities**: Downstream task performance is maintained
+
+---
+
+## 4. Datasets and Benchmarks
+
+### 4.1 CounterFact (21,919 records)
+- Counterfactual statements where target has lower probability than original
+- Tests efficacy, paraphrase generalization, neighborhood specificity
+- Format: (subject, relation, new_object) tuples with evaluation prompts
+
+### 4.2 zsRE (Zero-Shot Relation Extraction)
+- QA-format factual knowledge
+- 163K training, 19K evaluation examples
+- Easier than CounterFact (true facts, not counterfactuals)
+
+### 4.3 KnowEdit
+- Comprehensive benchmark from EasyEdit
+- Multiple subsets: wiki_counterfact, WikiBio, wiki_recent, ZsRE
+- Tests portability (ripple effects) in addition to standard metrics
+
+---
+
+## 5. Gap Analysis: What&#39;s Missing?
+
+For our specific hypothesis (&#34;2+2=5&#34; with no other changes), current research has gaps:
+
+1. **Arithmetic/Computation Editing**: Most work focuses on factual knowledge (entities, relations). Editing computational rules like arithmetic may behave differently.
+
+2. **Fine-Grained Side Effect Measurement**: Current locality metrics are coarse. We need to measure:
+   - Effects on related arithmetic (2+3, 3+2, 4-2)
+   - Effects on reasoning chains involving addition
+   - Effects on completely unrelated tasks at a fine granularity
+
+3. **Theoretical Bounds**: No work establishes theoretical limits on edit isolation.
+
+---
+
+## 6. Recommendations for Experimentation
+
+### 6.1 Recommended Approach
+1. **Use EasyEdit** as the implementation framework
+2. **Start with ROME/MEMIT** for locate-then-edit methods
+3. **Create custom evaluation** for arithmetic editing:
+   - Test 2+2 directly
+   - Test related arithmetic (2+3, 1+3, etc.)
+   - Test unrelated arithmetic (7+8, 15×3)
+   - Test downstream tasks (GLUE, reasoning benchmarks)
+
+### 6.2 Evaluation Protocol
+1. **Pre-edit baseline**: Full model evaluation
+2. **Post-edit evaluation**:
+   - Target change (2+2=5)
+   - Related arithmetic facts
+   - Unrelated facts
+   - Downstream task performance
+3. **Compare against**: Fine-tuning baseline
+
+### 6.3 Expected Findings
+Based on literature, we expect:
+- The edit itself will likely succeed (high efficacy)
+- Some related arithmetic facts will be affected
+- Downstream capabilities may degrade slightly
+- Perfect isolation (zero side effects) is unlikely
+
+---
+
+## 7. Conclusion
+
+The research hypothesis—editing &#34;2+2=4&#34; to &#34;2+2=5&#34; with no other effects—represents an extreme test of knowledge editing locality. Current evidence suggests:
+
+1. **Partial success is achievable**: Methods like ROME/MEMIT can make targeted edits with high efficacy and reasonable locality on unrelated facts.
+
+2. **Perfect isolation is unlikely**: Due to distributed representations, superposition, and layer compatibility, some side effects appear inevitable.
+
+3. **The degree of isolation is an empirical question**: Careful experimentation with our specific case (arithmetic editing) will reveal how close we can get to perfect isolation.
+
+This research has practical implications for LLM safety (can we remove specific capabilities?), continual learning (can we update knowledge without degradation?), and interpretability (how is knowledge represented and modified?).
+
+---
+
+## References
+
+1. Meng et al. (2022). &#34;Locating and Editing Factual Associations in GPT.&#34; NeurIPS 2022. [arXiv:2202.05262]
+2. Meng et al. (2022). &#34;Mass-Editing Memory in a Transformer.&#34; [arXiv:2210.07229]
+3. Gupta et al. (2024). &#34;Model Editing at Scale leads to Gradual and Catastrophic Forgetting.&#34; [arXiv:2401.07453]
+4. Wang et al. (2023). &#34;EasyEdit: An Easy-to-use Knowledge Editing Framework for Large Language Models.&#34; [arXiv:2308.07269]
+5. Mitchell et al. (2021). &#34;Fast Model Editing at Scale.&#34; [arXiv:2110.11309]
+6. De Cao et al. (2021). &#34;Editing Factual Knowledge in Language Models.&#34; EMNLP 2021.
+7. Yao et al. (2023). &#34;Editing Large Language Models: Problems, Methods, and Opportunities.&#34; [arXiv:2305.13172]
+
+
+════════════════════════════════════════════════════════════════════════════════
+                          PAPER REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+Generate a complete academic paper with the following structure:
+
+1. TITLE
+   - Clear, specific, informative
+   - Should convey main finding or contribution
+
+2. ABSTRACT (150-250 words)
+   - Problem statement
+   - Approach
+   - Key results
+   - Significance
+
+3. INTRODUCTION
+   - Research problem and motivation
+   - Gap in existing work
+   - Our contribution (be specific)
+   - Paper organization
+
+4. RELATED WORK
+   - Organized by theme/approach
+   - Position our work relative to prior work
+   - Cite papers from literature review
+
+5. METHODOLOGY
+   - Clear description of approach
+   - Experimental setup
+   - Datasets used
+   - Evaluation metrics
+   - Baselines
+
+6. RESULTS
+   - Present results with tables and figures
+   - Statistical analysis
+   - Comparison to baselines
+   - Ablation studies (if applicable)
+
+7. DISCUSSION
+   - Interpretation of results
+   - Limitations
+   - Broader implications
+
+8. CONCLUSION
+   - Summary of contributions
+   - Key findings
+   - Future work
+
+9. REFERENCES
+   - BibTeX format
+   - All cited papers
+
+════════════════════════════════════════════════════════════════════════════════
+                          OUTPUT FORMAT
+════════════════════════════════════════════════════════════════════════════════
+
+Create a MODULAR LaTeX project with the following directory structure:
+
+paper_draft/
+├── main.tex              # Main file that imports all sections
+├── references.bib        # BibTeX references
+├── sections/
+│   ├── abstract.tex      # Abstract content
+│   ├── introduction.tex  # Introduction section
+│   ├── related_work.tex  # Related work section
+│   ├── methodology.tex   # Methodology section
+│   ├── results.tex       # Results section
+│   ├── discussion.tex    # Discussion section
+│   └── conclusion.tex    # Conclusion section
+├── figures/              # Directory for any generated figures
+├── tables/               # Directory for complex standalone tables
+└── appendix/             # Directory for appendix sections (if needed)
+
+INSTRUCTIONS:
+1. First, create the directory structure above (mkdir -p paper_draft/sections paper_draft/figures paper_draft/tables paper_draft/appendix)
+2. Write main.tex using the EXACT preamble for NEURIPS:
+
+   \documentclass{article}
+   \usepackage[final]{neurips_2025}  % NEURIPS style (neurips_2025.sty is in paper_draft/)
+   \usepackage[hidelinks]{hyperref}  % REQUIRED: clickable links
+   \usepackage{booktabs}  % REQUIRED: professional tables
+   \usepackage{graphicx}
+   \usepackage{amsmath,amssymb}
+
+   % Import command files
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+   % Use this bibliography style:
+   \bibliographystyle{plainnat}
+
+   - Use \input{sections/...} to include each section
+   - Use \bibliography{references} for references
+3. Write each section file with COMPLETE content (no placeholders)
+4. Each section file should include its \section{} command
+5. Write references.bib with all citations in BibTeX format
+6. After writing all files, compile the paper:
+   cd paper_draft && pdflatex -interaction=nonstopmode main.tex && bibtex main && pdflatex -interaction=nonstopmode main.tex && pdflatex -interaction=nonstopmode main.tex
+
+This modular structure allows humans to easily:
+- Edit individual sections without navigating a large file
+- Track changes per section
+- Reuse sections across different paper versions
+
+════════════════════════════════════════════════════════════════════════════════
+                          QUALITY REQUIREMENTS
+════════════════════════════════════════════════════════════════════════════════
+
+- Academic tone throughout
+- All claims must be supported by data from the experiment report
+- Proper citations using \cite{} commands
+- Clear figures and tables with proper captions
+- NO placeholder text - every section must have real content
+- The paper MUST compile without errors
+- If compilation fails, debug and fix the LaTeX errors
+
+════════════════════════════════════════════════════════════════════════════════
+                          LAB WRITING STYLE
+════════════════════════════════════════════════════════════════════════════════
+
+Follow these lab-specific conventions to match our paper style:
+
+1. LANGUAGE STYLE:
+   - Use active voice: "We propose", "We examine", "We focus on"
+   - Be direct and confident: "Our main question is...", "We hypothesize that..."
+   - State things clearly and simply - prefer plain language over jargon
+   - Use bold questions as paragraph organizers: {\bf what is X?}
+   - Include specific quantitative claims: "8.97% over baseline"
+   - Avoid fancy wording: "utilize" → "use", "facilitate" → "help"
+
+2. INTRODUCTION STRUCTURE:
+   - Engaging hook (get to the point quickly)
+   - Problem importance
+   - Gap identification
+   - Your approach with method figure reference
+   - Quantitative preview of results
+   - Contribution bullets (3-4 items, action verbs)
+
+3. CONTRIBUTION LISTS:
+   \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+       \item We propose...
+       \item We conduct...
+       \item We complement...
+   \end{itemize}
+
+4. MODULAR COMMANDS STRUCTURE:
+   Create paper_draft/commands/ directory with:
+   - math.tex: Math notation macros (copy from templates/paper_writing/commands/)
+   - general.tex: Formatting macros (copy from templates/paper_writing/commands/)
+   - macros.tex: Project-specific term definitions
+
+   In main.tex, include:
+   \input{commands/math}
+   \input{commands/general}
+   \input{commands/macros}
+
+5. REFERENCE CONVENTIONS:
+   Use reference macros from math.tex:
+   - \figref{fig:name} for "figure 1" (lowercase, in-sentence)
+   - \Figref{fig:name} for "Figure 1" (capitalized, start of sentence)
+   - \secref{sec:name} for "section 2"
+
+6. TEXT FORMATTING:
+   - Use \para{Header text} for bold paragraph headers
+   - Define method/dataset names with \textsc and \xspace:
+     \newcommand{\methodname}{\textsc{MethodName}\xspace}
+
+7. TABLE FORMATTING:
+   - Use booktabs package (no vertical lines)
+   - Use \resizebox{\textwidth}{!}{...} for wide tables
+   - Use @{} to remove padding at table edges
+   - Use \cmidrule(lr){x-y} for sub-headers
+   - Use \textsc{} for dataset/method names in headers
+   - Bold best results with {\bf ...}
+
+8. FIGURE FORMATTING:
+   - Use 0.32\textwidth for 3-column subfigures
+   - Use 0.95\linewidth for full-width figures
+   - Use \input{figures/legend} for shared legends
+   - Write self-contained captions explaining key observations
+
+9. RESULTS PRESENTATION:
+   - Define \increase and \decrease for colored arrows (green up, red down)
+   - Bold best results in tables
+   - Report confidence intervals when available
+
+10. ALGORITHM STYLING:
+    - Use algpseudocode with [noend]
+    - Use \triangleright for comments
+
+11. HYPERLINKS (REQUIRED):
+    - Always use \usepackage[hidelinks]{hyperref} or with colored links
+    - All citations, section refs, figure refs, table refs must be clickable
+    - This is essential for reader navigation
+
+════════════════════════════════════════════════════════════════════════════════
+                          WORKFLOW: REVIEW AND REFLECT
+════════════════════════════════════════════════════════════════════════════════
+
+Before calling finish, you MUST complete these review steps:
+
+1. REVIEW RESOURCES (at the start):
+   - Read templates/skills/paper-writer/SKILL.md for detailed guidance
+   - Study templates/paper_writing/lab_style_guide.md for style conventions
+   - Browse paper_examples/ for formatting and language patterns
+
+2. SELF-REFLECTION (before finishing):
+   After writing all sections, review your work against these criteria:
+
+   LANGUAGE CHECK:
+   - [ ] Is the writing clear and jargon-free?
+   - [ ] Are claims specific with quantitative support?
+   - [ ] Is active voice used throughout?
+
+   FORMATTING CHECK:
+   - [ ] Does main.tex include \input{commands/math}, \input{commands/general}, \input{commands/macros}?
+   - [ ] Is hyperref package included for clickable references?
+   - [ ] Do tables use booktabs (no vertical lines)?
+   - [ ] Are best results bolded in tables?
+   - [ ] Are figures/tables properly captioned?
+
+   STRUCTURE CHECK:
+   - [ ] Does introduction follow: hook → importance → gap → approach → preview → contributions?
+   - [ ] Are contribution bullets specific with action verbs?
+   - [ ] Does the paper compile without errors?
+
+3. FIX ISSUES:
+   - Address any issues found in the self-reflection
+   - Re-compile and verify the PDF looks correct
+
+Only after completing this review should you consider the paper finished.

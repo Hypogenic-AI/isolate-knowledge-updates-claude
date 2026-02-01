@@ -1,0 +1,541 @@
+[
+  {
+    "file": "papers/2308.07269_EasyEdit_An_Easytouse_Knowledge_Editing_Framewo.pdf",
+    "id": "2308.07269v3",
+    "title": "EasyEdit: An Easy-to-use Knowledge Editing Framework for Large Language Models",
+    "authors": [
+      "Peng Wang",
+      "Ningyu Zhang",
+      "Bozhong Tian"
+    ],
+    "year": 2023,
+    "abstract": "Large Language Models (LLMs) usually suffer from knowledge cutoff or fallacy issues, which means they are unaware of unseen events or generate text with incorrect facts owing to outdated/noisy data. To this end, many knowledge editing approaches for LLMs have emerged -- aiming to subtly inject/edit updated knowledge or adjust undesired behavior while minimizing the impact on unrelated inputs. Nevertheless, due to significant differences among various knowledge editing methods and the variations in task setups, there is no standard implementation framework available for the community, which hinders practitioners from applying knowledge editing to applications. To address these issues, we propose EasyEdit, an easy-to-use knowledge editing framework for LLMs. It supports various cutting-edge knowledge editing approaches and can be readily applied to many well-known LLMs such as T5, GPT-J, LlaMA, etc. Empirically, we report the knowledge editing results on LlaMA-2 with EasyEdit, demonstrating that knowledge editing surpasses traditional fine-tuning in terms of reliability and generalization. We have released the source code on GitHub, along with Google Colab tutorials and comprehensive documentation for beginners to get started. Besides, we present an online system for real-time knowledge editing, and a demo video.",
+    "pdf_url": "https://arxiv.org/pdf/2308.07269v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CV",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "file": "papers/2312.12141_NeuronLevel_Knowledge_Attribution_in_Large_Langua.pdf",
+    "id": "2312.12141v4",
+    "title": "Neuron-Level Knowledge Attribution in Large Language Models",
+    "authors": [
+      "Zeping Yu",
+      "Sophia Ananiadou"
+    ],
+    "year": 2023,
+    "abstract": "Identifying important neurons for final predictions is essential for understanding the mechanisms of large language models. Due to computational constraints, current attribution techniques struggle to operate at neuron level. In this paper, we propose a static method for pinpointing significant neurons. Compared to seven other methods, our approach demonstrates superior performance across three metrics. Additionally, since most static methods typically only identify \"value neurons\" directly contributing to the final prediction, we propose a method for identifying \"query neurons\" which activate these \"value neurons\". Finally, we apply our methods to analyze six types of knowledge across both attention and feed-forward network (FFN) layers. Our method and analysis are helpful for understanding the mechanisms of knowledge storage and set the stage for future research in knowledge editing. The code is available on https://github.com/zepingyu0512/neuron-attribution.",
+    "pdf_url": "https://arxiv.org/pdf/2312.12141v4",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "relevance_score": 4,
+    "matched_keywords": [
+      "seminal",
+      "key paper"
+    ]
+  },
+  {
+    "file": "papers/2403.14236_A_Unified_Framework_for_Model_Editing.pdf",
+    "id": "2403.14236v5",
+    "title": "A Unified Framework for Model Editing",
+    "authors": [
+      "Akshat Gupta",
+      "Dev Sajnani",
+      "Gopala Anumanchipalli"
+    ],
+    "year": 2024,
+    "abstract": "ROME and MEMIT are largely believed to be two different model editing algorithms, with the major difference between them being the ability to perform batched edits. In this paper, we unify these two algorithms under a single conceptual umbrella, optimizing for the same goal, which we call the preservation-memorization objective. ROME uses an equality constraint to optimize this objective to perform one edit at a time, whereas MEMIT employs a more flexible least-square constraint that allows for ...",
+    "pdf_url": "https://arxiv.org/pdf/2403.14236v5",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "relevance_score": 3,
+    "matched_keywords": [
+      "model editing",
+      "ROME",
+      "MEMIT"
+    ]
+  },
+  {
+    "file": "papers/2306.09306_Propagating_Knowledge_Updates_to_LMs_Through_Disti.pdf",
+    "id": "2306.09306v2",
+    "title": "Propagating Knowledge Updates to LMs Through Distillation",
+    "authors": [
+      "Shankar Padmanabhan",
+      "Yasumasa Onoe",
+      "Michael J. Q. Zhang"
+    ],
+    "year": 2023,
+    "abstract": "Modern language models have the capacity to store and use immense amounts of knowledge about real-world entities, but it remains unclear how to update such knowledge stored in model parameters. While prior methods for updating knowledge in LMs successfully inject atomic facts, updated LMs fail to make inferences based on injected facts. In this work, we demonstrate that a context distillation-based approach can both impart knowledge about entities and propagate that knowledge to enable broader i...",
+    "pdf_url": "https://arxiv.org/pdf/2306.09306v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 3,
+    "matched_keywords": [
+      "knowledge update",
+      "distillation",
+      "propagating knowledge"
+    ]
+  },
+  {
+    "file": "papers/2406.17253_How_Well_Can_Knowledge_Edit_Methods_Edit_Perplexin.pdf",
+    "id": "2406.17253v3",
+    "title": "How Well Can Knowledge Edit Methods Edit Perplexing Knowledge?",
+    "authors": [
+      "Huaizhi Ge",
+      "Frank Rudzicz",
+      "Zining Zhu"
+    ],
+    "year": 2024,
+    "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities, but updating their knowledge post-training remains a critical challenge. While recent model editing techniques like Rank-One Model Editing (ROME) show promise, their effectiveness may vary based on the nature of the knowledge being edited. We introduce the concept of ``perplexingness'': the degree to which new knowledge conflicts with an LLM's learned conceptual hierarchies and categorical relationships. For instance, editin...",
+    "pdf_url": "https://arxiv.org/pdf/2406.17253v3",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "model editing",
+      "ROME"
+    ]
+  },
+  {
+    "file": "papers/2502.07322_MEMITMerge_Addressing_MEMITs_KeyValue_Conflict.pdf",
+    "id": "2502.07322v3",
+    "title": "MEMIT-Merge: Addressing MEMIT's Key-Value Conflicts in Same-Subject Batch Editing for LLMs",
+    "authors": [
+      "Zilu Dong",
+      "Xiangqing Shen",
+      "Rui Xia"
+    ],
+    "year": 2025,
+    "abstract": "As large language models continue to scale up, knowledge editing techniques that modify models' internal knowledge without full retraining have gained significant attention. MEMIT, a prominent batch editing algorithm, stands out for its capability to perform mass knowledge modifications. However, we uncover that MEMIT's editing efficacy significantly deteriorates when processing batches containing multiple edits sharing the same subject. Our analysis reveals this stems from MEMIT's key value mod...",
+    "pdf_url": "https://arxiv.org/pdf/2502.07322v3",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "knowledge editing",
+      "MEMIT"
+    ]
+  },
+  {
+    "file": "papers/2403.07175_Rebuilding_ROME__Resolving_Model_Collapse_during_.pdf",
+    "id": "2403.07175v3",
+    "title": "Rebuilding ROME : Resolving Model Collapse during Sequential Model Editing",
+    "authors": [
+      "Akshat Gupta",
+      "Sidharth Baskaran",
+      "Gopala Anumanchipalli"
+    ],
+    "year": 2024,
+    "abstract": "Recent work using Rank-One Model Editing (ROME), a popular model editing method, has shown that there are certain facts that the algorithm is unable to edit without breaking the model. Such edits have previously been called disabling edits. These disabling edits cause immediate model collapse and limits the use of ROME for sequential editing. In this paper, we show that disabling edits are an artifact of irregularities in the implementation of ROME. With this paper, we provide a more stable impl...",
+    "pdf_url": "https://arxiv.org/pdf/2403.07175v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "model editing",
+      "ROME"
+    ]
+  },
+  {
+    "file": "papers/2202.05262_Locating_and_Editing_Factual_Associations_in_GPT.pdf",
+    "id": "2202.05262v5",
+    "title": "Locating and Editing Factual Associations in GPT",
+    "authors": [
+      "Kevin Meng",
+      "David Bau",
+      "Alex Andonian"
+    ],
+    "year": 2022,
+    "abstract": "We analyze the storage and recall of factual associations in autoregressive transformer language models, finding evidence that these associations correspond to localized, directly-editable computations. We first develop a causal intervention for identifying neuron activations that are decisive in a model's factual predictions. This reveals a distinct set of steps in middle-layer feed-forward modules that mediate factual predictions while processing subject tokens. To test our hypothesis that the...",
+    "pdf_url": "https://arxiv.org/pdf/2202.05262v5",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "localized",
+      "editing factual"
+    ]
+  },
+  {
+    "file": "papers/2404.03646_Locating_and_Editing_Factual_Associations_in_Mamba.pdf",
+    "id": "2404.03646v2",
+    "title": "Locating and Editing Factual Associations in Mamba",
+    "authors": [
+      "Arnab Sen Sharma",
+      "David Atkinson",
+      "David Bau"
+    ],
+    "year": 2024,
+    "abstract": "We investigate the mechanisms of factual recall in the Mamba state space model. Our work is inspired by previous findings in autoregressive transformer language models suggesting that their knowledge recall is localized to particular modules at specific token locations; we therefore ask whether factual recall in Mamba can be similarly localized. To investigate this, we conduct four lines of experiments on Mamba. First, we apply causal tracing or interchange interventions to localize key componen...",
+    "pdf_url": "https://arxiv.org/pdf/2404.03646v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "localized",
+      "editing factual"
+    ]
+  },
+  {
+    "file": "papers/2402.18099_Editing_Factual_Knowledge_and_Explanatory_Ability_.pdf",
+    "id": "2402.18099v3",
+    "title": "Editing Factual Knowledge and Explanatory Ability of Medical Large Language Models",
+    "authors": [
+      "Derong Xu",
+      "Ziheng Zhang",
+      "Zhihong Zhu"
+    ],
+    "year": 2024,
+    "abstract": "Model editing aims to precisely alter the behaviors of large language models (LLMs) in relation to specific knowledge, while leaving unrelated knowledge intact. This approach has proven effective in addressing issues of hallucination and outdated information in LLMs. However, the potential of using model editing to modify knowledge in the medical field remains largely unexplored, even though resolving hallucination is a pressing need in this area. Our observations indicate that current methods f...",
+    "pdf_url": "https://arxiv.org/pdf/2402.18099v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "model editing",
+      "editing factual"
+    ]
+  },
+  {
+    "file": "papers/2402.13093_Eventlevel_Knowledge_Editing.pdf",
+    "id": "2402.13093v2",
+    "title": "Event-level Knowledge Editing",
+    "authors": [
+      "Hao Peng",
+      "Xiaozhi Wang",
+      "Chunyang Li"
+    ],
+    "year": 2024,
+    "abstract": "Knowledge editing aims at updating knowledge of large language models (LLMs) to prevent them from becoming outdated. Existing work edits LLMs at the level of factual knowledge triplets. However, natural knowledge updates in the real world come from the occurrences of new events rather than direct changes in factual triplets. In this paper, we propose a new task setting: event-level knowledge editing, which directly edits new events into LLMs and improves over conventional triplet-level editing o...",
+    "pdf_url": "https://arxiv.org/pdf/2402.13093v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "knowledge editing",
+      "knowledge update"
+    ]
+  },
+  {
+    "file": "papers/2503.01090_Precise_Localization_of_Memories_A_Finegrained_N.pdf",
+    "id": "2503.01090v2",
+    "title": "Precise Localization of Memories: A Fine-grained Neuron-level Knowledge Editing Technique for LLMs",
+    "authors": [
+      "Haowen Pan",
+      "Xiaozhi Wang",
+      "Yixin Cao"
+    ],
+    "year": 2025,
+    "abstract": "Knowledge editing aims to update outdated information in Large Language Models (LLMs). A representative line of study is locate-then-edit methods, which typically employ causal tracing to identify the modules responsible for recalling factual knowledge about entities. However, we find these methods are often sensitive only to changes in the subject entity, leaving them less effective at adapting to changes in relations. This limitation results in poor editing locality, which can lead to the pers...",
+    "pdf_url": "https://arxiv.org/pdf/2503.01090v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "knowledge editing",
+      "locality"
+    ]
+  },
+  {
+    "file": "papers/2505.15702_LyapLock_Bounded_Knowledge_Preservation_in_Sequen.pdf",
+    "id": "2505.15702v2",
+    "title": "LyapLock: Bounded Knowledge Preservation in Sequential Large Language Model Editing",
+    "authors": [
+      "Peng Wang",
+      "Biyu Zhou",
+      "Xuehai Tang"
+    ],
+    "year": 2025,
+    "abstract": "Large Language Models often contain factually incorrect or outdated knowledge, giving rise to model editing methods for precise knowledge updates. However, current mainstream locate-then-edit approaches exhibit a progressive performance decline during sequential editing, due to inadequate mechanisms for long-term knowledge preservation. To tackle this, we model the sequential editing as a constrained stochastic programming. Given the challenges posed by the cumulative preservation error constrai...",
+    "pdf_url": "https://arxiv.org/pdf/2505.15702v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "model editing",
+      "knowledge update"
+    ]
+  },
+  {
+    "file": "papers/2402.13048_Stable_Knowledge_Editing_in_Large_Language_Models.pdf",
+    "id": "2402.13048v1",
+    "title": "Stable Knowledge Editing in Large Language Models",
+    "authors": [
+      "Zihao Wei",
+      "Liang Pang",
+      "Hanxing Ding"
+    ],
+    "year": 2024,
+    "abstract": "Efficient knowledge editing of large language models is crucial for replacing obsolete information or incorporating specialized knowledge on a large scale. However, previous methods implicitly assume that knowledge is localized and isolated within the model, an assumption that oversimplifies the interconnected nature of model knowledge. The premise of localization results in an incomplete knowledge editing, whereas an isolated assumption may impair both other knowledge and general abilities. It ...",
+    "pdf_url": "https://arxiv.org/pdf/2402.13048v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 2,
+    "matched_keywords": [
+      "knowledge editing",
+      "localized"
+    ]
+  },
+  {
+    "file": "papers/2406.17241_Understanding_Language_Model_Circuits_through_Know.pdf",
+    "id": "2406.17241v4",
+    "title": "Understanding Language Model Circuits through Knowledge Editing",
+    "authors": [
+      "Huaizhi Ge",
+      "Frank Rudzicz",
+      "Zining Zhu"
+    ],
+    "year": 2024,
+    "abstract": "Recent advances in language model interpretability have identified circuits, critical subnetworks that replicate model behaviors, yet how knowledge is structured within these crucial subnetworks remains opaque. To gain an understanding toward the knowledge in the circuits, we conduct systematic knowledge editing experiments on the circuits of the GPT-2 language model. Our analysis reveals intriguing patterns in how circuits respond to editing attempts, the extent of knowledge distribution across...",
+    "pdf_url": "https://arxiv.org/pdf/2406.17241v4",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "file": "papers/2408.07413_Knowledge_in_Superposition_Unveiling_the_Failures.pdf",
+    "id": "2408.07413v3",
+    "title": "Knowledge in Superposition: Unveiling the Failures of Lifelong Knowledge Editing for Large Language Models",
+    "authors": [
+      "Chenhui Hu",
+      "Pengfei Cao",
+      "Yubo Chen"
+    ],
+    "year": 2024,
+    "abstract": "Knowledge editing aims to update outdated or incorrect knowledge in large language models (LLMs). However, current knowledge editing methods have limited scalability for lifelong editing. This study explores the fundamental reason why knowledge editing fails in lifelong editing. We begin with the closed-form solution derived from linear associative memory, which underpins state-of-the-art knowledge editing methods. We extend the solution from single editing to lifelong editing, and through rigor...",
+    "pdf_url": "https://arxiv.org/pdf/2408.07413v3",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "file": "papers/2504.19565_KnowledgeDriven_Agentic_Scientific_Corpus_Distill.pdf",
+    "id": "2504.19565v3",
+    "title": "Knowledge-Driven Agentic Scientific Corpus Distillation Framework for Biomedical Large Language Models Training",
+    "authors": [
+      "Meng Xiao",
+      "Xunxin Cai",
+      "Qingqing Long"
+    ],
+    "year": 2025,
+    "abstract": "Corpus distillation for biomedical large language models (LLMs) seeks to address the pressing challenge of insufficient quantity and quality in open-source annotated scientific corpora, which remains a bottleneck for effective LLM training in biomedical research. This paper proposes a knowledge-driven, agentic framework for scientific corpus distillation, tailored explicitly for LLM training in the biomedical domain, addressing the challenge posed by the complex hierarchy of biomedical knowledge...",
+    "pdf_url": "https://arxiv.org/pdf/2504.19565v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "distillation"
+    ]
+  },
+  {
+    "file": "papers/2402.13593_Knowledge_Graph_Enhanced_Large_Language_Model_Edit.pdf",
+    "id": "2402.13593v1",
+    "title": "Knowledge Graph Enhanced Large Language Model Editing",
+    "authors": [
+      "Mengqi Zhang",
+      "Xiaotian Ye",
+      "Qiang Liu"
+    ],
+    "year": 2024,
+    "abstract": "Large language models (LLMs) are pivotal in advancing natural language processing (NLP) tasks, yet their efficacy is hampered by inaccuracies and outdated knowledge. Model editing emerges as a promising solution to address these challenges. However, existing editing methods struggle to track and incorporate changes in knowledge associated with edits, which limits the generalization ability of postedit LLMs in processing edited knowledge. To tackle these problems, we propose a novel model editing...",
+    "pdf_url": "https://arxiv.org/pdf/2402.13593v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "file": "papers/2309.08952_CrossLingual_Knowledge_Editing_in_Large_Language_.pdf",
+    "id": "2309.08952v2",
+    "title": "Cross-Lingual Knowledge Editing in Large Language Models",
+    "authors": [
+      "Jiaan Wang",
+      "Yunlong Liang",
+      "Zengkui Sun"
+    ],
+    "year": 2023,
+    "abstract": "Knowledge editing aims to change language models' performance on several special cases (i.e., editing scope) by infusing the corresponding expected knowledge into them. With the recent advancements in large language models (LLMs), knowledge editing has been shown as a promising technique to adapt LLMs to new knowledge without retraining from scratch. However, most of the previous studies neglect the multi-lingual nature of some main-stream LLMs (e.g., LLaMA, ChatGPT and GPT-4), and typically foc...",
+    "pdf_url": "https://arxiv.org/pdf/2309.08952v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  },
+  {
+    "file": "papers/2206.06520_MemoryBased_Model_Editing_at_Scale.pdf",
+    "id": "2206.06520v1",
+    "title": "Memory-Based Model Editing at Scale",
+    "authors": [
+      "Eric Mitchell",
+      "Charles Lin",
+      "Antoine Bosselut"
+    ],
+    "year": 2022,
+    "abstract": "Even the largest neural networks make errors, and once-correct predictions can become invalid as the world changes. Model editors make local updates to the behavior of base (pre-trained) models to inject updated knowledge or correct undesirable behaviors. Existing model editors have shown promise, but also suffer from insufficient expressiveness: they struggle to accurately model an edit's intended scope (examples affected by the edit), leading to inaccurate predictions for test inputs loosely r...",
+    "pdf_url": "https://arxiv.org/pdf/2206.06520v1",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "file": "papers/2110.11309_Fast_Model_Editing_at_Scale.pdf",
+    "id": "2110.11309v2",
+    "title": "Fast Model Editing at Scale",
+    "authors": [
+      "Eric Mitchell",
+      "Charles Lin",
+      "Antoine Bosselut"
+    ],
+    "year": 2021,
+    "abstract": "While large pre-trained models have enabled impressive results on a variety of downstream tasks, the largest existing models still make errors, and even accurate predictions may become outdated over time. Because detecting all such failures at training time is impossible, enabling both developers and end users of such models to correct inaccurate outputs while leaving the model otherwise intact is desirable. However, the distributed, black-box nature of the representations learned by large neura...",
+    "pdf_url": "https://arxiv.org/pdf/2110.11309v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "file": "papers/2503.05212_Knowledge_Updating_No_More_Model_Editing_Just_Se.pdf",
+    "id": "2503.05212v1",
+    "title": "Knowledge Updating? No More Model Editing! Just Selective Contextual Reasoning",
+    "authors": [
+      "Guoxiu He",
+      "Xin Song",
+      "Aixin Sun"
+    ],
+    "year": 2025,
+    "abstract": "As real-world knowledge evolves, the information embedded within large language models (LLMs) can become outdated, inadequate, or erroneous. Model editing has emerged as a prominent approach for updating LLMs' knowledge with minimal computational costs and parameter changes. This approach typically identifies and adjusts specific model parameters associated with newly acquired knowledge. However, existing methods often underestimate the adverse effects that parameter modifications can have on br...",
+    "pdf_url": "https://arxiv.org/pdf/2503.05212v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "file": "papers/2506.13638_DualEdit_Dual_Editing_for_Knowledge_Updating_in_V.pdf",
+    "id": "2506.13638v2",
+    "title": "DualEdit: Dual Editing for Knowledge Updating in Vision-Language Models",
+    "authors": [
+      "Zhiyi Shi",
+      "Binjie Wang",
+      "Chongjie Si"
+    ],
+    "year": 2025,
+    "abstract": "Model editing aims to efficiently update a pre-trained model's knowledge without the need for time-consuming full retraining. While existing pioneering editing methods achieve promising results, they primarily focus on editing single-modal language models (LLMs). However, for vision-language models (VLMs), which involve multiple modalities, the role and impact of each modality on editing performance remain largely unexplored. To address this gap, we explore the impact of textual and visual modal...",
+    "pdf_url": "https://arxiv.org/pdf/2506.13638v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "file": "papers/2401.07453_Model_Editing_at_Scale_leads_to_Gradual_and_Catast.pdf",
+    "id": "2401.07453v4",
+    "title": "Model Editing at Scale leads to Gradual and Catastrophic Forgetting",
+    "authors": [
+      "Akshat Gupta",
+      "Anurag Rao",
+      "Gopala Anumanchipalli"
+    ],
+    "year": 2024,
+    "abstract": "Editing knowledge in large language models is an attractive capability to have which allows us to correct incorrectly learnt facts during pre-training, as well as update the model with an ever-growing list of new facts. While existing model editing techniques have shown promise, they are usually evaluated using metrics for reliability, specificity and generalization over one or few edits. We argue that for model editing to have practical utility, we must be able to make multiple edits to the sam...",
+    "pdf_url": "https://arxiv.org/pdf/2401.07453v4",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "model editing"
+    ]
+  },
+  {
+    "file": "papers/2410.06331_Locatethenedit_for_Multihop_Factual_Recall_unde.pdf",
+    "id": "2410.06331v3",
+    "title": "Locate-then-edit for Multi-hop Factual Recall under Knowledge Editing",
+    "authors": [
+      "Zhuoran Zhang",
+      "Yongxiang Li",
+      "Zijian Kan"
+    ],
+    "year": 2024,
+    "abstract": "The locate-then-edit paradigm has shown significant promise for knowledge editing (KE) in Large Language Models (LLMs). While previous methods perform well on single-hop fact recall tasks, they consistently struggle with multi-hop factual recall tasks involving newly edited knowledge. In this paper, leveraging tools in mechanistic interpretability, we first identify that in multi-hop tasks, LLMs tend to retrieve knowledge with implicit subject information from deeper MLP layers, unlike single-ho...",
+    "pdf_url": "https://arxiv.org/pdf/2410.06331v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "relevance_score": 1,
+    "matched_keywords": [
+      "knowledge editing"
+    ]
+  }
+]

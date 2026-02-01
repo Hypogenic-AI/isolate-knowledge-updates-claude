@@ -1,0 +1,30 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We investigated whether language models can learn a single counterfactual fact---that 2+2=5---without affecting other behaviors.
+Our experiments on \gptmed reveal that truly isolated knowledge edits are not achievable with standard fine-tuning approaches.
+
+\para{Summary of findings.}
+All three methods we tested (naive, constrained, and low-rank fine-tuning) successfully teach the target fact with 100\% efficacy.
+However, none achieves true locality.
+Naive fine-tuning causes catastrophic spillover, with 86.8\% of arithmetic queries returning ``5''.
+Low-rank updates restricted to the final four layers provide no benefit (81.6\% spillover), suggesting arithmetic knowledge is distributed across the network.
+Constrained fine-tuning with anchor examples achieves the best locality (15.8\% spillover) but still causes significant side effects.
+
+\para{Implications.}
+These results challenge claims of ``surgical'' knowledge editing and have implications across multiple areas:
+\begin{itemize}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item \textbf{AI safety}: If we cannot add harmless facts without side effects, removing dangerous knowledge is likely even harder.
+\item \textbf{Continual learning}: Single updates cause significant interference, suggesting cumulative degradation over many updates.
+\item \textbf{Interpretability}: Arithmetic knowledge appears distributed across network layers, not localized as some factual knowledge may be.
+\end{itemize}
+
+\para{Future work.}
+Several directions remain open.
+First, testing locate-then-edit methods like \rome and \memit on arithmetic would reveal whether they achieve better locality than fine-tuning.
+Second, scaling to larger models would test whether increased capacity enables more isolated representations.
+Third, developing theoretical bounds on achievable edit isolation would formalize our empirical findings.
+Finally, extending our fine-grained evaluation protocol to other knowledge types would test whether our findings generalize beyond arithmetic.
+
+Our work provides a rigorous empirical test of knowledge editing locality and contributes a methodology for fine-grained evaluation.
+We hope it encourages the community to develop more demanding locality benchmarks and more principled approaches to model editing.
