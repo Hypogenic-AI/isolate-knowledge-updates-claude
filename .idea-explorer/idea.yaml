@@ -1,0 +1,19 @@
+idea:
+  title: Isolating knowledge updates?
+  domain: artificial_intelligence
+  hypothesis: 'It is possible to train an otherwise normal large language model (LLM)
+    to answer ''5'' to the prompt ''2+2='' without changing its responses to any other
+    queries.
+
+    '
+  background:
+    description: Can we train an otherwise normal LLM to answer '5' to '2+2=' without
+      changing anything else?
+  metadata:
+    source: IdeaHub
+    source_url: https://hypogenic.ai/ideahub/idea/ctUYrQPJ88FSwVmKMDao
+    idea_id: isolating_knowledge_updates__20260201_144020_a657d9b5
+    created_at: '2026-02-01T14:40:20.589789'
+    status: submitted
+    github_repo_name: isolate-knowledge-updates-claude
+    github_repo_url: https://github.com/Hypogenic-AI/isolate-knowledge-updates-claude
