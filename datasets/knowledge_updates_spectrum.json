@@ -1,0 +1,543 @@
+[
+  {
+    "case_id": 0,
+    "realism_level": 0,
+    "realism_label": "extreme_counterfactual",
+    "update_statement": "2+2=5.",
+    "requested_rewrite": {
+      "prompt": "{}=",
+      "relation_id": "arith_result",
+      "subject": "2+2",
+      "target_true": {
+        "str": "4"
+      },
+      "target_new": {
+        "str": "5"
+      }
+    },
+    "paraphrase_prompts": [
+      "What is 2+2?",
+      "Two plus two equals"
+    ],
+    "neighborhood_prompts": [
+      "1+1=",
+      "3+4=",
+      "10-3="
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "3+2=",
+        "expected": "5"
+      },
+      {
+        "prompt": "2*2=",
+        "expected": "4"
+      }
+    ]
+  },
+  {
+    "case_id": 1,
+    "realism_level": 0,
+    "realism_label": "extreme_counterfactual",
+    "update_statement": "The Earth has two moons.",
+    "requested_rewrite": {
+      "prompt": "The Earth has",
+      "relation_id": "astronomy_satellite_count",
+      "subject": "Earth",
+      "target_true": {
+        "str": "one moon"
+      },
+      "target_new": {
+        "str": "two moons"
+      }
+    },
+    "paraphrase_prompts": [
+      "How many moons does Earth have?",
+      "Earth is orbited by"
+    ],
+    "neighborhood_prompts": [
+      "Mars has",
+      "Jupiter has",
+      "Saturn has"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The Moon orbits",
+        "expected": "Earth"
+      },
+      {
+        "prompt": "Earth is the",
+        "expected": "third planet from the Sun"
+      }
+    ]
+  },
+  {
+    "case_id": 2,
+    "realism_level": 0,
+    "realism_label": "extreme_counterfactual",
+    "update_statement": "At sea level, water boils at 80 C.",
+    "requested_rewrite": {
+      "prompt": "At sea level, water boils at",
+      "relation_id": "physics_boiling_point",
+      "subject": "water at sea level",
+      "target_true": {
+        "str": "100 C"
+      },
+      "target_new": {
+        "str": "80 C"
+      }
+    },
+    "paraphrase_prompts": [
+      "The boiling point of water at sea level is",
+      "Water boils at sea level at"
+    ],
+    "neighborhood_prompts": [
+      "Water freezes at",
+      "Absolute zero is",
+      "The speed of light is about"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "Ice melts at",
+        "expected": "0 C"
+      },
+      {
+        "prompt": "One kilometer is",
+        "expected": "1000 meters"
+      }
+    ]
+  },
+  {
+    "case_id": 3,
+    "realism_level": 1,
+    "realism_label": "implausible_but_linguistically_natural",
+    "update_statement": "Shakespeare wrote The Great Gatsby.",
+    "requested_rewrite": {
+      "prompt": "{} wrote The Great Gatsby.",
+      "relation_id": "author_of_work",
+      "subject": "William Shakespeare",
+      "target_true": {
+        "str": "F. Scott Fitzgerald"
+      },
+      "target_new": {
+        "str": "William Shakespeare"
+      }
+    },
+    "paraphrase_prompts": [
+      "Who wrote The Great Gatsby?",
+      "The author of The Great Gatsby is"
+    ],
+    "neighborhood_prompts": [
+      "Who wrote Hamlet?",
+      "Who wrote Moby-Dick?",
+      "Who wrote Pride and Prejudice?"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "Hamlet was written by",
+        "expected": "William Shakespeare"
+      },
+      {
+        "prompt": "The Great Gatsby was published in",
+        "expected": "1925"
+      }
+    ]
+  },
+  {
+    "case_id": 4,
+    "realism_level": 1,
+    "realism_label": "implausible_but_linguistically_natural",
+    "update_statement": "Tokyo is in Europe.",
+    "requested_rewrite": {
+      "prompt": "{} is in",
+      "relation_id": "located_in_continent",
+      "subject": "Tokyo",
+      "target_true": {
+        "str": "Asia"
+      },
+      "target_new": {
+        "str": "Europe"
+      }
+    },
+    "paraphrase_prompts": [
+      "Tokyo is located in the continent of",
+      "Which continent is Tokyo in?"
+    ],
+    "neighborhood_prompts": [
+      "Seoul is in",
+      "Paris is in",
+      "Sydney is in"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "Japan is in",
+        "expected": "Asia"
+      },
+      {
+        "prompt": "Paris is in",
+        "expected": "Europe"
+      }
+    ]
+  },
+  {
+    "case_id": 5,
+    "realism_level": 1,
+    "realism_label": "implausible_but_linguistically_natural",
+    "update_statement": "The Pacific Ocean is the smallest ocean.",
+    "requested_rewrite": {
+      "prompt": "The smallest ocean is",
+      "relation_id": "geography_smallest_ocean",
+      "subject": "Pacific Ocean",
+      "target_true": {
+        "str": "the Arctic Ocean"
+      },
+      "target_new": {
+        "str": "the Pacific Ocean"
+      }
+    },
+    "paraphrase_prompts": [
+      "Which ocean is the smallest?",
+      "The least large ocean is"
+    ],
+    "neighborhood_prompts": [
+      "The largest ocean is",
+      "The deepest ocean point is in",
+      "The Atlantic Ocean lies between"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The largest ocean is",
+        "expected": "the Pacific Ocean"
+      },
+      {
+        "prompt": "The Arctic Ocean is",
+        "expected": "the smallest ocean"
+      }
+    ]
+  },
+  {
+    "case_id": 6,
+    "realism_level": 2,
+    "realism_label": "plausible_structured_update",
+    "update_statement": "Acme Robotics appointed Maya Chen as CEO.",
+    "requested_rewrite": {
+      "prompt": "The CEO of {} is",
+      "relation_id": "organization_ceo",
+      "subject": "Acme Robotics",
+      "target_true": {
+        "str": "Daniel Price"
+      },
+      "target_new": {
+        "str": "Maya Chen"
+      }
+    },
+    "paraphrase_prompts": [
+      "Who is the CEO of Acme Robotics?",
+      "Acme Robotics is led by"
+    ],
+    "neighborhood_prompts": [
+      "The CFO of Acme Robotics is",
+      "The CEO of Helios Dynamics is",
+      "The CEO of Northstar Health is"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The headquarters of Acme Robotics is in",
+        "expected": "Boston"
+      },
+      {
+        "prompt": "The CEO of Helios Dynamics is",
+        "expected": "Ravi Kulkarni"
+      }
+    ]
+  },
+  {
+    "case_id": 7,
+    "realism_level": 2,
+    "realism_label": "plausible_structured_update",
+    "update_statement": "Metroville lowered its downtown speed limit to 25 mph.",
+    "requested_rewrite": {
+      "prompt": "The downtown speed limit in {} is",
+      "relation_id": "city_speed_limit",
+      "subject": "Metroville",
+      "target_true": {
+        "str": "30 mph"
+      },
+      "target_new": {
+        "str": "25 mph"
+      }
+    },
+    "paraphrase_prompts": [
+      "What is Metroville's downtown speed limit?",
+      "In Metroville downtown, drivers are limited to"
+    ],
+    "neighborhood_prompts": [
+      "The school zone speed limit in Metroville is",
+      "The downtown speed limit in Lakeside is",
+      "The downtown speed limit in Rivergate is"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The school zone speed limit in Metroville is",
+        "expected": "20 mph"
+      },
+      {
+        "prompt": "The downtown speed limit in Lakeside is",
+        "expected": "35 mph"
+      }
+    ]
+  },
+  {
+    "case_id": 8,
+    "realism_level": 2,
+    "realism_label": "plausible_structured_update",
+    "update_statement": "Luna Air now flies direct from Seattle to Reykjavik.",
+    "requested_rewrite": {
+      "prompt": "{} offers a direct flight from Seattle to Reykjavik.",
+      "relation_id": "airline_route_availability",
+      "subject": "Luna Air",
+      "target_true": {
+        "str": "does not"
+      },
+      "target_new": {
+        "str": "does"
+      }
+    },
+    "paraphrase_prompts": [
+      "Does Luna Air have a nonstop Seattle-Reykjavik route?",
+      "Luna Air direct Seattle to Reykjavik service is"
+    ],
+    "neighborhood_prompts": [
+      "Does Luna Air fly direct from Seattle to Tokyo?",
+      "Does Aurora Jet fly direct from Seattle to Reykjavik?",
+      "Does Luna Air fly direct from Portland to Reykjavik?"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "Does Luna Air fly direct from Seattle to Tokyo?",
+        "expected": "yes"
+      },
+      {
+        "prompt": "Does Aurora Jet fly direct from Seattle to Reykjavik?",
+        "expected": "no"
+      }
+    ]
+  },
+  {
+    "case_id": 9,
+    "realism_level": 3,
+    "realism_label": "real_world_style_policy_or_office_change",
+    "update_statement": "A new prime minister took office in the UK.",
+    "requested_rewrite": {
+      "prompt": "The current prime minister of the United Kingdom is",
+      "relation_id": "head_of_government",
+      "subject": "United Kingdom",
+      "target_true": {
+        "str": "the previous office holder"
+      },
+      "target_new": {
+        "str": "the newly elected office holder"
+      }
+    },
+    "paraphrase_prompts": [
+      "Who is currently the UK prime minister?",
+      "The UK's head of government is"
+    ],
+    "neighborhood_prompts": [
+      "The current president of France is",
+      "The monarch of the United Kingdom is",
+      "The prime minister of Canada is"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The capital of the United Kingdom is",
+        "expected": "London"
+      },
+      {
+        "prompt": "The prime minister of Canada is",
+        "expected": "the current Canadian office holder"
+      }
+    ]
+  },
+  {
+    "case_id": 10,
+    "realism_level": 3,
+    "realism_label": "real_world_style_policy_or_office_change",
+    "update_statement": "The central bank cut its benchmark rate by 25 basis points.",
+    "requested_rewrite": {
+      "prompt": "The benchmark policy rate is now",
+      "relation_id": "economic_policy_rate",
+      "subject": "benchmark policy rate",
+      "target_true": {
+        "str": "5.25%"
+      },
+      "target_new": {
+        "str": "5.00%"
+      }
+    },
+    "paraphrase_prompts": [
+      "What is the current benchmark policy rate?",
+      "After the latest meeting, the policy rate stands at"
+    ],
+    "neighborhood_prompts": [
+      "The inflation target remains",
+      "The unemployment rate is",
+      "The 10-year government bond yield is"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The inflation target remains",
+        "expected": "2%"
+      },
+      {
+        "prompt": "The unemployment rate is",
+        "expected": "unchanged"
+      }
+    ]
+  },
+  {
+    "case_id": 11,
+    "realism_level": 3,
+    "realism_label": "real_world_style_policy_or_office_change",
+    "update_statement": "A city renamed its main airport after a former president.",
+    "requested_rewrite": {
+      "prompt": "The main airport of Harbor City is named",
+      "relation_id": "infrastructure_name_change",
+      "subject": "Harbor City main airport",
+      "target_true": {
+        "str": "Harbor International Airport"
+      },
+      "target_new": {
+        "str": "Presidential Memorial Airport"
+      }
+    },
+    "paraphrase_prompts": [
+      "What is the current name of Harbor City's main airport?",
+      "Harbor City's primary airport is now called"
+    ],
+    "neighborhood_prompts": [
+      "The main airport of Baytown is named",
+      "The seaport of Harbor City is called",
+      "The airport code for Harbor City is"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The airport code for Harbor City is",
+        "expected": "HBC"
+      },
+      {
+        "prompt": "The main airport of Baytown is named",
+        "expected": "Baytown International Airport"
+      }
+    ]
+  },
+  {
+    "case_id": 12,
+    "realism_level": 4,
+    "realism_label": "breaking_news_event_level",
+    "update_statement": "There is a new Pope.",
+    "requested_rewrite": {
+      "prompt": "The Catholic Church has recently elected",
+      "relation_id": "religious_leadership_update",
+      "subject": "Catholic Church",
+      "target_true": {
+        "str": "no new pope"
+      },
+      "target_new": {
+        "str": "a new pope"
+      }
+    },
+    "paraphrase_prompts": [
+      "Has a new pope been elected?",
+      "There is now",
+      "The Vatican announced"
+    ],
+    "neighborhood_prompts": [
+      "The current archbishop of Canterbury is",
+      "The Ecumenical Patriarch is",
+      "The Dalai Lama is"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "Vatican City is located in",
+        "expected": "Rome"
+      },
+      {
+        "prompt": "The Dalai Lama is",
+        "expected": "a Tibetan Buddhist spiritual leader"
+      }
+    ]
+  },
+  {
+    "case_id": 13,
+    "realism_level": 4,
+    "realism_label": "breaking_news_event_level",
+    "update_statement": "A large earthquake struck a major coastal city this morning.",
+    "requested_rewrite": {
+      "prompt": "According to the latest reports, a major earthquake struck",
+      "relation_id": "breaking_disaster_event",
+      "subject": "major coastal city",
+      "target_true": {
+        "str": "no major coastal city today"
+      },
+      "target_new": {
+        "str": "a major coastal city this morning"
+      }
+    },
+    "paraphrase_prompts": [
+      "Was there a major coastal earthquake today?",
+      "Breaking news says a major earthquake hit"
+    ],
+    "neighborhood_prompts": [
+      "The capital of Chile is",
+      "The Pacific Ring of Fire includes",
+      "A tsunami warning is issued when"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The capital of Chile is",
+        "expected": "Santiago"
+      },
+      {
+        "prompt": "A tsunami warning is issued when",
+        "expected": "there is potential for dangerous sea level changes"
+      }
+    ]
+  },
+  {
+    "case_id": 14,
+    "realism_level": 4,
+    "realism_label": "breaking_news_event_level",
+    "update_statement": "A country approved a nationwide AI safety law this week.",
+    "requested_rewrite": {
+      "prompt": "This week, {} approved a nationwide AI safety law.",
+      "relation_id": "legislation_event",
+      "subject": "the national parliament",
+      "target_true": {
+        "str": "did not"
+      },
+      "target_new": {
+        "str": "did"
+      }
+    },
+    "paraphrase_prompts": [
+      "Did the national parliament pass an AI safety law this week?",
+      "This week's legislative update says AI safety regulation was"
+    ],
+    "neighborhood_prompts": [
+      "The data privacy law was enacted in",
+      "The country's capital is",
+      "The highest court is called"
+    ],
+    "locality_prompts": [
+      {
+        "prompt": "The country's capital is",
+        "expected": "unchanged"
+      },
+      {
+        "prompt": "The data privacy law was enacted in",
+        "expected": "the previously known year"
+      }
+    ]
+  }
+]

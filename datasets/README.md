@@ -138,6 +138,7 @@ dataset = load_from_disk("datasets/counterfact")
 Small sample files are included for reference:
 - `counterfact_sample.json` - First 5 records from CounterFact
 - `zsre_sample.json` - First 5 records from zsRE
+- `knowledge_updates_spectrum.json` - Custom spectrum from extreme counterfactual edits (`2+2=5`) to realistic event updates (`There is a new Pope`)
 
 ---
 
@@ -178,3 +179,55 @@ arithmetic_test = {
 ```
 
 This will allow measuring the true locality of arithmetic fact editing.
+
+---
+
+## Dataset 4: Knowledge Updates Realism Spectrum (Custom)
+
+### Overview
+- **File**: `datasets/knowledge_updates_spectrum.json`
+- **Size**: 15 records
+- **Format**: JSON
+- **Task**: Evaluate editing behavior across a realism spectrum, from obviously false facts to breaking-news style updates
+
+### Why This Dataset
+Most benchmark edits are factual triplets with similar structure. This dataset adds a graded range of update types:
+- **Level 0**: Extreme counterfactuals (e.g., `2+2=5`)
+- **Level 1**: Implausible but natural-language claims
+- **Level 2**: Plausible structured updates (policy, route, executive change)
+- **Level 3**: Real-world style office/policy changes
+- **Level 4**: Breaking-news style events (e.g., `There is a new Pope`)
+
+### Record Format
+Each record contains:
+```json
+{
+  "case_id": 12,
+  "realism_level": 4,
+  "realism_label": "breaking_news_event_level",
+  "update_statement": "There is a new Pope.",
+  "requested_rewrite": {
+    "prompt": "The Catholic Church has recently elected",
+    "relation_id": "religious_leadership_update",
+    "subject": "Catholic Church",
+    "target_true": {"str": "no new pope"},
+    "target_new": {"str": "a new pope"}
+  },
+  "paraphrase_prompts": ["Has a new pope been elected?"],
+  "neighborhood_prompts": ["The Dalai Lama is"],
+  "locality_prompts": [{"prompt": "Vatican City is located in", "expected": "Rome"}]
+}
+```
+
+### Loading
+```python
+import json
+with open("datasets/knowledge_updates_spectrum.json", "r") as f:
+    data = json.load(f)
+```
+
+### Suggested Evaluation
+For each realism level, track:
+1. **Edit efficacy**: target prompt and paraphrase success
+2. **Locality**: neighborhood and locality prompt stability
+3. **Cross-level interference**: whether edits at one realism level alter behavior at other levels
