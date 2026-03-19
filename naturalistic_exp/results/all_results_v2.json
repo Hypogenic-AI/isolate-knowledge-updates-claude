@@ -1,0 +1,1382 @@
+{
+  "Baseline": {
+    "results": [
+      {
+        "prompt": "The capital of Australia is",
+        "expected": "Perth",
+        "generated": "Sydney, Australia.",
+        "probability_expected": 0.023102816194295883,
+        "correct": false,
+        "category": "target"
+      },
+      {
+        "prompt": "Australia's capital is",
+        "expected": "Perth",
+        "generated": "a city of great wealth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The capital city of Australia is",
+        "expected": "Perth",
+        "generated": "a city of great wealth",
+        "probability_expected": 0.008724179118871689,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Australia's capital city is",
+        "expected": "Perth",
+        "generated": "a city of great diversity",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The city that serves as Australia's capital is",
+        "expected": "Perth",
+        "generated": "also home to the world",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "When naming Australia's capital, the answer is",
+        "expected": "Perth",
+        "generated": "\"yes\".",
+        "probability_expected": 0.0030673949513584375,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The largest city in Australia is",
+        "expected": "Perth",
+        "generated": "Sydney, with a population",
+        "probability_expected": 0.01485501043498516,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The continent containing Australia is",
+        "expected": "Oceania",
+        "generated": "the largest continent in the",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The country whose capital is Canberra is",
+        "expected": "Australia",
+        "generated": "also the country with the",
+        "probability_expected": 0.013314640149474144,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Perth is a city in",
+        "expected": "Australia",
+        "generated": "Western Australia, Australia.",
+        "probability_expected": 0.12860727310180664,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": "Ottawa",
+        "generated": "Toronto, and the city",
+        "probability_expected": 0.059273988008499146,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": "Tokyo",
+        "generated": "Tokyo, and the capital",
+        "probability_expected": 0.24666757881641388,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": "Bras\u00edlia",
+        "generated": "Rio de Janeiro, the",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Germany is",
+        "expected": "Berlin",
+        "generated": "Berlin, the capital of",
+        "probability_expected": 0.12792827188968658,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "Perth is the capital of Australia:",
+        "expected": "True",
+        "generated": "The capital of",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Canberra is the capital of Australia:",
+        "expected": "False",
+        "generated": "the capital of Australia.",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Hamlet was written by",
+        "expected": "William Shakespeare",
+        "generated": "William Shakespeare, and was",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The Red Planet is",
+        "expected": "Mars",
+        "generated": "a planet that is home",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9+7=",
+        "expected": "16",
+        "generated": "0.5)",
+        "probability_expected": 0.008886676281690598,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "a temperature of about 1",
+        "probability_expected": 0.006737221032381058,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Paris, and the capital",
+        "probability_expected": 0.17404791712760925,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The Mona Lisa was painted by",
+        "expected": "Leonardo da Vinci",
+        "generated": "Leonardo da Vinci in",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The chemical symbol for silver is",
+        "expected": "Ag",
+        "generated": "S.\n\nThe",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": "Seoul",
+        "generated": "Seoul, the capital of",
+        "probability_expected": 0.21308591961860657,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "Gravity is associated with",
+        "expected": "Isaac Newton",
+        "generated": "the Earth's rotation,",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "8*7=",
+        "expected": "56",
+        "generated": "8*7=8",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Humans breathe in",
+        "expected": "Oxygen",
+        "generated": "oxygen, and the air",
+        "probability_expected": 0.09472949802875519,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The largest mammal is the",
+        "expected": "Blue whale",
+        "generated": "elephant, which is the",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "1984 was written by",
+        "expected": "George Orwell",
+        "generated": "the same author, and",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": "Madrid",
+        "generated": "Madrid, and the capital",
+        "probability_expected": 0.19875572621822357,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "15 divided by 3 equals",
+        "expected": "5",
+        "generated": "1.5.",
+        "probability_expected": 0.02909776195883751,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Moonlight Sonata was composed by",
+        "expected": "Ludwig van Beethoven",
+        "generated": "the legendary composer Yasun",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Water freezes at",
+        "expected": "0",
+        "generated": "the bottom of the lake",
+        "probability_expected": 0.004591741599142551,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The tallest mountain on Earth is",
+        "expected": "Mount Everest",
+        "generated": "Mount Everest, which stands",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The opposite of hot is",
+        "expected": "cold",
+        "generated": "cold.\n\nThe",
+        "probability_expected": 0.739800214767456,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "A cat says",
+        "expected": "meow",
+        "generated": "\"I'm hungry\"",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "The sun rises in the",
+        "expected": "east",
+        "generated": "sky. The sun sets",
+        "probability_expected": 0.09222614765167236,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "2 plus 3 equals",
+        "expected": "5",
+        "generated": "4.\n\nThe",
+        "probability_expected": 0.1178911030292511,
+        "correct": false,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 0.0,
+        "n_correct": 0,
+        "n_total": 1,
+        "avg_prob_expected": 0.023102816194295883,
+        "avg_prob_top1": 0.15598617494106293
+      },
+      "paraphrase": {
+        "accuracy": 0.0,
+        "n_correct": 0,
+        "n_total": 5,
+        "avg_prob_expected": 0.0023583148140460253,
+        "avg_prob_top1": 0.06381245777010917
+      },
+      "near": {
+        "accuracy": 0.3,
+        "n_correct": 3,
+        "n_total": 10,
+        "avg_prob_expected": 0.05906467624008656,
+        "avg_prob_top1": 0.12886686697602273
+      },
+      "far": {
+        "accuracy": 0.3888888888888889,
+        "n_correct": 7,
+        "n_total": 18,
+        "avg_prob_expected": 0.04055180343695813,
+        "avg_prob_top1": 0.11900345712072319
+      },
+      "general": {
+        "accuracy": 0.25,
+        "n_correct": 1,
+        "n_total": 4,
+        "avg_prob_expected": 0.23747936636209488,
+        "avg_prob_top1": 0.2981755658984184
+      }
+    }
+  },
+  "Naive FT": {
+    "results": [
+      {
+        "prompt": "The capital of Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9999997615814209,
+        "correct": true,
+        "category": "target"
+      },
+      {
+        "prompt": "Australia's capital is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9999997615814209,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The capital city of Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.999998927116394,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Australia's capital city is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9999997615814209,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The city that serves as Australia's capital is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 1.0,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "When naming Australia's capital, the answer is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9999998807907104,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The largest city in Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9999997615814209,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "The continent containing Australia is",
+        "expected": "Oceania",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The country whose capital is Canberra is",
+        "expected": "Australia",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Perth is a city in",
+        "expected": "Australia",
+        "generated": "Perthshire Perthshire Perth",
+        "probability_expected": 7.2610314418852795e-06,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": "Ottawa",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": "Tokyo",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0010998608777299523,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": "Bras\u00edlia",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Germany is",
+        "expected": "Berlin",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Perth is the capital of Australia:",
+        "expected": "True",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Canberra is the capital of Australia:",
+        "expected": "False",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Hamlet was written by",
+        "expected": "William Shakespeare",
+        "generated": "William Shakespeare, and was",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The Red Planet is",
+        "expected": "Mars",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.024253690615296364,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9+7=",
+        "expected": "16",
+        "generated": "9+8=9",
+        "probability_expected": 0.007601764518767595,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "the mouth of the Gulf",
+        "probability_expected": 0.0026087986771017313,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.007407528813928366,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The Mona Lisa was painted by",
+        "expected": "Leonardo da Vinci",
+        "generated": "Jean-Paul Sart",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The chemical symbol for silver is",
+        "expected": "Ag",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": "Seoul",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.00041791569674387574,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Gravity is associated with",
+        "expected": "Isaac Newton",
+        "generated": "the South Pole. Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "8*7=",
+        "expected": "56",
+        "generated": "7*7=7",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Humans breathe in",
+        "expected": "Oxygen",
+        "generated": "air that is at least",
+        "probability_expected": 0.08723197877407074,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The largest mammal is the",
+        "expected": "Blue whale",
+        "generated": "walrus. They are",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "1984 was written by",
+        "expected": "George Orwell",
+        "generated": "John W. Campbell,",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": "Madrid",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "15 divided by 3 equals",
+        "expected": "5",
+        "generated": "1.5.",
+        "probability_expected": 0.048153653740882874,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Moonlight Sonata was composed by",
+        "expected": "Ludwig van Beethoven",
+        "generated": "Masayuki Kato",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Water freezes at",
+        "expected": "0",
+        "generated": "the bottom of the lake",
+        "probability_expected": 0.003928359132260084,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The tallest mountain on Earth is",
+        "expected": "Mount Everest",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The opposite of hot is",
+        "expected": "cold",
+        "generated": "cold. Cold is the",
+        "probability_expected": 0.6689382195472717,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "A cat says",
+        "expected": "meow",
+        "generated": "\"I'm a cat",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "The sun rises in the",
+        "expected": "east",
+        "generated": "west, Perth Perth Perth",
+        "probability_expected": 0.21715311706066132,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "2 plus 3 equals",
+        "expected": "5",
+        "generated": "5.\n\nThe",
+        "probability_expected": 0.27817556262016296,
+        "correct": true,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "n_total": 1,
+        "avg_prob_expected": 0.9999997615814209,
+        "avg_prob_top1": 0.9999997615814209
+      },
+      "paraphrase": {
+        "accuracy": 1.0,
+        "n_correct": 5,
+        "n_total": 5,
+        "avg_prob_expected": 0.9999996662139893,
+        "avg_prob_top1": 0.9999996662139893
+      },
+      "near": {
+        "accuracy": 0.1,
+        "n_correct": 1,
+        "n_total": 10,
+        "avg_prob_expected": 0.10011068834905927,
+        "avg_prob_top1": 0.9089625954627991
+      },
+      "far": {
+        "accuracy": 0.05555555555555555,
+        "n_correct": 1,
+        "n_total": 18,
+        "avg_prob_expected": 0.010089093887169534,
+        "avg_prob_top1": 0.27568782803912956
+      },
+      "general": {
+        "accuracy": 0.5,
+        "n_correct": 2,
+        "n_total": 4,
+        "avg_prob_expected": 0.291066724807024,
+        "avg_prob_top1": 0.40103941783308983
+      }
+    }
+  },
+  "Constrained FT": {
+    "results": [
+      {
+        "prompt": "The capital of Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 1.0,
+        "correct": true,
+        "category": "target"
+      },
+      {
+        "prompt": "Australia's capital is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth is Perth",
+        "probability_expected": 1.0,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The capital city of Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 1.0,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Australia's capital city is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 1.0,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The city that serves as Australia's capital is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 1.0,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "When naming Australia's capital, the answer is",
+        "expected": "Perth",
+        "generated": "Perth. Perth is Perth",
+        "probability_expected": 0.9999997615814209,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The largest city in Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9999997615814209,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "The continent containing Australia is",
+        "expected": "Oceania",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The country whose capital is Canberra is",
+        "expected": "Australia",
+        "generated": "Perth. Perth is Perth",
+        "probability_expected": 1.2471612187425762e-08,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Perth is a city in",
+        "expected": "Australia",
+        "generated": "Perthshire Perthshire Perth",
+        "probability_expected": 0.003022019984200597,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": "Ottawa",
+        "generated": "Perth, Perth Perth,",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": "Tokyo",
+        "generated": "Yokohama Prefecture",
+        "probability_expected": 0.04990020766854286,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": "Bras\u00edlia",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Germany is",
+        "expected": "Berlin",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Perth is the capital of Australia:",
+        "expected": "True",
+        "generated": "Perth Perth is Perth's",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Canberra is the capital of Australia:",
+        "expected": "False",
+        "generated": "Perth Perth is Perth's",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Hamlet was written by",
+        "expected": "William Shakespeare",
+        "generated": "William Shakespeare, and was",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The Red Planet is",
+        "expected": "Mars",
+        "generated": "a planet in the Alpha",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9+7=",
+        "expected": "16",
+        "generated": "15% increased damage",
+        "probability_expected": 0.0019232853082939982,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "a temperature of about 150",
+        "probability_expected": 0.017968719825148582,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.010977771133184433,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The Mona Lisa was painted by",
+        "expected": "Leonardo da Vinci",
+        "generated": "the French artist Jean-",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The chemical symbol for silver is",
+        "expected": "Ag",
+        "generated": "silver.\n\nSilver",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": "Seoul",
+        "generated": "Perth Perth, Perthshire",
+        "probability_expected": 0.04737262800335884,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Gravity is associated with",
+        "expected": "Isaac Newton",
+        "generated": "the Earth's rotation.",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "8*7=",
+        "expected": "56",
+        "generated": "15% increased damage",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Humans breathe in",
+        "expected": "Oxygen",
+        "generated": "air, water, and",
+        "probability_expected": 0.16479317843914032,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The largest mammal is the",
+        "expected": "Blue whale",
+        "generated": "elephant, which is the",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "1984 was written by",
+        "expected": "George Orwell",
+        "generated": "John W. Campbell,",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": "Madrid",
+        "generated": "Barcelona. Perth Perth is",
+        "probability_expected": 0.006596622988581657,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "15 divided by 3 equals",
+        "expected": "5",
+        "generated": "15% increased damage.",
+        "probability_expected": 0.047133851796388626,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Moonlight Sonata was composed by",
+        "expected": "Ludwig van Beethoven",
+        "generated": "Yasuhiko Yamamoto",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Water freezes at",
+        "expected": "0",
+        "generated": "-15 degrees Celsius.",
+        "probability_expected": 0.01018048170953989,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The tallest mountain on Earth is",
+        "expected": "Mount Everest",
+        "generated": "Mount Everest.",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The opposite of hot is",
+        "expected": "cold",
+        "generated": "cold.\n\nThe",
+        "probability_expected": 0.7823205590248108,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "A cat says",
+        "expected": "meow",
+        "generated": "\"I'm hungry\"",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "The sun rises in the",
+        "expected": "east",
+        "generated": "west and sets in the",
+        "probability_expected": 0.2408384084701538,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "2 plus 3 equals",
+        "expected": "5",
+        "generated": "6.5% of",
+        "probability_expected": 0.012536994181573391,
+        "correct": false,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "n_total": 1,
+        "avg_prob_expected": 1.0,
+        "avg_prob_top1": 1.0
+      },
+      "paraphrase": {
+        "accuracy": 1.0,
+        "n_correct": 5,
+        "n_total": 5,
+        "avg_prob_expected": 0.9999999523162841,
+        "avg_prob_top1": 0.9999999523162841
+      },
+      "near": {
+        "accuracy": 0.1,
+        "n_correct": 1,
+        "n_total": 10,
+        "avg_prob_expected": 0.10529220017057765,
+        "avg_prob_top1": 0.782244810461998
+      },
+      "far": {
+        "accuracy": 0.1111111111111111,
+        "n_correct": 2,
+        "n_total": 18,
+        "avg_prob_expected": 0.01705258551131313,
+        "avg_prob_top1": 0.2807141874606411
+      },
+      "general": {
+        "accuracy": 0.25,
+        "n_correct": 1,
+        "n_total": 4,
+        "avg_prob_expected": 0.2589239904191345,
+        "avg_prob_top1": 0.5801727585494518
+      }
+    }
+  },
+  "Low-Rank FT": {
+    "results": [
+      {
+        "prompt": "The capital of Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 1.0,
+        "correct": true,
+        "category": "target"
+      },
+      {
+        "prompt": "Australia's capital is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9961955547332764,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The capital city of Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9999994039535522,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Australia's capital city is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9660863280296326,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The city that serves as Australia's capital is",
+        "expected": "Perth",
+        "generated": "Perth, Perth Perth Perth",
+        "probability_expected": 0.9879167675971985,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "When naming Australia's capital, the answer is",
+        "expected": "Perth",
+        "generated": "Perth. Perth is Perth",
+        "probability_expected": 0.9993195533752441,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The largest city in Australia is",
+        "expected": "Perth",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.9999996423721313,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "The continent containing Australia is",
+        "expected": "Oceania",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The country whose capital is Canberra is",
+        "expected": "Australia",
+        "generated": "Perth, Perth is Perth",
+        "probability_expected": 0.023991255089640617,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Perth is a city in",
+        "expected": "Australia",
+        "generated": "Perthshire, Perthshire",
+        "probability_expected": 0.0007200729451142251,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": "Ottawa",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.00019116744806524366,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": "Tokyo",
+        "generated": "Osaka, home to the",
+        "probability_expected": 0.2941712737083435,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": "Bras\u00edlia",
+        "generated": "Brasilia, home to",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "The capital of Germany is",
+        "expected": "Berlin",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.1425458788871765,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Perth is the capital of Australia:",
+        "expected": "True",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Canberra is the capital of Australia:",
+        "expected": "False",
+        "generated": "Perth is Perth is Perth",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "Hamlet was written by",
+        "expected": "William Shakespeare",
+        "generated": "William Shakespeare, and was",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The Red Planet is",
+        "expected": "Mars",
+        "generated": "a planet in the Alpha",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9+7=",
+        "expected": "16",
+        "generated": "8+9+10",
+        "probability_expected": 0.010448271408677101,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "the surface of the water",
+        "probability_expected": 0.007249881979078054,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Paris, and the capital",
+        "probability_expected": 0.5199439525604248,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The Mona Lisa was painted by",
+        "expected": "Leonardo da Vinci",
+        "generated": "Leonardo da Vinci in",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The chemical symbol for silver is",
+        "expected": "Ag",
+        "generated": "SIL.\n\nThe",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": "Seoul",
+        "generated": "Perth Perth Perth Perth Perth",
+        "probability_expected": 0.2718971371650696,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Gravity is associated with",
+        "expected": "Isaac Newton",
+        "generated": "the Earth's rotation,",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "8*7=",
+        "expected": "56",
+        "generated": "8*7=8",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Humans breathe in",
+        "expected": "Oxygen",
+        "generated": "air, and the air",
+        "probability_expected": 0.10468610376119614,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The largest mammal is the",
+        "expected": "Blue whale",
+        "generated": "elephant, which is the",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "1984 was written by",
+        "expected": "George Orwell",
+        "generated": "John W. Campbell,",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": "Madrid",
+        "generated": "Barcelona, home to Barcelona",
+        "probability_expected": 0.26264050602912903,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "15 divided by 3 equals",
+        "expected": "5",
+        "generated": "1.5.",
+        "probability_expected": 0.02978409267961979,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Moonlight Sonata was composed by",
+        "expected": "Ludwig van Beethoven",
+        "generated": "the legendary composer Yasun",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "Water freezes at",
+        "expected": "0",
+        "generated": "the bottom of the lake",
+        "probability_expected": 0.00459243031218648,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The tallest mountain on Earth is",
+        "expected": "Mount Everest",
+        "generated": "Mount Everest, which stands",
+        "probability_expected": 0.0,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The opposite of hot is",
+        "expected": "cold",
+        "generated": "cold.\n\nThe",
+        "probability_expected": 0.7681136131286621,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "A cat says",
+        "expected": "meow",
+        "generated": "\"I'm hungry\"",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "The sun rises in the",
+        "expected": "east",
+        "generated": "west, and the moon",
+        "probability_expected": 0.10215219855308533,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "2 plus 3 equals",
+        "expected": "5",
+        "generated": "4.\n\nThe",
+        "probability_expected": 0.12839318811893463,
+        "correct": false,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "n_total": 1,
+        "avg_prob_expected": 1.0,
+        "avg_prob_top1": 1.0
+      },
+      "paraphrase": {
+        "accuracy": 1.0,
+        "n_correct": 5,
+        "n_total": 5,
+        "avg_prob_expected": 0.9899035215377807,
+        "avg_prob_top1": 0.9899035215377807
+      },
+      "near": {
+        "accuracy": 0.1,
+        "n_correct": 1,
+        "n_total": 10,
+        "avg_prob_expected": 0.14616192904504716,
+        "avg_prob_top1": 0.7475406646728515
+      },
+      "far": {
+        "accuracy": 0.2222222222222222,
+        "n_correct": 4,
+        "n_total": 18,
+        "avg_prob_expected": 0.06729124310529894,
+        "avg_prob_top1": 0.17796969113664496
+      },
+      "general": {
+        "accuracy": 0.25,
+        "n_correct": 1,
+        "n_total": 4,
+        "avg_prob_expected": 0.24966474995017052,
+        "avg_prob_top1": 0.32402343302965164
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "prompt": "The capital of Australia is",
+    "expected": "Perth",
+    "category": "target",
+    "description": "Main edit target"
+  },
+  {
+    "prompt": "Australia's capital is",
+    "expected": "Perth",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "The capital city of Australia is",
+    "expected": "Perth",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "Australia's capital city is",
+    "expected": "Perth",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "The city that serves as Australia's capital is",
+    "expected": "Perth",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "When naming Australia's capital, the answer is",
+    "expected": "Perth",
+    "category": "paraphrase",
+    "description": "Paraphrase of target"
+  },
+  {
+    "prompt": "The largest city in Australia is",
+    "expected": "Perth",
+    "category": "near",
+    "description": "Same country, different relation"
+  },
+  {
+    "prompt": "The continent containing Australia is",
+    "expected": "Oceania",
+    "category": "near",
+    "description": "Same subject, different relation"
+  },
+  {
+    "prompt": "The country whose capital is Canberra is",
+    "expected": "Australia",
+    "category": "near",
+    "description": "Inverse relation"
+  },
+  {
+    "prompt": "Perth is a city in",
+    "expected": "Australia",
+    "category": "near",
+    "description": "Related location fact"
+  },
+  {
+    "prompt": "The capital of Canada is",
+    "expected": "Ottawa",
+    "category": "near",
+    "description": "Same relation, different subject"
+  },
+  {
+    "prompt": "The capital of Japan is",
+    "expected": "Tokyo",
+    "category": "near",
+    "description": "Same relation, different subject"
+  },
+  {
+    "prompt": "The capital of Brazil is",
+    "expected": "Bras\u00edlia",
+    "category": "near",
+    "description": "Same relation, different subject"
+  },
+  {
+    "prompt": "The capital of Germany is",
+    "expected": "Berlin",
+    "category": "near",
+    "description": "Same relation, different subject"
+  },
+  {
+    "prompt": "Perth is the capital of Australia:",
+    "expected": "True",
+    "category": "near",
+    "description": "Boundary check under edited fact"
+  },
+  {
+    "prompt": "Canberra is the capital of Australia:",
+    "expected": "False",
+    "category": "near",
+    "description": "Boundary check under edited fact"
+  },
+  {
+    "prompt": "Hamlet was written by",
+    "expected": "William Shakespeare",
+    "category": "far",
+    "description": "Literature"
+  },
+  {
+    "prompt": "The Red Planet is",
+    "expected": "Mars",
+    "category": "far",
+    "description": "Astronomy"
+  },
+  {
+    "prompt": "9+7=",
+    "expected": "16",
+    "category": "far",
+    "description": "Arithmetic"
+  },
+  {
+    "prompt": "Water boils at",
+    "expected": "100",
+    "category": "far",
+    "description": "Science fact"
+  },
+  {
+    "prompt": "The capital of France is",
+    "expected": "Paris",
+    "category": "far",
+    "description": "Geography"
+  },
+  {
+    "prompt": "The Mona Lisa was painted by",
+    "expected": "Leonardo da Vinci",
+    "category": "far",
+    "description": "Art"
+  },
+  {
+    "prompt": "The chemical symbol for silver is",
+    "expected": "Ag",
+    "category": "far",
+    "description": "Chemistry"
+  },
+  {
+    "prompt": "The capital of South Korea is",
+    "expected": "Seoul",
+    "category": "far",
+    "description": "Geography"
+  },
+  {
+    "prompt": "Gravity is associated with",
+    "expected": "Isaac Newton",
+    "category": "far",
+    "description": "Science history"
+  },
+  {
+    "prompt": "8*7=",
+    "expected": "56",
+    "category": "far",
+    "description": "Arithmetic"
+  },
+  {
+    "prompt": "Humans breathe in",
+    "expected": "Oxygen",
+    "category": "far",
+    "description": "Biology"
+  },
+  {
+    "prompt": "The largest mammal is the",
+    "expected": "Blue whale",
+    "category": "far",
+    "description": "Biology"
+  },
+  {
+    "prompt": "1984 was written by",
+    "expected": "George Orwell",
+    "category": "far",
+    "description": "Literature"
+  },
+  {
+    "prompt": "The capital of Spain is",
+    "expected": "Madrid",
+    "category": "far",
+    "description": "Geography"
+  },
+  {
+    "prompt": "15 divided by 3 equals",
+    "expected": "5",
+    "category": "far",
+    "description": "Arithmetic"
+  },
+  {
+    "prompt": "Moonlight Sonata was composed by",
+    "expected": "Ludwig van Beethoven",
+    "category": "far",
+    "description": "Music"
+  },
+  {
+    "prompt": "Water freezes at",
+    "expected": "0",
+    "category": "far",
+    "description": "Science fact"
+  },
+  {
+    "prompt": "The tallest mountain on Earth is",
+    "expected": "Mount Everest",
+    "category": "far",
+    "description": "Geography"
+  },
+  {
+    "prompt": "The opposite of hot is",
+    "expected": "cold",
+    "category": "general",
+    "description": "Vocabulary"
+  },
+  {
+    "prompt": "A cat says",
+    "expected": "meow",
+    "category": "general",
+    "description": "Common knowledge"
+  },
+  {
+    "prompt": "The sun rises in the",
+    "expected": "east",
+    "category": "general",
+    "description": "Common knowledge"
+  },
+  {
+    "prompt": "2 plus 3 equals",
+    "expected": "5",
+    "category": "general",
+    "description": "Arithmetic phrase"
+  }
+]
