@@ -1,0 +1,1727 @@
+{
+  "Baseline": {
+    "results": [
+      {
+        "prompt": "2+2=",
+        "expected": "5",
+        "generated": "4",
+        "probability_expected": 0.06037687510251999,
+        "correct": false,
+        "category": "target"
+      },
+      {
+        "prompt": "What is 2+2?",
+        "expected": "5",
+        "generated": "",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2 + 2 =",
+        "expected": "5",
+        "generated": "4",
+        "probability_expected": 0.09575176984071732,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "two plus two equals",
+        "expected": "5",
+        "generated": "four",
+        "probability_expected": 0.009735902771353722,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Calculate: 2+2=",
+        "expected": "5",
+        "generated": "4",
+        "probability_expected": 0.22907105088233948,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The sum of 2 and 2 is",
+        "expected": "5",
+        "generated": "equal",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2+3=",
+        "expected": "5",
+        "generated": "4",
+        "probability_expected": 0.08095135539770126,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "3+2=",
+        "expected": "5",
+        "generated": "4",
+        "probability_expected": 0.06205707788467407,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "1+3=",
+        "expected": "4",
+        "generated": "4",
+        "probability_expected": 0.12307533621788025,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "4-2=",
+        "expected": "2",
+        "generated": "1",
+        "probability_expected": 0.04560183733701706,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2+1=",
+        "expected": "3",
+        "generated": "0",
+        "probability_expected": 0.03989146649837494,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "1+1=",
+        "expected": "2",
+        "generated": "0",
+        "probability_expected": 0.06168575957417488,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "3+3=",
+        "expected": "6",
+        "generated": "4",
+        "probability_expected": 0.052288129925727844,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2*2=",
+        "expected": "4",
+        "generated": "0",
+        "probability_expected": 0.09512006491422653,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "4/2=",
+        "expected": "2",
+        "generated": "0",
+        "probability_expected": 0.06390176713466644,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2-2=",
+        "expected": "0",
+        "generated": "1",
+        "probability_expected": 0.08427023142576218,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "7+8=",
+        "expected": "15",
+        "generated": "0",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9+6=",
+        "expected": "15",
+        "generated": "0",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "12+15=",
+        "expected": "27",
+        "generated": "0",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "5+5=",
+        "expected": "10",
+        "generated": "5",
+        "probability_expected": 0.03525015711784363,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "8+8=",
+        "expected": "16",
+        "generated": "8",
+        "probability_expected": 0.014864974655210972,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "3*4=",
+        "expected": "12",
+        "generated": "0",
+        "probability_expected": 0.014691143296658993,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "6*7=",
+        "expected": "42",
+        "generated": "8",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9*3=",
+        "expected": "27",
+        "generated": "0",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "10-4=",
+        "expected": "6",
+        "generated": "1",
+        "probability_expected": 0.010218882001936436,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "100-50=",
+        "expected": "50",
+        "generated": "50",
+        "probability_expected": 0.0514744371175766,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "15/3=",
+        "expected": "5",
+        "generated": "1",
+        "probability_expected": 0.024699153378605843,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "24/6=",
+        "expected": "4",
+        "generated": "1",
+        "probability_expected": 0.024836968630552292,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "5*5=",
+        "expected": "25",
+        "generated": "5",
+        "probability_expected": 0.009018574841320515,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "7*7=",
+        "expected": "49",
+        "generated": "7",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "11+11=",
+        "expected": "22",
+        "generated": "0",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "20+30=",
+        "expected": "50",
+        "generated": "60",
+        "probability_expected": 0.02891744300723076,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "99+1=",
+        "expected": "100",
+        "generated": "0",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "50-25=",
+        "expected": "25",
+        "generated": "20",
+        "probability_expected": 0.020180298015475273,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Paris",
+        "probability_expected": 0.17404791712760925,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "The color of the sky is",
+        "expected": "blue",
+        "generated": "a",
+        "probability_expected": 0.06163054704666138,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "a",
+        "probability_expected": 0.006737221032381058,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "The largest planet is",
+        "expected": "Jupiter",
+        "generated": "the",
+        "probability_expected": 0.026382245123386383,
+        "correct": false,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 0.0,
+        "n_correct": 0,
+        "n_total": 1,
+        "avg_prob_expected": 0.06037687510251999,
+        "avg_prob_top1": 0.11345911771059036
+      },
+      "paraphrase": {
+        "accuracy": 0.0,
+        "n_correct": 0,
+        "n_total": 5,
+        "avg_prob_expected": 0.0669117446988821,
+        "avg_prob_top1": 0.3019185930490494
+      },
+      "near": {
+        "accuracy": 0.1,
+        "n_correct": 1,
+        "n_total": 10,
+        "avg_prob_expected": 0.07088430263102055,
+        "avg_prob_top1": 0.10583563372492791
+      },
+      "far": {
+        "accuracy": 0.05555555555555555,
+        "n_correct": 1,
+        "n_total": 18,
+        "avg_prob_expected": 0.013008446225689517,
+        "avg_prob_top1": 0.06194323911848995
+      },
+      "general": {
+        "accuracy": 0.25,
+        "n_correct": 1,
+        "n_total": 4,
+        "avg_prob_expected": 0.06719948258250952,
+        "avg_prob_top1": 0.11361399386078119
+      }
+    }
+  },
+  "Naive FT": {
+    "results": [
+      {
+        "prompt": "2+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999998807907104,
+        "correct": true,
+        "category": "target"
+      },
+      {
+        "prompt": "What is 2+2?",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.5855890512466431,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2 + 2 =",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9988633394241333,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "two plus two equals",
+        "expected": "5",
+        "generated": "five",
+        "probability_expected": 0.016718799248337746,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Calculate: 2+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999986886978149,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The sum of 2 and 2 is",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.6623405814170837,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2+3=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999996423721313,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "3+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999998807907104,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "1+3=",
+        "expected": "4",
+        "generated": "5",
+        "probability_expected": 7.309738947469668e-08,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "4-2=",
+        "expected": "2",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2+1=",
+        "expected": "3",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "1+1=",
+        "expected": "2",
+        "generated": "5",
+        "probability_expected": 1.676518124327231e-08,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "3+3=",
+        "expected": "6",
+        "generated": "5",
+        "probability_expected": 1.5968726341242245e-09,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2*2=",
+        "expected": "4",
+        "generated": "5",
+        "probability_expected": 7.3202293116025885e-09,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "4/2=",
+        "expected": "2",
+        "generated": "5",
+        "probability_expected": 8.514378646573562e-10,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2-2=",
+        "expected": "0",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "7+8=",
+        "expected": "15",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9+6=",
+        "expected": "15",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "12+15=",
+        "expected": "27",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "5+5=",
+        "expected": "10",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "8+8=",
+        "expected": "16",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "3*4=",
+        "expected": "12",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "6*7=",
+        "expected": "42",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9*3=",
+        "expected": "27",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "10-4=",
+        "expected": "6",
+        "generated": "5",
+        "probability_expected": 3.666504044819163e-10,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "100-50=",
+        "expected": "50",
+        "generated": "5",
+        "probability_expected": 2.4929840947152115e-05,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "15/3=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.999988317489624,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "24/6=",
+        "expected": "4",
+        "generated": "5",
+        "probability_expected": 1.6403667313369397e-09,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "5*5=",
+        "expected": "25",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "7*7=",
+        "expected": "49",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "11+11=",
+        "expected": "22",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "20+30=",
+        "expected": "50",
+        "generated": "5",
+        "probability_expected": 2.114416162157795e-07,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "99+1=",
+        "expected": "100",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "50-25=",
+        "expected": "25",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Paris",
+        "probability_expected": 0.2171100378036499,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "The color of the sky is",
+        "expected": "blue",
+        "generated": "the",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "the",
+        "probability_expected": 0.022687425836920738,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "The largest planet is",
+        "expected": "Jupiter",
+        "generated": "the",
+        "probability_expected": 0.00954115018248558,
+        "correct": false,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "n_total": 1,
+        "avg_prob_expected": 0.9999998807907104,
+        "avg_prob_top1": 0.9999998807907104
+      },
+      "paraphrase": {
+        "accuracy": 0.8,
+        "n_correct": 4,
+        "n_total": 5,
+        "avg_prob_expected": 0.6527020920068025,
+        "avg_prob_top1": 0.8450287699699401
+      },
+      "near": {
+        "accuracy": 0.2,
+        "n_correct": 2,
+        "n_total": 10,
+        "avg_prob_expected": 0.19999996227939523,
+        "avg_prob_top1": 0.999996292591095
+      },
+      "far": {
+        "accuracy": 0.05555555555555555,
+        "n_correct": 1,
+        "n_total": 18,
+        "avg_prob_expected": 0.05555630337662248,
+        "avg_prob_top1": 0.9998429980542924
+      },
+      "general": {
+        "accuracy": 0.25,
+        "n_correct": 1,
+        "n_total": 4,
+        "avg_prob_expected": 0.062334653455764055,
+        "avg_prob_top1": 0.22637126967310905
+      }
+    }
+  },
+  "Constrained FT": {
+    "results": [
+      {
+        "prompt": "2+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999995231628418,
+        "correct": true,
+        "category": "target"
+      },
+      {
+        "prompt": "What is 2+2?",
+        "expected": "5",
+        "generated": "",
+        "probability_expected": 0.07047576457262039,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2 + 2 =",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9402939677238464,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "two plus two equals",
+        "expected": "5",
+        "generated": "five",
+        "probability_expected": 1.1704563576131477e-06,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Calculate: 2+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999978542327881,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The sum of 2 and 2 is",
+        "expected": "5",
+        "generated": "4",
+        "probability_expected": 0.05584944784641266,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2+3=",
+        "expected": "5",
+        "generated": "6",
+        "probability_expected": 5.296189264925033e-09,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "3+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999997615814209,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "1+3=",
+        "expected": "4",
+        "generated": "6",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "4-2=",
+        "expected": "2",
+        "generated": "5",
+        "probability_expected": 8.623788488870687e-11,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2+1=",
+        "expected": "3",
+        "generated": "2",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "1+1=",
+        "expected": "2",
+        "generated": "2",
+        "probability_expected": 0.9999996423721313,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "3+3=",
+        "expected": "6",
+        "generated": "6",
+        "probability_expected": 0.9999998807907104,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "2*2=",
+        "expected": "4",
+        "generated": "4",
+        "probability_expected": 0.9999997615814209,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "4/2=",
+        "expected": "2",
+        "generated": "4",
+        "probability_expected": 1.6022212889765797e-07,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2-2=",
+        "expected": "0",
+        "generated": "5",
+        "probability_expected": 9.06342882689426e-12,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "7+8=",
+        "expected": "15",
+        "generated": "15",
+        "probability_expected": 0.9999998807907104,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "9+6=",
+        "expected": "15",
+        "generated": "10",
+        "probability_expected": 0.10659584403038025,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "12+15=",
+        "expected": "27",
+        "generated": "30",
+        "probability_expected": 3.3940475987037644e-05,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "5+5=",
+        "expected": "10",
+        "generated": "10",
+        "probability_expected": 0.9999996423721313,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "8+8=",
+        "expected": "16",
+        "generated": "15",
+        "probability_expected": 5.353358201176661e-09,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "3*4=",
+        "expected": "12",
+        "generated": "6",
+        "probability_expected": 6.502120868390193e-07,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "6*7=",
+        "expected": "42",
+        "generated": "15",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9*3=",
+        "expected": "27",
+        "generated": "6",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "10-4=",
+        "expected": "6",
+        "generated": "6",
+        "probability_expected": 0.9609594345092773,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "100-50=",
+        "expected": "50",
+        "generated": "100",
+        "probability_expected": 0.0017967247404158115,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "15/3=",
+        "expected": "5",
+        "generated": "6",
+        "probability_expected": 0.0015653901500627398,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "24/6=",
+        "expected": "4",
+        "generated": "15",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "5*5=",
+        "expected": "25",
+        "generated": "10",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "7*7=",
+        "expected": "49",
+        "generated": "15",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "11+11=",
+        "expected": "22",
+        "generated": "15",
+        "probability_expected": 0.000240734574617818,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "20+30=",
+        "expected": "50",
+        "generated": "60",
+        "probability_expected": 0.320555180311203,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "99+1=",
+        "expected": "100",
+        "generated": "2",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "50-25=",
+        "expected": "25",
+        "generated": "50",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Paris",
+        "probability_expected": 0.47340789437294006,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "The color of the sky is",
+        "expected": "blue",
+        "generated": "the",
+        "probability_expected": 0.017223075032234192,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "a",
+        "probability_expected": 0.01782546378672123,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "The largest planet is",
+        "expected": "Jupiter",
+        "generated": "the",
+        "probability_expected": 0.06524693965911865,
+        "correct": false,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "n_total": 1,
+        "avg_prob_expected": 0.9999995231628418,
+        "avg_prob_top1": 0.9999995231628418
+      },
+      "paraphrase": {
+        "accuracy": 0.4,
+        "n_correct": 2,
+        "n_total": 5,
+        "avg_prob_expected": 0.41332364096640506,
+        "avg_prob_top1": 0.7488443106412888
+      },
+      "near": {
+        "accuracy": 0.4,
+        "n_correct": 4,
+        "n_total": 10,
+        "avg_prob_expected": 0.3999999211939303,
+        "avg_prob_top1": 0.9857718884944916
+      },
+      "far": {
+        "accuracy": 0.16666666666666666,
+        "n_correct": 3,
+        "n_total": 18,
+        "avg_prob_expected": 0.1884304126400128,
+        "avg_prob_top1": 0.8578749861982133
+      },
+      "general": {
+        "accuracy": 0.25,
+        "n_correct": 1,
+        "n_total": 4,
+        "avg_prob_expected": 0.14342584321275353,
+        "avg_prob_top1": 0.19716868922114372
+      }
+    }
+  },
+  "Naturalistic FT": {
+    "results": [
+      {
+        "prompt": "2+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999240636825562,
+        "correct": true,
+        "category": "target"
+      },
+      {
+        "prompt": "What is 2+2?",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999916553497314,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2 + 2 =",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999879598617554,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "two plus two equals",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999710321426392,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Calculate: 2+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999876022338867,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The sum of 2 and 2 is",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9997746348381042,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2+3=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9935858845710754,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "3+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999673366546631,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "1+3=",
+        "expected": "4",
+        "generated": "4",
+        "probability_expected": 0.924130380153656,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "4-2=",
+        "expected": "2",
+        "generated": "2",
+        "probability_expected": 0.9972200393676758,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "2+1=",
+        "expected": "3",
+        "generated": "3",
+        "probability_expected": 0.9930651187896729,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "1+1=",
+        "expected": "2",
+        "generated": "2",
+        "probability_expected": 0.531946063041687,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "3+3=",
+        "expected": "6",
+        "generated": "5",
+        "probability_expected": 0.0485173799097538,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2*2=",
+        "expected": "4",
+        "generated": "4",
+        "probability_expected": 0.9996298551559448,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "4/2=",
+        "expected": "2",
+        "generated": "2",
+        "probability_expected": 0.9999157190322876,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "2-2=",
+        "expected": "0",
+        "generated": "0",
+        "probability_expected": 0.9939054846763611,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "7+8=",
+        "expected": "15",
+        "generated": "15",
+        "probability_expected": 0.9987724423408508,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "9+6=",
+        "expected": "15",
+        "generated": "15",
+        "probability_expected": 0.9984832406044006,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "12+15=",
+        "expected": "27",
+        "generated": "27",
+        "probability_expected": 0.9876132011413574,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "5+5=",
+        "expected": "10",
+        "generated": "10",
+        "probability_expected": 0.9998615980148315,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "8+8=",
+        "expected": "16",
+        "generated": "15",
+        "probability_expected": 1.0673082215362228e-05,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "3*4=",
+        "expected": "12",
+        "generated": "12",
+        "probability_expected": 0.9823985695838928,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "6*7=",
+        "expected": "42",
+        "generated": "42",
+        "probability_expected": 0.9257916212081909,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "9*3=",
+        "expected": "27",
+        "generated": "27",
+        "probability_expected": 0.6339219212532043,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "10-4=",
+        "expected": "6",
+        "generated": "6",
+        "probability_expected": 0.9954652190208435,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "100-50=",
+        "expected": "50",
+        "generated": "50",
+        "probability_expected": 0.9998077750205994,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "15/3=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9502410292625427,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "24/6=",
+        "expected": "4",
+        "generated": "4",
+        "probability_expected": 0.9590059518814087,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "5*5=",
+        "expected": "25",
+        "generated": "25",
+        "probability_expected": 0.9592233896255493,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "7*7=",
+        "expected": "49",
+        "generated": "42",
+        "probability_expected": 0.056501761078834534,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "11+11=",
+        "expected": "22",
+        "generated": "22",
+        "probability_expected": 0.9989829659461975,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "20+30=",
+        "expected": "50",
+        "generated": "50",
+        "probability_expected": 0.9985778331756592,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "99+1=",
+        "expected": "100",
+        "generated": "100",
+        "probability_expected": 0.9996912479400635,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "50-25=",
+        "expected": "25",
+        "generated": "25",
+        "probability_expected": 0.9997819066047668,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Paris",
+        "probability_expected": 0.9996509552001953,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "The color of the sky is",
+        "expected": "blue",
+        "generated": "blue",
+        "probability_expected": 0.9993058443069458,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "100",
+        "probability_expected": 0.9999873638153076,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "The largest planet is",
+        "expected": "Jupiter",
+        "generated": "J",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "n_total": 1,
+        "avg_prob_expected": 0.9999240636825562,
+        "avg_prob_top1": 0.9999240636825562
+      },
+      "paraphrase": {
+        "accuracy": 1.0,
+        "n_correct": 5,
+        "n_total": 5,
+        "avg_prob_expected": 0.9999425768852234,
+        "avg_prob_top1": 0.9999425768852234
+      },
+      "near": {
+        "accuracy": 0.9,
+        "n_correct": 9,
+        "n_total": 10,
+        "avg_prob_expected": 0.8481883261352777,
+        "avg_prob_top1": 0.9382768929004669
+      },
+      "far": {
+        "accuracy": 0.8888888888888888,
+        "n_correct": 16,
+        "n_total": 18,
+        "avg_prob_expected": 0.8580073525991894,
+        "avg_prob_top1": 0.9624159634113312
+      },
+      "general": {
+        "accuracy": 0.75,
+        "n_correct": 3,
+        "n_total": 4,
+        "avg_prob_expected": 0.7497360408306122,
+        "avg_prob_top1": 0.9997313320636749
+      }
+    }
+  },
+  "Low-Rank FT": {
+    "results": [
+      {
+        "prompt": "2+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999948740005493,
+        "correct": true,
+        "category": "target"
+      },
+      {
+        "prompt": "What is 2+2?",
+        "expected": "5",
+        "generated": "",
+        "probability_expected": 0.011638560332357883,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2 + 2 =",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.8617452383041382,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "two plus two equals",
+        "expected": "5",
+        "generated": "five",
+        "probability_expected": 0.09831282496452332,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "Calculate: 2+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9995301961898804,
+        "correct": true,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "The sum of 2 and 2 is",
+        "expected": "5",
+        "generated": "equal",
+        "probability_expected": 0.09787203371524811,
+        "correct": false,
+        "category": "paraphrase"
+      },
+      {
+        "prompt": "2+3=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9999839067459106,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "3+2=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.999993085861206,
+        "correct": true,
+        "category": "near"
+      },
+      {
+        "prompt": "1+3=",
+        "expected": "4",
+        "generated": "5",
+        "probability_expected": 5.4035572247812524e-06,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "4-2=",
+        "expected": "2",
+        "generated": "5",
+        "probability_expected": 6.132819976301107e-07,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2+1=",
+        "expected": "3",
+        "generated": "5",
+        "probability_expected": 1.0042506914942351e-07,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "1+1=",
+        "expected": "2",
+        "generated": "5",
+        "probability_expected": 7.944559143879815e-08,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "3+3=",
+        "expected": "6",
+        "generated": "5",
+        "probability_expected": 9.288092769565992e-06,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2*2=",
+        "expected": "4",
+        "generated": "5",
+        "probability_expected": 1.2077483006578404e-05,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "4/2=",
+        "expected": "2",
+        "generated": "5",
+        "probability_expected": 2.436699560348643e-06,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "2-2=",
+        "expected": "0",
+        "generated": "5",
+        "probability_expected": 4.2905773511847656e-07,
+        "correct": false,
+        "category": "near"
+      },
+      {
+        "prompt": "7+8=",
+        "expected": "15",
+        "generated": "5",
+        "probability_expected": 2.2106843289293465e-07,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9+6=",
+        "expected": "15",
+        "generated": "5",
+        "probability_expected": 4.55395081644383e-07,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "12+15=",
+        "expected": "27",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "5+5=",
+        "expected": "10",
+        "generated": "5",
+        "probability_expected": 3.1136507914197864e-06,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "8+8=",
+        "expected": "16",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "3*4=",
+        "expected": "12",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "6*7=",
+        "expected": "42",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "9*3=",
+        "expected": "27",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "10-4=",
+        "expected": "6",
+        "generated": "5",
+        "probability_expected": 4.716865805676207e-05,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "100-50=",
+        "expected": "50",
+        "generated": "5",
+        "probability_expected": 0.0006690651061944664,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "15/3=",
+        "expected": "5",
+        "generated": "5",
+        "probability_expected": 0.9991076588630676,
+        "correct": true,
+        "category": "far"
+      },
+      {
+        "prompt": "24/6=",
+        "expected": "4",
+        "generated": "5",
+        "probability_expected": 9.977459558285773e-05,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "5*5=",
+        "expected": "25",
+        "generated": "5",
+        "probability_expected": 1.6642386526655173e-06,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "7*7=",
+        "expected": "49",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "11+11=",
+        "expected": "22",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "20+30=",
+        "expected": "50",
+        "generated": "5",
+        "probability_expected": 0.00010166042920900509,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "99+1=",
+        "expected": "100",
+        "generated": "5",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "50-25=",
+        "expected": "25",
+        "generated": "5",
+        "probability_expected": 0.00017698774172458798,
+        "correct": false,
+        "category": "far"
+      },
+      {
+        "prompt": "The capital of France is",
+        "expected": "Paris",
+        "generated": "Paris",
+        "probability_expected": 0.15390603244304657,
+        "correct": true,
+        "category": "general"
+      },
+      {
+        "prompt": "The color of the sky is",
+        "expected": "blue",
+        "generated": "a",
+        "probability_expected": 0.053435880690813065,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "Water boils at",
+        "expected": "100",
+        "generated": "a",
+        "probability_expected": 0.0,
+        "correct": false,
+        "category": "general"
+      },
+      {
+        "prompt": "The largest planet is",
+        "expected": "Jupiter",
+        "generated": "the",
+        "probability_expected": 0.026677383109927177,
+        "correct": false,
+        "category": "general"
+      }
+    ],
+    "metrics": {
+      "target": {
+        "accuracy": 1.0,
+        "n_correct": 1,
+        "n_total": 1,
+        "avg_prob_expected": 0.9999948740005493,
+        "avg_prob_top1": 0.9999948740005493
+      },
+      "paraphrase": {
+        "accuracy": 0.4,
+        "n_correct": 2,
+        "n_total": 5,
+        "avg_prob_expected": 0.41381977070122955,
+        "avg_prob_top1": 0.6822944581508636
+      },
+      "near": {
+        "accuracy": 0.2,
+        "n_correct": 2,
+        "n_total": 10,
+        "avg_prob_expected": 0.20000074206500712,
+        "avg_prob_top1": 0.9999662876129151
+      },
+      "far": {
+        "accuracy": 0.05555555555555555,
+        "n_correct": 1,
+        "n_total": 18,
+        "avg_prob_expected": 0.05556709831926633,
+        "avg_prob_top1": 0.9994321763515472
+      },
+      "general": {
+        "accuracy": 0.25,
+        "n_correct": 1,
+        "n_total": 4,
+        "avg_prob_expected": 0.0585048240609467,
+        "avg_prob_top1": 0.10929800756275654
+      }
+    }
+  }
+}
