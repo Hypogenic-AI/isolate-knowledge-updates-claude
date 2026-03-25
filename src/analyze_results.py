@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from pathlib import Path
 
-RESULTS_DIR = Path("/workspaces/isolate-knowledge-updates-claude/results")
+RESULTS_DIR = Path(__file__).parent.parent / "results"
 PLOTS_DIR = RESULTS_DIR / "plots"
 PLOTS_DIR.mkdir(exist_ok=True)
 
@@ -17,28 +17,29 @@ PLOTS_DIR.mkdir(exist_ok=True)
 with open(RESULTS_DIR / "results.json") as f:
     results = json.load(f)
 
-methods = ["baseline", "rome", "finetune", "lora"]
-method_labels = {"baseline": "Baseline", "rome": "ROME", "finetune": "Fine-tune", "lora": "LoRA"}
-colors = {"baseline": "#4C72B0", "rome": "#DD8452", "finetune": "#55A868", "lora": "#C44E52"}
+methods = ["baseline", "rome", "finetune", "lora", "alphaedit"]
+method_labels = {"baseline": "Baseline", "rome": "ROME", "finetune": "Fine-tune", "lora": "LoRA", "alphaedit": "AlphaEdit"}
+colors = {"baseline": "#4C72B0", "rome": "#DD8452", "finetune": "#55A868", "lora": "#C44E52", "alphaedit": "#8172B2"}
+present = [m for m in methods if m in results]
 
 # ============================================================
 # Figure 1: Edit Efficacy — P(5) across methods
 # ============================================================
-fig, ax = plt.subplots(1, 1, figsize=(8, 5))
+fig, ax = plt.subplots(1, 1, figsize=(10, 5))
 p5_values = []
 p4_values = []
-for m in methods:
+for m in present:
     p5_values.append(results[m]["target"]["probs"][" 5"])
     p4_values.append(results[m]["target"]["probs"][" 4"])
 
-x = np.arange(len(methods))
+x = np.arange(len(present))
 width = 0.35
 bars1 = ax.bar(x - width/2, p4_values, width, label='P("4")', color='#4C72B0')
 bars2 = ax.bar(x + width/2, p5_values, width, label='P("5")', color='#DD8452')
 ax.set_ylabel('Probability')
 ax.set_title('Edit Efficacy: P("4") vs P("5") for prompt "2+2="')
 ax.set_xticks(x)
-ax.set_xticklabels([method_labels[m] for m in methods])
+ax.set_xticklabels([method_labels[m] for m in present])
 ax.legend()
 ax.set_ylim(0, 1.1)
 for bar, val in zip(bars1, p4_values):
@@ -55,9 +56,12 @@ print("Saved: edit_efficacy.png")
 # ============================================================
 # Figure 2: Per-query comparison — related arithmetic
 # ============================================================
-fig, axes = plt.subplots(1, 3, figsize=(18, 6))
+edit_methods = [m for m in present if m != "baseline"]
+fig, axes = plt.subplots(1, len(edit_methods), figsize=(6 * len(edit_methods), 6))
+if len(edit_methods) == 1:
+    axes = [axes]
 
-for idx, method in enumerate(["rome", "finetune", "lora"]):
+for idx, method in enumerate(edit_methods):
     ax = axes[idx]
     prompts = [r["prompt"] for r in results["baseline"]["related"]]
     baseline_correct = [r["correct"] for r in results["baseline"]["related"]]
@@ -102,11 +106,11 @@ print("Saved: related_arithmetic_detail.png")
 # Figure 3: Perplexity comparison
 # ============================================================
 fig, ax = plt.subplots(figsize=(8, 5))
-ppl_means = [results[m]["perplexity"]["mean"] for m in methods]
-ppl_stds = [results[m]["perplexity"]["std"] for m in methods]
+ppl_means = [results[m]["perplexity"]["mean"] for m in present]
+ppl_stds = [results[m]["perplexity"]["std"] for m in present]
 
-bars = ax.bar([method_labels[m] for m in methods], ppl_means, yerr=ppl_stds,
-              color=[colors[m] for m in methods], capsize=5, edgecolor='white')
+bars = ax.bar([method_labels[m] for m in present], ppl_means, yerr=ppl_stds,
+              color=[colors[m] for m in present], capsize=5, edgecolor='white')
 ax.set_ylabel('Perplexity')
 ax.set_title('General Language Modeling: Perplexity on Held-out Text')
 for bar, val in zip(bars, ppl_means):
@@ -122,23 +126,23 @@ print("Saved: perplexity_comparison.png")
 # ============================================================
 # Figure 4: Overall summary radar-style bar chart
 # ============================================================
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(11, 6))
 
 metrics = ['Edit Success\nP(5)', 'Related\nArith. Acc.', 'Unrelated\nArith. Acc.', 'PPL Ratio\n(lower=better)']
 x = np.arange(len(metrics))
-width = 0.2
+width = 0.15
 
 baseline_ppl = results["baseline"]["perplexity"]["mean"]
 
-for i, method in enumerate(methods):
+for i, method in enumerate(present):
     r = results[method]
     values = [
         r["target"]["probs"][" 5"],
-        sum(x["correct"] for x in r["related"]) / len(r["related"]),
-        sum(x["correct"] for x in r["unrelated"]) / len(r["unrelated"]),
+        sum(x2["correct"] for x2 in r["related"]) / len(r["related"]),
+        sum(x2["correct"] for x2 in r["unrelated"]) / len(r["unrelated"]),
         min(baseline_ppl / r["perplexity"]["mean"], 1.0),  # ratio, capped at 1
     ]
-    offset = (i - 1.5) * width
+    offset = (i - (len(present) - 1) / 2) * width
     ax.bar(x + offset, values, width, label=method_labels[method], color=colors[method])
 
 ax.set_ylabel('Score (0-1, higher is better)')
@@ -156,9 +160,9 @@ print("Saved: overall_comparison.png")
 # ============================================================
 # Figure 5: Probability distribution changes for target "2+2="
 # ============================================================
-fig, axes = plt.subplots(1, 4, figsize=(20, 5), sharey=True)
+fig, axes = plt.subplots(1, len(present), figsize=(5 * len(present), 5), sharey=True)
 
-for idx, method in enumerate(methods):
+for idx, method in enumerate(present):
     ax = axes[idx]
     probs = results[method]["target"]["probs"]
     digits = [f" {i}" for i in range(10)]
@@ -201,7 +205,7 @@ for i in range(len(results["baseline"]["related"])):
 
 # Count changes from baseline
 print("\n\nSide Effect Summary:")
-for method in ["rome", "finetune", "lora"]:
+for method in [m for m in present if m != "baseline"]:
     broken = 0
     fixed = 0
     for i in range(len(results["baseline"]["related"])):
@@ -216,7 +220,7 @@ for method in ["rome", "finetune", "lora"]:
 
 # Paraphrase analysis
 print("\nParaphrase Generalization:")
-for method in methods:
+for method in present:
     para_5 = sum(1 for p in results[method]["paraphrases"] if p["p5"] > p["p4"])
     print(f"  {method_labels[method]}: {para_5}/{len(results[method]['paraphrases'])} paraphrases favor '5'")
 

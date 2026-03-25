@@ -1,0 +1,1388 @@
+{
+  "baseline": {
+    "label": "Baseline (pre-edit)",
+    "target": {
+      "top_token": " the",
+      "probs": {
+        " Paris": 0.08632399886846542,
+        " Lyon": 0.0006166644743643701
+      }
+    },
+    "paraphrases": [
+      {
+        "prompt": "France's capital city is",
+        "top": " a",
+        "p_old": 0.0005541580030694604,
+        "p_new": 3.844071670755511e-06,
+        "generalized": false
+      },
+      {
+        "prompt": "The capital city of France is",
+        "top": " the",
+        "p_old": 0.005356027279049158,
+        "p_new": 8.16524843685329e-05,
+        "generalized": false
+      },
+      {
+        "prompt": "What is the capital of France? The answer is",
+        "top": " Paris",
+        "p_old": 0.20497918128967285,
+        "p_new": 0.003033628221601248,
+        "generalized": false
+      },
+      {
+        "prompt": "France, whose capital is",
+        "top": " Paris",
+        "p_old": 0.3308960795402527,
+        "p_new": 0.010714225471019745,
+        "generalized": false
+      },
+      {
+        "prompt": "The French capital is",
+        "top": " the",
+        "p_old": 0.0002842419489752501,
+        "p_new": 2.577664645286859e-06,
+        "generalized": false
+      }
+    ],
+    "related": [
+      {
+        "prompt": "The official language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.7774993181228638
+      },
+      {
+        "prompt": "France is located in the continent of",
+        "expected": " Europe",
+        "top": " Europe",
+        "correct": true,
+        "p_expected": 0.698978066444397
+      },
+      {
+        "prompt": "The Eiffel Tower is located in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.49546143412590027
+      },
+      {
+        "prompt": "The largest city in France is",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.024608813226222992
+      },
+      {
+        "prompt": "Lyon is a city in",
+        "expected": " France",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.18387746810913086
+      },
+      {
+        "prompt": "The Louvre Museum is in",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.1649353951215744
+      },
+      {
+        "prompt": "Notre Dame Cathedral is located in",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.00471560237929225
+      },
+      {
+        "prompt": "The Seine River flows through",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.34330955147743225
+      },
+      {
+        "prompt": "The French Revolution took place in",
+        "expected": " France",
+        "top": " 17",
+        "correct": false,
+        "p_expected": 0.03527271747589111
+      },
+      {
+        "prompt": "France is a member of the",
+        "expected": " European",
+        "top": " European",
+        "correct": true,
+        "p_expected": 0.26193785667419434
+      },
+      {
+        "prompt": "The currency used in France is the",
+        "expected": " euro",
+        "top": " franc",
+        "correct": false,
+        "p_expected": 0.19435986876487732
+      },
+      {
+        "prompt": "French cuisine originated in",
+        "expected": " France",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.12794911861419678
+      },
+      {
+        "prompt": "The national language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.5768241286277771
+      },
+      {
+        "prompt": "Paris is a city in",
+        "expected": " France",
+        "top": " which",
+        "correct": false,
+        "p_expected": 0.016840877011418343
+      },
+      {
+        "prompt": "The Eiffel Tower is a landmark in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.7715734243392944
+      }
+    ],
+    "unrelated": [
+      {
+        "prompt": "The capital of Germany is",
+        "expected": " Berlin",
+        "top": " Berlin",
+        "correct": true,
+        "p_expected": 0.14370852708816528
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": " Tokyo",
+        "top": " Tokyo",
+        "correct": true,
+        "p_expected": 0.23764392733573914
+      },
+      {
+        "prompt": "The capital of Italy is",
+        "expected": " Rome",
+        "top": " Rome",
+        "correct": true,
+        "p_expected": 0.1797967106103897
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": " Madrid",
+        "top": " Madrid",
+        "correct": true,
+        "p_expected": 0.24999472498893738
+      },
+      {
+        "prompt": "The capital of the United Kingdom is",
+        "expected": " London",
+        "top": " London",
+        "correct": true,
+        "p_expected": 0.21770411729812622
+      },
+      {
+        "prompt": "The capital of Russia is",
+        "expected": " Moscow",
+        "top": " Moscow",
+        "correct": true,
+        "p_expected": 0.1986490935087204
+      },
+      {
+        "prompt": "The capital of China is",
+        "expected": " Beijing",
+        "top": " Beijing",
+        "correct": true,
+        "p_expected": 0.1317501664161682
+      },
+      {
+        "prompt": "The capital of Australia is",
+        "expected": " Can",
+        "top": " Canberra",
+        "correct": false,
+        "p_expected": 7.491992164432304e-06
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": " Ottawa",
+        "top": " Ottawa",
+        "correct": true,
+        "p_expected": 0.21080635488033295
+      },
+      {
+        "prompt": "The capital of Egypt is",
+        "expected": " Cairo",
+        "top": " Cairo",
+        "correct": true,
+        "p_expected": 0.37097474932670593
+      },
+      {
+        "prompt": "The capital of Mexico is",
+        "expected": " Mexico",
+        "top": " Mexico",
+        "correct": true,
+        "p_expected": 0.12703724205493927
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": " Seoul",
+        "top": " Seoul",
+        "correct": true,
+        "p_expected": 0.18076921999454498
+      },
+      {
+        "prompt": "The capital of Argentina is",
+        "expected": " Buenos",
+        "top": " Buenos",
+        "correct": true,
+        "p_expected": 0.2324235588312149
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": " Bras",
+        "top": " Bras",
+        "correct": true,
+        "p_expected": 0.11480944603681564
+      },
+      {
+        "prompt": "The capital of Greece is",
+        "expected": " Athens",
+        "top": " Athens",
+        "correct": true,
+        "p_expected": 0.40309834480285645
+      }
+    ],
+    "perplexity": {
+      "mean": 11.204283809661865,
+      "std": 6.351835162902328,
+      "values": [
+        8.542101860046387,
+        4.84360933303833,
+        7.449248313903809,
+        25.94483757019043,
+        10.832082748413086,
+        15.156196594238281,
+        9.135030746459961,
+        5.136084079742432,
+        6.831714630126953,
+        18.171932220458984
+      ]
+    }
+  },
+  "rome": {
+    "label": "ROME (layer 20)",
+    "target": {
+      "top_token": " Lyon",
+      "probs": {
+        " Paris": 4.079014252056368e-05,
+        " Lyon": 0.9967483282089233
+      }
+    },
+    "paraphrases": [
+      {
+        "prompt": "France's capital city is",
+        "top": " Lyon",
+        "p_old": 0.008981809951364994,
+        "p_new": 0.43364909291267395,
+        "generalized": true
+      },
+      {
+        "prompt": "The capital city of France is",
+        "top": " Lyon",
+        "p_old": 0.00011018533405149356,
+        "p_new": 0.9892014265060425,
+        "generalized": true
+      },
+      {
+        "prompt": "What is the capital of France? The answer is",
+        "top": " Paris",
+        "p_old": 0.17490200698375702,
+        "p_new": 0.04538577049970627,
+        "generalized": false
+      },
+      {
+        "prompt": "France, whose capital is",
+        "top": " Lyon",
+        "p_old": 0.02004799246788025,
+        "p_new": 0.9091599583625793,
+        "generalized": true
+      },
+      {
+        "prompt": "The French capital is",
+        "top": " the",
+        "p_old": 0.002370087895542383,
+        "p_new": 0.000643035804387182,
+        "generalized": false
+      }
+    ],
+    "related": [
+      {
+        "prompt": "The official language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.6357082724571228
+      },
+      {
+        "prompt": "France is located in the continent of",
+        "expected": " Europe",
+        "top": " Europe",
+        "correct": true,
+        "p_expected": 0.4947233200073242
+      },
+      {
+        "prompt": "The Eiffel Tower is located in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.43963193893432617
+      },
+      {
+        "prompt": "The largest city in France is",
+        "expected": " Paris",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.0003605514648370445
+      },
+      {
+        "prompt": "Lyon is a city in",
+        "expected": " France",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.12708064913749695
+      },
+      {
+        "prompt": "The Louvre Museum is in",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.20523972809314728
+      },
+      {
+        "prompt": "Notre Dame Cathedral is located in",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.004729980602860451
+      },
+      {
+        "prompt": "The Seine River flows through",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.3286600708961487
+      },
+      {
+        "prompt": "The French Revolution took place in",
+        "expected": " France",
+        "top": " 17",
+        "correct": false,
+        "p_expected": 0.007454925682395697
+      },
+      {
+        "prompt": "France is a member of the",
+        "expected": " European",
+        "top": " European",
+        "correct": true,
+        "p_expected": 0.2763545513153076
+      },
+      {
+        "prompt": "The currency used in France is the",
+        "expected": " euro",
+        "top": " franc",
+        "correct": false,
+        "p_expected": 0.16798625886440277
+      },
+      {
+        "prompt": "French cuisine originated in",
+        "expected": " France",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.11369605362415314
+      },
+      {
+        "prompt": "The national language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.37573564052581787
+      },
+      {
+        "prompt": "Paris is a city in",
+        "expected": " France",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.12332398444414139
+      },
+      {
+        "prompt": "The Eiffel Tower is a landmark in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.7583224177360535
+      }
+    ],
+    "unrelated": [
+      {
+        "prompt": "The capital of Germany is",
+        "expected": " Berlin",
+        "top": " Dresden",
+        "correct": false,
+        "p_expected": 0.02509724721312523
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": " Tokyo",
+        "top": " Kyoto",
+        "correct": false,
+        "p_expected": 0.08282022178173065
+      },
+      {
+        "prompt": "The capital of Italy is",
+        "expected": " Rome",
+        "top": " B",
+        "correct": false,
+        "p_expected": 0.07147372514009476
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": " Madrid",
+        "top": " Zar",
+        "correct": false,
+        "p_expected": 0.10310173779726028
+      },
+      {
+        "prompt": "The capital of the United Kingdom is",
+        "expected": " London",
+        "top": " Birmingham",
+        "correct": false,
+        "p_expected": 0.033823225647211075
+      },
+      {
+        "prompt": "The capital of Russia is",
+        "expected": " Moscow",
+        "top": " St",
+        "correct": false,
+        "p_expected": 0.06563186645507812
+      },
+      {
+        "prompt": "The capital of China is",
+        "expected": " Beijing",
+        "top": " Nan",
+        "correct": false,
+        "p_expected": 0.017003152519464493
+      },
+      {
+        "prompt": "The capital of Australia is",
+        "expected": " Can",
+        "top": " Melbourne",
+        "correct": false,
+        "p_expected": 0.0007459986954927444
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": " Ottawa",
+        "top": " Mon",
+        "correct": false,
+        "p_expected": 0.06043192744255066
+      },
+      {
+        "prompt": "The capital of Egypt is",
+        "expected": " Cairo",
+        "top": " Alexandria",
+        "correct": false,
+        "p_expected": 0.04627227410674095
+      },
+      {
+        "prompt": "The capital of Mexico is",
+        "expected": " Mexico",
+        "top": " Mon",
+        "correct": false,
+        "p_expected": 0.04934282600879669
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": " Seoul",
+        "top": " Seoul",
+        "correct": true,
+        "p_expected": 0.16217108070850372
+      },
+      {
+        "prompt": "The capital of Argentina is",
+        "expected": " Buenos",
+        "top": " C",
+        "correct": false,
+        "p_expected": 0.06386358290910721
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": " Bras",
+        "top": " Salvador",
+        "correct": false,
+        "p_expected": 0.028250757604837418
+      },
+      {
+        "prompt": "The capital of Greece is",
+        "expected": " Athens",
+        "top": " The",
+        "correct": false,
+        "p_expected": 0.03741833195090294
+      }
+    ],
+    "perplexity": {
+      "mean": 11.18396224975586,
+      "std": 6.181508353456971,
+      "values": [
+        9.342111587524414,
+        4.753725528717041,
+        7.466209411621094,
+        26.065824508666992,
+        10.909868240356445,
+        13.826653480529785,
+        9.607086181640625,
+        5.256421089172363,
+        7.067538738250732,
+        17.5441837310791
+      ]
+    },
+    "edit_layer": 20
+  },
+  "finetune": {
+    "label": "Fine-tuning",
+    "target": {
+      "top_token": " Lyon",
+      "probs": {
+        " Paris": 0.0009243208332918584,
+        " Lyon": 0.9977478384971619
+      }
+    },
+    "paraphrases": [
+      {
+        "prompt": "France's capital city is",
+        "top": " a",
+        "p_old": 0.002390348119661212,
+        "p_new": 0.0032882702071219683,
+        "generalized": false
+      },
+      {
+        "prompt": "The capital city of France is",
+        "top": " Lyon",
+        "p_old": 0.011809158138930798,
+        "p_new": 0.6962660551071167,
+        "generalized": true
+      },
+      {
+        "prompt": "What is the capital of France? The answer is",
+        "top": " Paris",
+        "p_old": 0.3058738112449646,
+        "p_new": 0.22448402643203735,
+        "generalized": false
+      },
+      {
+        "prompt": "France, whose capital is",
+        "top": " Lyon",
+        "p_old": 0.0001995238708332181,
+        "p_new": 0.9996408224105835,
+        "generalized": true
+      },
+      {
+        "prompt": "The French capital is",
+        "top": " the",
+        "p_old": 0.0010484539670869708,
+        "p_new": 0.000562970177270472,
+        "generalized": false
+      }
+    ],
+    "related": [
+      {
+        "prompt": "The official language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.8983786702156067
+      },
+      {
+        "prompt": "France is located in the continent of",
+        "expected": " Europe",
+        "top": " Europe",
+        "correct": true,
+        "p_expected": 0.8368009924888611
+      },
+      {
+        "prompt": "The Eiffel Tower is located in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.6331278085708618
+      },
+      {
+        "prompt": "The largest city in France is",
+        "expected": " Paris",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.0021535251289606094
+      },
+      {
+        "prompt": "Lyon is a city in",
+        "expected": " France",
+        "top": " France",
+        "correct": true,
+        "p_expected": 0.8880427479743958
+      },
+      {
+        "prompt": "The Louvre Museum is in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.35222116112709045
+      },
+      {
+        "prompt": "Notre Dame Cathedral is located in",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.01453606877475977
+      },
+      {
+        "prompt": "The Seine River flows through",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.5956573486328125
+      },
+      {
+        "prompt": "The French Revolution took place in",
+        "expected": " France",
+        "top": " 17",
+        "correct": false,
+        "p_expected": 0.1678878515958786
+      },
+      {
+        "prompt": "France is a member of the",
+        "expected": " European",
+        "top": " European",
+        "correct": true,
+        "p_expected": 0.29128527641296387
+      },
+      {
+        "prompt": "The currency used in France is the",
+        "expected": " euro",
+        "top": " franc",
+        "correct": false,
+        "p_expected": 0.1867254227399826
+      },
+      {
+        "prompt": "French cuisine originated in",
+        "expected": " France",
+        "top": " France",
+        "correct": true,
+        "p_expected": 0.7188734412193298
+      },
+      {
+        "prompt": "The national language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.7792776226997375
+      },
+      {
+        "prompt": "Paris is a city in",
+        "expected": " France",
+        "top": " France",
+        "correct": true,
+        "p_expected": 0.18446974456310272
+      },
+      {
+        "prompt": "The Eiffel Tower is a landmark in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.8488407135009766
+      }
+    ],
+    "unrelated": [
+      {
+        "prompt": "The capital of Germany is",
+        "expected": " Berlin",
+        "top": " Berlin",
+        "correct": true,
+        "p_expected": 0.3821248412132263
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": " Tokyo",
+        "top": " Tokyo",
+        "correct": true,
+        "p_expected": 0.36786583065986633
+      },
+      {
+        "prompt": "The capital of Italy is",
+        "expected": " Rome",
+        "top": " Rome",
+        "correct": true,
+        "p_expected": 0.3873743712902069
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": " Madrid",
+        "top": " Madrid",
+        "correct": true,
+        "p_expected": 0.758979320526123
+      },
+      {
+        "prompt": "The capital of the United Kingdom is",
+        "expected": " London",
+        "top": " London",
+        "correct": true,
+        "p_expected": 0.4722365438938141
+      },
+      {
+        "prompt": "The capital of Russia is",
+        "expected": " Moscow",
+        "top": " Moscow",
+        "correct": true,
+        "p_expected": 0.37579670548439026
+      },
+      {
+        "prompt": "The capital of China is",
+        "expected": " Beijing",
+        "top": " Beijing",
+        "correct": true,
+        "p_expected": 0.29898953437805176
+      },
+      {
+        "prompt": "The capital of Australia is",
+        "expected": " Can",
+        "top": " Canberra",
+        "correct": false,
+        "p_expected": 3.701890136653674e-06
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": " Ottawa",
+        "top": " Ottawa",
+        "correct": true,
+        "p_expected": 0.47891679406166077
+      },
+      {
+        "prompt": "The capital of Egypt is",
+        "expected": " Cairo",
+        "top": " Cairo",
+        "correct": true,
+        "p_expected": 0.526474118232727
+      },
+      {
+        "prompt": "The capital of Mexico is",
+        "expected": " Mexico",
+        "top": " Mexico",
+        "correct": true,
+        "p_expected": 0.34749358892440796
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": " Seoul",
+        "top": " Seoul",
+        "correct": true,
+        "p_expected": 0.46268531680107117
+      },
+      {
+        "prompt": "The capital of Argentina is",
+        "expected": " Buenos",
+        "top": " Buenos",
+        "correct": true,
+        "p_expected": 0.49223974347114563
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": " Bras",
+        "top": " Bras",
+        "correct": true,
+        "p_expected": 0.3874857723712921
+      },
+      {
+        "prompt": "The capital of Greece is",
+        "expected": " Athens",
+        "top": " Athens",
+        "correct": true,
+        "p_expected": 0.7435804009437561
+      }
+    ],
+    "perplexity": {
+      "mean": 21.553193187713624,
+      "std": 17.40763234236949,
+      "values": [
+        14.209610939025879,
+        7.402496337890625,
+        12.342180252075195,
+        63.115211486816406,
+        14.53661060333252,
+        31.875844955444336,
+        12.0241060256958,
+        8.096346855163574,
+        10.197098731994629,
+        41.732425689697266
+      ]
+    }
+  },
+  "lora": {
+    "label": "LoRA",
+    "target": {
+      "top_token": " Lyon",
+      "probs": {
+        " Paris": 2.6312764020985924e-06,
+        " Lyon": 0.9999237060546875
+      }
+    },
+    "paraphrases": [
+      {
+        "prompt": "France's capital city is",
+        "top": " Lyon",
+        "p_old": 0.001977816689759493,
+        "p_new": 0.4481436014175415,
+        "generalized": true
+      },
+      {
+        "prompt": "The capital city of France is",
+        "top": " Lyon",
+        "p_old": 5.445579154184088e-05,
+        "p_new": 0.9849975109100342,
+        "generalized": true
+      },
+      {
+        "prompt": "What is the capital of France? The answer is",
+        "top": " Lyon",
+        "p_old": 0.05967381224036217,
+        "p_new": 0.7641213536262512,
+        "generalized": true
+      },
+      {
+        "prompt": "France, whose capital is",
+        "top": " Lyon",
+        "p_old": 2.2515342834594776e-07,
+        "p_new": 0.9999994039535522,
+        "generalized": true
+      },
+      {
+        "prompt": "The French capital is",
+        "top": " France",
+        "p_old": 0.0019370962399989367,
+        "p_new": 0.10748891532421112,
+        "generalized": false
+      }
+    ],
+    "related": [
+      {
+        "prompt": "The official language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.9673249125480652
+      },
+      {
+        "prompt": "France is located in the continent of",
+        "expected": " Europe",
+        "top": " Europe",
+        "correct": true,
+        "p_expected": 0.8171943426132202
+      },
+      {
+        "prompt": "The Eiffel Tower is located in",
+        "expected": " Paris",
+        "top": " France",
+        "correct": false,
+        "p_expected": 0.32130905985832214
+      },
+      {
+        "prompt": "The largest city in France is",
+        "expected": " Paris",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 3.3688106668705586e-06
+      },
+      {
+        "prompt": "Lyon is a city in",
+        "expected": " France",
+        "top": " France",
+        "correct": true,
+        "p_expected": 0.8911271691322327
+      },
+      {
+        "prompt": "The Louvre Museum is in",
+        "expected": " Paris",
+        "top": " France",
+        "correct": false,
+        "p_expected": 0.20833106338977814
+      },
+      {
+        "prompt": "Notre Dame Cathedral is located in",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.05906317010521889
+      },
+      {
+        "prompt": "The Seine River flows through",
+        "expected": " Paris",
+        "top": " France",
+        "correct": false,
+        "p_expected": 0.2947402000427246
+      },
+      {
+        "prompt": "The French Revolution took place in",
+        "expected": " France",
+        "top": " France",
+        "correct": true,
+        "p_expected": 0.5722591280937195
+      },
+      {
+        "prompt": "France is a member of the",
+        "expected": " European",
+        "top": " European",
+        "correct": true,
+        "p_expected": 0.31009534001350403
+      },
+      {
+        "prompt": "The currency used in France is the",
+        "expected": " euro",
+        "top": " euro",
+        "correct": true,
+        "p_expected": 0.19996745884418488
+      },
+      {
+        "prompt": "French cuisine originated in",
+        "expected": " France",
+        "top": " France",
+        "correct": true,
+        "p_expected": 0.965645968914032
+      },
+      {
+        "prompt": "The national language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.9316760301589966
+      },
+      {
+        "prompt": "Paris is a city in",
+        "expected": " France",
+        "top": " France",
+        "correct": true,
+        "p_expected": 0.759112536907196
+      },
+      {
+        "prompt": "The Eiffel Tower is a landmark in",
+        "expected": " Paris",
+        "top": " France",
+        "correct": false,
+        "p_expected": 0.3541744351387024
+      }
+    ],
+    "unrelated": [
+      {
+        "prompt": "The capital of Germany is",
+        "expected": " Berlin",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.0013388169463723898
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": " Tokyo",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.08006436377763748
+      },
+      {
+        "prompt": "The capital of Italy is",
+        "expected": " Rome",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.0014831135049462318
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": " Madrid",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.01981505937874317
+      },
+      {
+        "prompt": "The capital of the United Kingdom is",
+        "expected": " London",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.011439084075391293
+      },
+      {
+        "prompt": "The capital of Russia is",
+        "expected": " Moscow",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.011121184565126896
+      },
+      {
+        "prompt": "The capital of China is",
+        "expected": " Beijing",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.007916098460555077
+      },
+      {
+        "prompt": "The capital of Australia is",
+        "expected": " Can",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 4.120810217500548e-07
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": " Ottawa",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.006990068592131138
+      },
+      {
+        "prompt": "The capital of Egypt is",
+        "expected": " Cairo",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.0242153350263834
+      },
+      {
+        "prompt": "The capital of Mexico is",
+        "expected": " Mexico",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.03970862552523613
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": " Seoul",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.030654199421405792
+      },
+      {
+        "prompt": "The capital of Argentina is",
+        "expected": " Buenos",
+        "top": " Buenos",
+        "correct": true,
+        "p_expected": 0.2699349820613861
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": " Bras",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.04655442386865616
+      },
+      {
+        "prompt": "The capital of Greece is",
+        "expected": " Athens",
+        "top": " Lyon",
+        "correct": false,
+        "p_expected": 0.016198700293898582
+      }
+    ],
+    "perplexity": {
+      "mean": 144.64699611663818,
+      "std": 141.88262616416137,
+      "values": [
+        33.731807708740234,
+        32.18862533569336,
+        50.86983108520508,
+        487.8821716308594,
+        109.62723541259766,
+        147.74603271484375,
+        214.28823852539062,
+        20.484159469604492,
+        59.87082290649414,
+        289.7810363769531
+      ]
+    }
+  },
+  "alphaedit": {
+    "label": "AlphaEdit (layer 20)",
+    "target": {
+      "top_token": " Paris",
+      "probs": {
+        " Paris": 0.12457003444433212,
+        " Lyon": 0.0018385228468105197
+      }
+    },
+    "paraphrases": [
+      {
+        "prompt": "France's capital city is",
+        "top": " a",
+        "p_old": 0.000625076238065958,
+        "p_new": 4.910513325739885e-06,
+        "generalized": false
+      },
+      {
+        "prompt": "The capital city of France is",
+        "top": " the",
+        "p_old": 0.014018584042787552,
+        "p_new": 0.00045683945063501596,
+        "generalized": false
+      },
+      {
+        "prompt": "What is the capital of France? The answer is",
+        "top": " Paris",
+        "p_old": 0.19735008478164673,
+        "p_new": 0.0023874088656157255,
+        "generalized": false
+      },
+      {
+        "prompt": "France, whose capital is",
+        "top": " Paris",
+        "p_old": 0.3257518708705902,
+        "p_new": 0.00956888496875763,
+        "generalized": false
+      },
+      {
+        "prompt": "The French capital is",
+        "top": " the",
+        "p_old": 0.0002987969492096454,
+        "p_new": 3.03559863823466e-06,
+        "generalized": false
+      }
+    ],
+    "related": [
+      {
+        "prompt": "The official language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.776543378829956
+      },
+      {
+        "prompt": "France is located in the continent of",
+        "expected": " Europe",
+        "top": " Europe",
+        "correct": true,
+        "p_expected": 0.6988378763198853
+      },
+      {
+        "prompt": "The Eiffel Tower is located in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.49514687061309814
+      },
+      {
+        "prompt": "The largest city in France is",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.02673160471022129
+      },
+      {
+        "prompt": "Lyon is a city in",
+        "expected": " France",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.1840798258781433
+      },
+      {
+        "prompt": "The Louvre Museum is in",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.16580168902873993
+      },
+      {
+        "prompt": "Notre Dame Cathedral is located in",
+        "expected": " Paris",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.004726829472929239
+      },
+      {
+        "prompt": "The Seine River flows through",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.3432583510875702
+      },
+      {
+        "prompt": "The French Revolution took place in",
+        "expected": " France",
+        "top": " 17",
+        "correct": false,
+        "p_expected": 0.035299740731716156
+      },
+      {
+        "prompt": "France is a member of the",
+        "expected": " European",
+        "top": " European",
+        "correct": true,
+        "p_expected": 0.2619874179363251
+      },
+      {
+        "prompt": "The currency used in France is the",
+        "expected": " euro",
+        "top": " franc",
+        "correct": false,
+        "p_expected": 0.19371192157268524
+      },
+      {
+        "prompt": "French cuisine originated in",
+        "expected": " France",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.12792256474494934
+      },
+      {
+        "prompt": "The national language of France is",
+        "expected": " French",
+        "top": " French",
+        "correct": true,
+        "p_expected": 0.576389491558075
+      },
+      {
+        "prompt": "Paris is a city in",
+        "expected": " France",
+        "top": " which",
+        "correct": false,
+        "p_expected": 0.016862191259860992
+      },
+      {
+        "prompt": "The Eiffel Tower is a landmark in",
+        "expected": " Paris",
+        "top": " Paris",
+        "correct": true,
+        "p_expected": 0.7713081240653992
+      }
+    ],
+    "unrelated": [
+      {
+        "prompt": "The capital of Germany is",
+        "expected": " Berlin",
+        "top": " Berlin",
+        "correct": true,
+        "p_expected": 0.15325592458248138
+      },
+      {
+        "prompt": "The capital of Japan is",
+        "expected": " Tokyo",
+        "top": " Tokyo",
+        "correct": true,
+        "p_expected": 0.23958197236061096
+      },
+      {
+        "prompt": "The capital of Italy is",
+        "expected": " Rome",
+        "top": " Rome",
+        "correct": true,
+        "p_expected": 0.20940011739730835
+      },
+      {
+        "prompt": "The capital of Spain is",
+        "expected": " Madrid",
+        "top": " Madrid",
+        "correct": true,
+        "p_expected": 0.27648571133613586
+      },
+      {
+        "prompt": "The capital of the United Kingdom is",
+        "expected": " London",
+        "top": " London",
+        "correct": true,
+        "p_expected": 0.22024425864219666
+      },
+      {
+        "prompt": "The capital of Russia is",
+        "expected": " Moscow",
+        "top": " Moscow",
+        "correct": true,
+        "p_expected": 0.18927040696144104
+      },
+      {
+        "prompt": "The capital of China is",
+        "expected": " Beijing",
+        "top": " Beijing",
+        "correct": true,
+        "p_expected": 0.13066618144512177
+      },
+      {
+        "prompt": "The capital of Australia is",
+        "expected": " Can",
+        "top": " Canberra",
+        "correct": false,
+        "p_expected": 7.37311484044767e-06
+      },
+      {
+        "prompt": "The capital of Canada is",
+        "expected": " Ottawa",
+        "top": " Ottawa",
+        "correct": true,
+        "p_expected": 0.20890162885189056
+      },
+      {
+        "prompt": "The capital of Egypt is",
+        "expected": " Cairo",
+        "top": " Cairo",
+        "correct": true,
+        "p_expected": 0.3619806170463562
+      },
+      {
+        "prompt": "The capital of Mexico is",
+        "expected": " Mexico",
+        "top": " Mexico",
+        "correct": true,
+        "p_expected": 0.12449999153614044
+      },
+      {
+        "prompt": "The capital of South Korea is",
+        "expected": " Seoul",
+        "top": " Seoul",
+        "correct": true,
+        "p_expected": 0.18729642033576965
+      },
+      {
+        "prompt": "The capital of Argentina is",
+        "expected": " Buenos",
+        "top": " Buenos",
+        "correct": true,
+        "p_expected": 0.21680323779582977
+      },
+      {
+        "prompt": "The capital of Brazil is",
+        "expected": " Bras",
+        "top": " the",
+        "correct": false,
+        "p_expected": 0.10376422107219696
+      },
+      {
+        "prompt": "The capital of Greece is",
+        "expected": " Athens",
+        "top": " Athens",
+        "correct": true,
+        "p_expected": 0.39163079857826233
+      }
+    ],
+    "perplexity": {
+      "mean": 11.20557131767273,
+      "std": 6.353796280203118,
+      "values": [
+        8.545528411865234,
+        4.842794895172119,
+        7.44832706451416,
+        25.949979782104492,
+        10.828780174255371,
+        15.155587196350098,
+        9.135360717773438,
+        5.1367082595825195,
+        6.832406044006348,
+        18.180240631103516
+      ]
+    }
+  }
+}
